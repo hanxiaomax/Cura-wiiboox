@@ -66,7 +66,6 @@ class preferencesDialog(wx.Dialog):
 class machineSettingsDialog(wx.Dialog):
 	def __init__(self, parent):
 		super(machineSettingsDialog, self).__init__(None, title=_("Machine settings"))
-
 		wx.EVT_CLOSE(self, self.OnClose)
 
 		self.parent = parent
@@ -120,6 +119,7 @@ class machineSettingsDialog(wx.Dialog):
 		self.okButton.Bind(wx.EVT_BUTTON, lambda e: self.Close())
 		self.buttonPanel.GetSizer().Add(self.okButton, flag=wx.ALL, border=5)
 
+
 		self.addButton = wx.Button(self.buttonPanel, -1, _('Add new machine'))
 		self.addButton.Bind(wx.EVT_BUTTON, self.OnAddMachine)
 		self.buttonPanel.GetSizer().Add(self.addButton, flag=wx.ALL, border=5)
@@ -127,6 +127,11 @@ class machineSettingsDialog(wx.Dialog):
 		self.remButton = wx.Button(self.buttonPanel, -1, _('Remove machine'))
 		self.remButton.Bind(wx.EVT_BUTTON, self.OnRemoveMachine)
 		self.buttonPanel.GetSizer().Add(self.remButton, flag=wx.ALL, border=5)
+
+		self.renButton = wx.Button(self.buttonPanel, -1, _('Change machine name'))
+		self.renButton.Bind(wx.EVT_BUTTON, self.OnRenameMachine)
+		self.buttonPanel.GetSizer().Add(self.renButton, flag=wx.ALL, border=5)
+
 
 		main.Fit()
 		self.Fit()
@@ -159,6 +164,15 @@ class machineSettingsDialog(wx.Dialog):
 		prefDialog.Centre()
 		prefDialog.Show()
 		wx.CallAfter(self.Close)
+
+
+	def OnRenameMachine(self, e):
+		dialog = wx.TextEntryDialog(self, _("Enter the new name:"), _("Change machine name"), self.nb.GetPageText(self.nb.GetSelection()))
+		if dialog.ShowModal() != wx.ID_OK:
+			return
+		self.nb.SetPageText(self.nb.GetSelection(), dialog.GetValue())
+		profile.putMachineSetting('machine_name', dialog.GetValue(), self.nb.GetSelection())
+		self.parent.updateMachineMenu()
 
 	def OnClose(self, e):
 		self.parent.reloadSettingPanels()

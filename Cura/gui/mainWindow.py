@@ -1,7 +1,8 @@
 #coding:utf-8
 #TODO:
 #1.不检测原版Cura的更新程序
-#2.从原版更新时自动汉化额外的字符串
+#2.从原版更新时自动汉化额外的字符串：Done！使用git merge+人工解决冲突
+
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
 import wx
@@ -303,6 +304,7 @@ class mainWindow(wx.Frame):
 			print _("Unable to read from clipboard")
 
 
+
 	def updateSliceMode(self):
 		isSimple = profile.getPreference('startMode') == 'Simple'
 
@@ -469,6 +471,9 @@ class mainWindow(wx.Frame):
 			for line in f:
 				if line.startswith(';CURA_PROFILE_STRING:'):
 					profile.setProfileFromString(line[line.find(':')+1:].strip())
+
+					if ';{profile_string}' not in profile.getAlterationFile('end.gcode'):
+						profile.setAlterationFile('end.gcode', profile.getAlterationFile('end.gcode') + '\n;{profile_string}')
 					hasProfile = True
 			if hasProfile:
 				self.updateProfileToAllControls()
@@ -481,7 +486,8 @@ class mainWindow(wx.Frame):
 		dlg.SetWildcard("ini files (*.ini)|*.ini")
 		if dlg.ShowModal() == wx.ID_OK:
 			profileFile = dlg.GetPath()
-			if platform.system() == 'Linux': #hack for linux, as for some reason the .ini is not appended.
+
+			if not profileFile.lower().endswith('.ini'): #hack for linux, as for some reason the .ini is not appended.
 				profileFile += '.ini'
 			profile.saveProfile(profileFile)
 		dlg.Destroy()
@@ -512,6 +518,7 @@ class mainWindow(wx.Frame):
 		dlg.SetWildcard("HEX file (*.hex)|*.hex;*.HEX")
 		if dlg.ShowModal() == wx.ID_OK:
 			filename = dlg.GetPath()
+			dlg.Destroy()
 			if not(os.path.exists(filename)):
 				return
 			#For some reason my Ubuntu 10.10 crashes here.
@@ -560,6 +567,7 @@ class mainWindow(wx.Frame):
 				wx.TheClipboard.Close()
 		except:
 			print _("Could not write to clipboard, unable to get ownership. Another program is using the clipboard.")
+
 
 	def OnCheckForUpdate(self, e):
 		newVersion = version.checkForNewerVersion()
@@ -611,12 +619,12 @@ class normalSettingsPanel(configBase.configPanelBase):
 		self.nb = wx.Notebook(self)
 		self.SetSizer(wx.BoxSizer(wx.HORIZONTAL))
 		self.GetSizer().Add(self.nb, 1, wx.EXPAND)
-
 		(left, right, self.printPanel) = self.CreateDynamicConfigTab(self.nb, _('Basic'))
 		self._addSettingsToPanels('basic', left, right)
 		self.SizeLabelWidths(left, right)
 
 		(left, right, self.advancedPanel) = self.CreateDynamicConfigTab(self.nb, _('Advanced'))
+
 		self._addSettingsToPanels('advanced', left, right)
 		self.SizeLabelWidths(left, right)
 
@@ -717,5 +725,3 @@ class normalSettingsPanel(configBase.configPanelBase):
 		if self.alterationPanel is not None:
 			self.alterationPanel.updateProfileToControls()
 		self.pluginPanel.updateProfileToControls()
-
-

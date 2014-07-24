@@ -50,10 +50,12 @@ def getDefaultMachineProfiles():
 	return glob.glob(path)
 
 def setupLocalization(selectedLanguage = None):
+
 	#Default to Chinese
 	#FIXME:can not boot with cn while using languages=['cn']
 	#FIXED:changing the secound value in setting() in porfile.py and the default value in preference.ini
 	languages = ['cn']
+
 
 	if selectedLanguage is not None:
 		for item in getLanguageOptions():
@@ -73,3 +75,4 @@ def getLanguageOptions():
 		 	['sp', 'Spanish'],
 		 	['po', 'Polish']
 		 ]
+

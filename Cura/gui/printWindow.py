@@ -331,7 +331,9 @@ class printWindowBasic(wx.Frame):
 		self.OnPowerWarningChange(None)
 		self.powerWarningTimer.Start(10000)
 
-		self.statsText = wx.StaticText(self.panel, -1, _("InfoLine from printer connection\nInfoLine from dialog\nExtra line"))
+
+		self.statsText = wx.StaticText(self.panel, -1, _("InfoLine from printer connection\nInfoLine from dialog\nExtra line\nMore lines for layout\nMore lines for layout\nMore lines for layout"))
+
 
 		self.connectButton = wx.Button(self.panel, -1, _("Connect"))
 		#self.loadButton = wx.Button(self.panel, -1, 'Load')
@@ -364,7 +366,9 @@ class printWindowBasic(wx.Frame):
 		self.Centre()
 
 		self.progress.SetMinSize(self.progress.GetSize())
-		self.statsText.SetLabel('\n\n')
+
+		self.statsText.SetLabel('\n\n\n\n\n\n')
+
 		self._updateButtonStates()
 
 		self._printerConnection.addCallback(self._doPrinterConnectionUpdate)
@@ -441,6 +445,9 @@ class printWindowBasic(wx.Frame):
 			info += 'Temperature: %d' % (self._printerConnection.getTemperature(0))
 		if self._printerConnection.getBedTemperature() > 0:
 			info += ' Bed: %d' % (self._printerConnection.getBedTemperature())
+
+		info += '\n\n'
+
 		self.statsText.SetLabel(info)
 
 	def _updateButtonStates(self):
@@ -588,7 +595,7 @@ class TemperatureGraph(wx.Panel):
 
 class LogWindow(wx.Frame):
 	def __init__(self, logText):
-		super(LogWindow, self).__init__(None, title="Error log")
+		super(LogWindow, self).__init__(None, title=_("Error log"))
 		self.textBox = wx.TextCtrl(self, -1, logText, style=wx.TE_MULTILINE | wx.TE_DONTWRAP | wx.TE_READONLY)
 		self.SetSize((500, 400))
 		self.Show(True)

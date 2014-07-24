@@ -199,3 +199,4 @@ else:
 if __name__ == '__main__':
 	app=CuraApp("1.txt")
 	app.MainLoop()
+

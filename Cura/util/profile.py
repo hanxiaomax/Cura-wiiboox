@@ -198,6 +198,9 @@ setting('retraction_combing',       True, bool,  'expert',   _('Retraction')).se
 setting('retraction_minimal_extrusion',0.02, float,'expert', _('Retraction')).setRange(0).setLabel(_("Minimal extrusion before retracting (mm)"), _("The minimal amount of extrusion that needs to be done before retracting again if a retraction needs to happen before this minimal is reached the retraction is ignored.\nThis avoids retracting a lot on the same piece of filament which flattens the filament and causes grinding issues."))
 setting('retraction_hop',            0.0, float, 'expert',   _('Retraction')).setRange(0).setLabel(_("Z hop when retracting (mm)"), _("When a retraction is done, the head is lifted by this amount to travel over the print. A value of 0.075 works well. This feature has a lot of positive effect on delta towers."))
 setting('bottom_thickness',          0.3, float, 'advanced', _('Quality')).setRange(0).setLabel(_("Initial layer thickness (mm)"), _("Layer thickness of the bottom layer. A thicker bottom layer makes sticking to the bed easier. Set to 0.0 to have the bottom layer thickness the same as the other layers."))
+
+setting('layer0_width_factor',       100, float, 'advanced', _('Quality')).setRange(50, 300).setLabel(_("Initial layer line width (%)"), _("Extra width factor for the extrusion on the first layer, on some printers it's good to have wider extrusion on the first layer to get better bed adhesion."))
+
 setting('object_sink',               0.0, float, 'advanced', _('Quality')).setRange(0).setLabel(_("Cut off object bottom (mm)"), _("Sinks the object into the platform, this can be used for objects that do not have a flat bottom and thus create a too small first layer."))
 #setting('enable_skin',             False, bool,  'advanced', _('Quality')).setLabel(_("Duplicate outlines"), _("Skin prints the outer lines of the prints twice, each time with half the thickness. This gives the illusion of a higher print quality."))
 setting('overlap_dual',             0.15, float, 'advanced', _('Quality')).setLabel(_("Dual extrusion overlap (mm)"), _("Add a certain amount of overlapping extrusion on dual-extrusion prints. This bonds the different colors together."))
@@ -225,7 +228,10 @@ setting('support_angle', 60, float, 'expert', _('Support')).setRange(0,90).setLa
 setting('support_fill_rate', 15, int, 'expert', _('Support')).setRange(0,100).setLabel(_("Fill amount (%)"), _("Amount of infill structure in the support material, less material gives weaker support which is easier to remove. 15% seems to be a good average."))
 setting('support_xy_distance', 0.7, float, 'expert', _('Support')).setRange(0,10).setLabel(_("Distance X/Y (mm)"), _("Distance of the support material from the print, in the X/Y directions.\n0.7mm gives a nice distance from the print so the support does not stick to the print."))
 setting('support_z_distance', 0.15, float, 'expert', _('Support')).setRange(0,10).setLabel(_("Distance Z (mm)"), _("Distance from the top/bottom of the support to the print. A small gap here makes it easier to remove the support but makes the print a bit uglier.\n0.15mm gives a good seperation of the support material."))
-setting('spiralize', False, bool, 'expert', 'Spiralize').setLabel(_("Spiralize the outer contour"), _("Spiralize is smoothing out the Z move of the outer edge. This will create a steady Z increase over the whole print. This feature turns a solid object into a single walled print with a solid bottom."))
+
+setting('spiralize', False, bool, 'expert', 'Black Magic').setLabel(_("Spiralize the outer contour"), _("Spiralize is smoothing out the Z move of the outer edge. This will create a steady Z increase over the whole print. This feature turns a solid object into a single walled print with a solid bottom.\nThis feature used to be called Joris in older versions."))
+setting('simple_mode', False, bool, 'expert', 'Black Magic').setLabel(_("Only follow mesh surface"), _("Only follow the mesh surfaces of the 3D model, do not do anything else. No infill, no top/bottom, nothing."))
+
 #setting('bridge_speed', 100, int, 'expert', 'Bridge').setRange(0,100).setLabel(_("Bridge speed (%)"), _("Speed at which layers with bridges are printed, compared to normal printing speed."))
 setting('brim_line_count', 20, int, 'expert', _('Brim')).setRange(1,100).setLabel(_("Brim line amount"), _("The amount of lines used for a brim, more lines means a larger brim which sticks better, but this also makes your effective print area smaller."))
 setting('raft_margin', 5.0, float, 'expert', _('Raft')).setRange(0).setLabel(_("Extra margin (mm)"), _("If the raft is enabled, this is the extra raft area around the object which is also rafted. Increasing this margin will create a stronger raft while using more material and leaving less area for your print."))
@@ -332,20 +338,137 @@ G90                         ;absolute positioning
 ;{profile_string}
 """, str, 'alteration', 'alteration')
 #######################################################################################
+
+setting('start3.gcode', """;Sliced at: {day} {date} {time}
+;Basic settings: Layer height: {layer_height} Walls: {wall_thickness} Fill: {fill_density}
+;Print time: {print_time}
+;Filament used: {filament_amount}m {filament_weight}g
+;Filament cost: {filament_cost}
+;M190 S{print_bed_temperature} ;Uncomment to add your own bed temperature line
+;M104 S{print_temperature} ;Uncomment to add your own temperature line
+;M109 T1 S{print_temperature2} ;Uncomment to add your own temperature line
+;M109 T0 S{print_temperature} ;Uncomment to add your own temperature line
+G21        ;metric values
+G90        ;absolute positioning
+M107       ;start with the fan off
+
+G28 X0 Y0  ;move X/Y to min endstops
+G28 Z0     ;move Z to min endstops
+
+G1 Z15.0 F{travel_speed} ;move the platform down 15mm
+
+T2                      ;Switch to the 2nd extruder
+G92 E0                  ;zero the extruded length
+G1 F200 E10             ;extrude 10mm of feed stock
+G92 E0                  ;zero the extruded length again
+G1 F200 E-{retraction_dual_amount}
+
+T1                      ;Switch to the 2nd extruder
+G92 E0                  ;zero the extruded length
+G1 F200 E10             ;extrude 10mm of feed stock
+G92 E0                  ;zero the extruded length again
+G1 F200 E-{retraction_dual_amount}
+
+T0                      ;Switch to the first extruder
+G92 E0                  ;zero the extruded length
+G1 F200 E10             ;extrude 10mm of feed stock
+G92 E0                  ;zero the extruded length again
+G1 F{travel_speed}
+;Put printing message on LCD screen
+M117 Printing...
+""", str, 'alteration', 'alteration')
+#######################################################################################
+setting('end3.gcode', """;End GCode
+M104 T0 S0                     ;extruder heater off
+M104 T1 S0                     ;extruder heater off
+M104 T2 S0                     ;extruder heater off
+M140 S0                     ;heated bed heater off (if you have it)
+
+G91                                    ;relative positioning
+G1 E-1 F300                            ;retract the filament a bit before lifting the nozzle, to release some of the pressure
+G1 Z+0.5 E-5 X-20 Y-20 F{travel_speed} ;move Z up a bit and retract filament even more
+G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way
+
+M84                         ;steppers off
+G90                         ;absolute positioning
+;{profile_string}
+""", str, 'alteration', 'alteration')
+setting('start4.gcode', """;Sliced at: {day} {date} {time}
+;Basic settings: Layer height: {layer_height} Walls: {wall_thickness} Fill: {fill_density}
+;Print time: {print_time}
+;Filament used: {filament_amount}m {filament_weight}g
+;Filament cost: {filament_cost}
+;M190 S{print_bed_temperature} ;Uncomment to add your own bed temperature line
+;M104 S{print_temperature} ;Uncomment to add your own temperature line
+;M109 T2 S{print_temperature2} ;Uncomment to add your own temperature line
+;M109 T1 S{print_temperature2} ;Uncomment to add your own temperature line
+;M109 T0 S{print_temperature} ;Uncomment to add your own temperature line
+G21        ;metric values
+G90        ;absolute positioning
+M107       ;start with the fan off
+
+G28 X0 Y0  ;move X/Y to min endstops
+G28 Z0     ;move Z to min endstops
+
+G1 Z15.0 F{travel_speed} ;move the platform down 15mm
+
+T3                      ;Switch to the 4th extruder
+G92 E0                  ;zero the extruded length
+G1 F200 E10             ;extrude 10mm of feed stock
+G92 E0                  ;zero the extruded length again
+G1 F200 E-{retraction_dual_amount}
+
+T2                      ;Switch to the 3th extruder
+G92 E0                  ;zero the extruded length
+G1 F200 E10             ;extrude 10mm of feed stock
+G92 E0                  ;zero the extruded length again
+G1 F200 E-{retraction_dual_amount}
+
+T1                      ;Switch to the 2nd extruder
+G92 E0                  ;zero the extruded length
+G1 F200 E10             ;extrude 10mm of feed stock
+G92 E0                  ;zero the extruded length again
+G1 F200 E-{retraction_dual_amount}
+
+T0                      ;Switch to the first extruder
+G92 E0                  ;zero the extruded length
+G1 F200 E10             ;extrude 10mm of feed stock
+G92 E0                  ;zero the extruded length again
+G1 F{travel_speed}
+;Put printing message on LCD screen
+M117 Printing...
+""", str, 'alteration', 'alteration')
+#######################################################################################
+setting('end4.gcode', """;End GCode
+M104 T0 S0                     ;extruder heater off
+M104 T1 S0                     ;extruder heater off
+M104 T2 S0                     ;extruder heater off
+M104 T3 S0                     ;extruder heater off
+M140 S0                     ;heated bed heater off (if you have it)
+
+G91                                    ;relative positioning
+G1 E-1 F300                            ;retract the filament a bit before lifting the nozzle, to release some of the pressure
+G1 Z+0.5 E-5 X-20 Y-20 F{travel_speed} ;move Z up a bit and retract filament even more
+G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way
+
+M84                         ;steppers off
+G90                         ;absolute positioning
+;{profile_string}
+""", str, 'alteration', 'alteration')
+#######################################################################################
+
 setting('support_start.gcode', '', str, 'alteration', 'alteration')
 setting('support_end.gcode', '', str, 'alteration', 'alteration')
 setting('cool_start.gcode', '', str, 'alteration', 'alteration')
 setting('cool_end.gcode', '', str, 'alteration', 'alteration')
 setting('replace.csv', '', str, 'alteration', 'alteration')
 #######################################################################################
-setting('switchExtruder.gcode', """;Switch between the current extruder and the next extruder, when printing with multiple extruders.
-G92 E0
-G1 E-36 F5000
-G92 E0
-T{extruder}
-G1 X{new_x} Y{new_y} Z{new_z} F{travel_speed}
-G1 E36 F5000
-G92 E0
+
+setting('preSwitchExtruder.gcode', """;Switch between the current extruder and the next extruder, when printing with multiple extruders.
+;This code is added before the T(n)
+""", str, 'alteration', 'alteration')
+setting('postSwitchExtruder.gcode', """;Switch between the current extruder and the next extruder, when printing with multiple extruders.
+;This code is added after the T(n)
 """, str, 'alteration', 'alteration')
 
 setting('startMode', 'Simple', ['Simple', 'Normal'], 'preference', 'hidden')
@@ -359,7 +482,9 @@ setting('check_for_updates', 'True', bool, 'preference', 'hidden').setLabel(_("C
 setting('submit_slice_information', 'False', bool, 'preference', 'hidden').setLabel(_("Send usage statistics"), _("Submit anonymous usage information to improve future versions of Cura"))
 setting('youmagine_token', '', str, 'preference', 'hidden')
 setting('filament_physical_density', '1240', float, 'preference', 'hidden').setRange(500.0, 3000.0).setLabel(_("Density (kg/m3)"), _("Weight of the filament per m3. Around 1240 for PLA. And around 1040 for ABS. This value is used to estimate the weight if the filament used for the print."))
+
 setting('language', 'Chinese', str, 'preference', 'hidden').setLabel(_('Language'), _('Change the language in which Cura runs. Switching language requires a restart of Cura'))
+
 setting('active_machine', '0', int, 'preference', 'hidden')
 
 setting('model_colour', '#FFC924', str, 'preference', 'hidden').setLabel(_('Model colour'), _('Display color for first extruder'))
@@ -485,6 +610,10 @@ def getBasePath():
 		#If we have a frozen python install, we need to step out of the library.zip
 		if hasattr(sys, 'frozen'):
 			basePath = os.path.normpath(os.path.join(basePath, ".."))
+
+	elif platform.system() == "Darwin":
+		basePath = os.path.expanduser('~/Library/Application Support/Cura/%s' % version.getVersion(False))
+
 	else:
 		basePath = os.path.expanduser('~/.cura/%s' % version.getVersion(False))
 	if not os.path.isdir(basePath):
@@ -580,7 +709,12 @@ def saveProfile(filename, allMachines = False):
 			else:
 				profileParser.set('profile', set.getName(), set.getValue().encode('utf-8'))
 
-	profileParser.write(open(filename, 'w'))
+
+	try:
+		profileParser.write(open(filename, 'w'))
+	except:
+		print "Failed to write profile file: %s" % (filename)
+
 
 def resetProfile():
 	""" Reset the profile for the current machine to default. """
@@ -783,7 +917,12 @@ def savePreferences(filename):
 			if set.isMachineSetting():
 				parser.set('machine_%d' % (n), set.getName(), set.getValue(n).encode('utf-8'))
 		n += 1
-	parser.write(open(filename, 'w'))
+
+	try:
+		parser.write(open(filename, 'w'))
+	except:
+		print "Failed to write preferences file: %s" % (filename)
+
 
 def getPreference(name):
 	if name in tempOverride:
@@ -828,11 +967,12 @@ def getMachineSetting(name, index = None):
 	sys.stderr.write('Error: "%s" not found in machine settings\n' % (name))
 	return ''
 
-def putMachineSetting(name, value):
+
+def putMachineSetting(name, value, index = None):
 	#Check if we have a configuration file loaded, else load the default.
 	global settingsDictionary
 	if name in settingsDictionary and settingsDictionary[name].isMachineSetting():
-		settingsDictionary[name].setValue(value)
+		settingsDictionary[name].setValue(value, index)
 	savePreferences(getPreferencePath())
 
 def isMachineSetting(name):
@@ -903,7 +1043,7 @@ def calculateEdgeWidth():
 	wallThickness = getProfileSettingFloat('wall_thickness')
 	nozzleSize = getProfileSettingFloat('nozzle_size')
 
-	if getProfileSetting('spiralize') == 'True':
+	if getProfileSetting('spiralize') == 'True' or getProfileSetting('simple_mode') == 'True':
 		return wallThickness
 
 	if wallThickness < 0.01:
@@ -928,7 +1068,8 @@ def calculateLineCount():
 		return 0
 	if wallThickness < nozzleSize:
 		return 1
-	if getProfileSetting('spiralize') == 'True':
+
+	if getProfileSetting('spiralize') == 'True' or getProfileSetting('simple_mode') == 'True':
 		return 1
 
 	lineCount = int(wallThickness / (nozzleSize - 0.0001))

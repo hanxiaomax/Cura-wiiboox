@@ -21,6 +21,7 @@ class aboutWindow(wx.Frame):
 		p.SetSizer(s)
 
 		title = wx.StaticText(p, -1, _('Cura'))
+
 		title.SetFont(wx.Font(18, wx.SWISS, wx.NORMAL, wx.BOLD))
 		s.Add(title, flag=wx.ALIGN_CENTRE|wx.EXPAND|wx.BOTTOM, border=5)
 
@@ -61,8 +62,4 @@ class aboutWindow(wx.Frame):
 
 	def OnClose(self, e):
 		self.Destroy()
-if __name__=='__main__':
-	app=wx.PySimpleApp()
-	frame=aboutWindow()
-	frame.Show()
-	app.MainLoop()
+

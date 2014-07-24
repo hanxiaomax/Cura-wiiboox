@@ -1,4 +1,6 @@
+
 #coding:utf-8
+
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
 import wx
@@ -331,7 +333,9 @@ class SceneView(openglGui.glGuiPanel):
 		except:
 			import sys, traceback
 			traceback.print_exc()
+
 			self.notification.message(_("Failed to save"))#internationalization
+
 		else:
 			if ejectDrive:
 				self.notification.message("Saved as %s" % (targetFilename), lambda : self._doEjectSD(ejectDrive), 31, 'Eject')
@@ -505,7 +509,9 @@ class SceneView(openglGui.glGuiPanel):
 			if n > cnt:
 				break
 		if n <= cnt:
+
 			self.notification.message(_("Could not create more than %d items" % (n - 1)))#internationalization
+
 		self._scene.remove(newObj)
 		self._scene.centerAll()
 		self.sceneUpdated()
@@ -1249,8 +1255,10 @@ class SceneView(openglGui.glGuiPanel):
 					self._platformMesh[machine]._drawOffset = numpy.array([0,-37,145], numpy.float32)
 				else:
 					self._platformMesh[machine]._drawOffset = numpy.array([0,0,2.5], numpy.float32)
-			glColor4f(1,1,1,1)
+
+			glColor4f(1,1,1,1)#100%
 			#glColor4d(1,1,1,0.5)
+
 			self._objectShader.bind()
 			self._renderObject(self._platformMesh[machine], False, False)
 			self._objectShader.unbind()
@@ -1265,10 +1273,12 @@ class SceneView(openglGui.glGuiPanel):
 				glColor4f(1,1,1,1)
 
 				glTranslate(0,150,-5)
+
 				#定制内容：注释掉了logo
 				h = 0#50
 				d = 0#8
 				w = 0#100
+
 				glEnable(GL_BLEND)
 				glBlendFunc(GL_DST_COLOR, GL_ZERO)
 				glBegin(GL_QUADS)

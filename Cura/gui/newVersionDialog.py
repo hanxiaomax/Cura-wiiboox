@@ -26,13 +26,18 @@ class newVersionDialog(wx.Dialog):
 		s.Add(wx.StaticText(p, -1, '(This dialog is only shown once)'))
 		s.Add(wx.StaticLine(p), flag=wx.EXPAND|wx.TOP|wx.BOTTOM, border=10)
 		s.Add(wx.StaticText(p, -1, 'New in this version:'))
-		s.Add(wx.StaticText(p, -1, '* Updated drivers for Windows 8.1.'))
-		s.Add(wx.StaticText(p, -1, '* Added better raft support with surface layers and an air-gap. Special thanks to Gregoire Passault.'))
-		s.Add(wx.StaticText(p, -1, '* Improved outer surface quality on high detail prints.'))
-		s.Add(wx.StaticText(p, -1, '* Fixed bug with multiple machines and different start/end GCode.'))
-		s.Add(wx.StaticText(p, -1, '* Added initial support for BitsFromBytes machines.'))
-		s.Add(wx.StaticText(p, -1, '* Improved the Pronterface UI with buttons to set temperature and extrusion buttons.'))
-		s.Add(wx.StaticText(p, -1, '* Improved bridging detection.'))
+
+		s.Add(wx.StaticText(p, -1, _('* Added feature to configure the first layer to use wider print lines, for better adhesion to the printer bed.')))
+		s.Add(wx.StaticText(p, -1, _('* Added all Printrbot printer variations.')))
+		s.Add(wx.StaticText(p, -1, 'New in version 14.06.1:'))
+
+		s.Add(wx.StaticText(p, -1, _('* Updated drivers for Windows 8.1.')))
+		s.Add(wx.StaticText(p, -1, _('* Added better raft support with surface layers and an air-gap. Special thanks to Gregoire Passault.')))
+		s.Add(wx.StaticText(p, -1, _('* Improved outer surface quality on high detail prints.')))
+		s.Add(wx.StaticText(p, -1, _('* Fixed bug with multiple machines and different start/end GCode.')))
+		s.Add(wx.StaticText(p, -1, _('* Added initial support for BitsFromBytes machines.')))
+		s.Add(wx.StaticText(p, -1, _('* Improved the Pronterface UI with buttons to set temperature and extrusion buttons.')))
+		s.Add(wx.StaticText(p, -1, _('* Improved bridging detection.')))
 
 		self.hasUltimaker = None
 		self.hasUltimaker2 = None
@@ -50,11 +55,19 @@ class newVersionDialog(wx.Dialog):
 			s.Add(button, flag=wx.TOP, border=5)
 		if self.hasUltimaker2 is not None:
 			s.Add(wx.StaticLine(p), flag=wx.EXPAND|wx.TOP|wx.BOTTOM, border=10)
-			s.Add(wx.StaticText(p, -1, 'New firmware for your Ultimaker2: (14.04.1)'))
-			s.Add(wx.StaticText(p, -1, '* Improved the start of the print, first moves the bed up before moving to the print.'))
-			s.Add(wx.StaticText(p, -1, '* Made sure the head does not bump into the front of the casing at first startup.'))
-			s.Add(wx.StaticText(p, -1, '* Fixed support for the PauseAtZ plugin.'))
-			button = wx.Button(p, -1, 'Install now')
+			s.Add(wx.StaticText(p, -1, _('New firmware for your Ultimaker2: (14.07.0)')))
+			s.Add(wx.StaticText(p, -1, _('* Added feature in the maintenance menu to just load filament')))
+			s.Add(wx.StaticText(p, -1, _('* Fixed grinding problem at the start of a print')))
+			s.Add(wx.StaticText(p, -1, _('* Fixed properly retracting when a print is finished')))
+			s.Add(wx.StaticText(p, -1, _('Firmware update: (14.06.2)')))
+			s.Add(wx.StaticText(p, -1, _('* Fixed a problem with the bed leveling. (Special thanks to stevegt for figuring this out)')))
+			s.Add(wx.StaticText(p, -1, _('* Improved the start of the print, first moves the bed up before moving to the print.')))
+			s.Add(wx.StaticText(p, -1, _('* Improved the start of the print, initial filament push is slower so it does not slip.')))
+			s.Add(wx.StaticText(p, -1, _('* Made sure the head does not bump into the front of the casing at first startup.')))
+			s.Add(wx.StaticText(p, -1, _('* Fixed support for the PauseAtZ plugin.')))
+			s.Add(wx.StaticText(p, -1, _('* Added lifetime runtime stats. Allows you to see how long the printer has been running.')))
+
+			button = wx.Button(p, -1, _('Install now'))
 			self.Bind(wx.EVT_BUTTON, self.OnUltimaker2Firmware, button)
 			s.Add(button, flag=wx.TOP, border=5)
 
