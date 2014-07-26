@@ -868,7 +868,7 @@ class UltimakerCalibrateStepsPerEPage(InfoPage):
 
 		self.sendGCommand('M104 S200') #Set the temperature to 200C, should be enough to get PLA and ABS out.
 		wx.MessageBox(
-			'Wait till you can remove the filament from the machine, and press OK.\n(Temperature is set to 200C)',
+			_('Wait till you can remove the filament from the machine, and press OK.\n(Temperature is set to 200C)'),
 			'Machine heatup', wx.OK | wx.ICON_INFORMATION)
 		self.sendGCommand('M104 S0')
 		time.sleep(1)
@@ -891,13 +891,13 @@ class UltimakerCalibrateStepsPerEPage(InfoPage):
 class Ultimaker2ReadyPage(InfoPage):
 	def __init__(self, parent):
 		super(Ultimaker2ReadyPage, self).__init__(parent, "Ultimaker2")
-		self.AddText('Congratulations on your the purchase of your brand new Ultimaker2.')
-		self.AddText('Cura is now ready to be used with your Ultimaker2.')
+		self.AddText(_('Congratulations on your the purchase of your brand new Ultimaker2.'))
+		self.AddText(_('Cura is now ready to be used with your Ultimaker2.'))
 		self.AddSeperator()
 
 class configWizard(wx.wizard.Wizard):
 	def __init__(self, addNew = False):
-		super(configWizard, self).__init__(None, -1, "Configuration Wizard")
+		super(configWizard, self).__init__(None, -1, _("Configuration Wizard"))
 
 		self.Bind(wx.wizard.EVT_WIZARD_PAGE_CHANGED, self.OnPageChanged)
 		self.Bind(wx.wizard.EVT_WIZARD_PAGE_CHANGING, self.OnPageChanging)
@@ -1033,7 +1033,7 @@ class bedLevelWizardMain(InfoPage):
 		feedTravel = profile.getProfileSettingFloat('travel_speed') * 60
 
 		if self._wizardState == -1:
-			wx.CallAfter(self.infoBox.SetInfo, 'Homing printer...')
+			wx.CallAfter(self.infoBox.SetInfo, _('Homing printer...'))
 			wx.CallAfter(self.upButton.Enable, False)
 			wx.CallAfter(self.downButton.Enable, False)
 			wx.CallAfter(self.upButton2.Enable, False)
@@ -1043,14 +1043,14 @@ class bedLevelWizardMain(InfoPage):
 			self._wizardState = 1
 		elif self._wizardState == 2:
 			if profile.getMachineSetting('has_heated_bed') == 'True':
-				wx.CallAfter(self.infoBox.SetBusy, 'Moving head to back center...')
+				wx.CallAfter(self.infoBox.SetBusy, _('Moving head to back center...'))
 				self.comm.sendCommand('G1 Z3 F%d' % (feedZ))
 				self.comm.sendCommand('G1 X%d Y%d F%d' % (profile.getMachineSettingFloat('machine_width') / 2.0, profile.getMachineSettingFloat('machine_depth'), feedTravel))
 				self.comm.sendCommand('G1 Z0 F%d' % (feedZ))
 				self.comm.sendCommand('M400')
 				self._wizardState = 3
 			else:
-				wx.CallAfter(self.infoBox.SetBusy, 'Moving head to back left corner...')
+				wx.CallAfter(self.infoBox.SetBusy, _('Moving head to back left corner...'))
 				self.comm.sendCommand('G1 Z3 F%d' % (feedZ))
 				self.comm.sendCommand('G1 X%d Y%d F%d' % (0, profile.getMachineSettingFloat('machine_depth'), feedTravel))
 				self.comm.sendCommand('G1 Z0 F%d' % (feedZ))
@@ -1058,14 +1058,14 @@ class bedLevelWizardMain(InfoPage):
 				self._wizardState = 3
 		elif self._wizardState == 4:
 			if profile.getMachineSetting('has_heated_bed') == 'True':
-				wx.CallAfter(self.infoBox.SetBusy, 'Moving head to front right corner...')
+				wx.CallAfter(self.infoBox.SetBusy, _('Moving head to front right corner...'))
 				self.comm.sendCommand('G1 Z3 F%d' % (feedZ))
 				self.comm.sendCommand('G1 X%d Y%d F%d' % (profile.getMachineSettingFloat('machine_width') - 5.0, 5, feedTravel))
 				self.comm.sendCommand('G1 Z0 F%d' % (feedZ))
 				self.comm.sendCommand('M400')
 				self._wizardState = 7
 			else:
-				wx.CallAfter(self.infoBox.SetBusy, 'Moving head to back right corner...')
+				wx.CallAfter(self.infoBox.SetBusy, _('Moving head to back right corner...'))
 				self.comm.sendCommand('G1 Z3 F%d' % (feedZ))
 				self.comm.sendCommand('G1 X%d Y%d F%d' % (profile.getMachineSettingFloat('machine_width') - 5.0, profile.getMachineSettingFloat('machine_depth') - 25, feedTravel))
 				self.comm.sendCommand('G1 Z0 F%d' % (feedZ))
@@ -1073,21 +1073,21 @@ class bedLevelWizardMain(InfoPage):
 				self._wizardState = 5
 
 		elif self._wizardState == 6:
-			wx.CallAfter(self.infoBox.SetBusy, 'Moving head to front right corner...')
+			wx.CallAfter(self.infoBox.SetBusy, _('Moving head to front right corner...'))
 			self.comm.sendCommand('G1 Z3 F%d' % (feedZ))
 			self.comm.sendCommand('G1 X%d Y%d F%d' % (profile.getMachineSettingFloat('machine_width') - 5.0, 20, feedTravel))
 			self.comm.sendCommand('G1 Z0 F%d' % (feedZ))
 			self.comm.sendCommand('M400')
 			self._wizardState = 7
 		elif self._wizardState == 8:
-			wx.CallAfter(self.infoBox.SetBusy, 'Heating up printer...')
+			wx.CallAfter(self.infoBox.SetBusy, _('Heating up printer...'))
 			self.comm.sendCommand('G1 Z15 F%d' % (feedZ))
 			self.comm.sendCommand('M104 S%d' % (profile.getProfileSettingFloat('print_temperature')))
 			self.comm.sendCommand('G1 X%d Y%d F%d' % (0, 0, feedTravel))
 			self._wizardState = 9
 		elif self._wizardState == 10:
 			self._wizardState = 11
-			wx.CallAfter(self.infoBox.SetInfo, 'Printing a square on the printer bed at 0.3mm height.')
+			wx.CallAfter(self.infoBox.SetInfo, _('Printing a square on the printer bed at 0.3mm height.'))
 			feedZ = profile.getProfileSettingFloat('print_speed') * 60
 			feedPrint = profile.getProfileSettingFloat('print_speed') * 60
 			feedTravel = profile.getProfileSettingFloat('travel_speed') * 60
@@ -1124,34 +1124,34 @@ class bedLevelWizardMain(InfoPage):
 		self.resumeButton.Enable(False)
 
 	def mcLog(self, message):
-		print 'Log:', message
+		print _('Log:'), message
 
 	def mcTempUpdate(self, temp, bedTemp, targetTemp, bedTargetTemp):
 		if self._wizardState == 1:
 			self._wizardState = 2
-			wx.CallAfter(self.infoBox.SetAttention, 'Adjust the front left screw of your printer bed\nSo the nozzle just hits the bed.')
+			wx.CallAfter(self.infoBox.SetAttention, _('Adjust the front left screw of your printer bed\nSo the nozzle just hits the bed.'))
 			wx.CallAfter(self.resumeButton.Enable, True)
 		elif self._wizardState == 3:
 			self._wizardState = 4
 			if profile.getMachineSetting('has_heated_bed') == 'True':
-				wx.CallAfter(self.infoBox.SetAttention, 'Adjust the back screw of your printer bed\nSo the nozzle just hits the bed.')
+				wx.CallAfter(self.infoBox.SetAttention, _('Adjust the back screw of your printer bed\nSo the nozzle just hits the bed.'))
 			else:
-				wx.CallAfter(self.infoBox.SetAttention, 'Adjust the back left screw of your printer bed\nSo the nozzle just hits the bed.')
+				wx.CallAfter(self.infoBox.SetAttention, _('Adjust the back left screw of your printer bed\nSo the nozzle just hits the bed.'))
 
 			wx.CallAfter(self.resumeButton.Enable, True)
 		elif self._wizardState == 5:
 			self._wizardState = 6
-			wx.CallAfter(self.infoBox.SetAttention, 'Adjust the back right screw of your printer bed\nSo the nozzle just hits the bed.')
+			wx.CallAfter(self.infoBox.SetAttention, _('Adjust the back right screw of your printer bed\nSo the nozzle just hits the bed.'))
 			wx.CallAfter(self.resumeButton.Enable, True)
 		elif self._wizardState == 7:
 			self._wizardState = 8
-			wx.CallAfter(self.infoBox.SetAttention, 'Adjust the front right screw of your printer bed\nSo the nozzle just hits the bed.')
+			wx.CallAfter(self.infoBox.SetAttention, _('Adjust the front right screw of your printer bed\nSo the nozzle just hits the bed.'))
 			wx.CallAfter(self.resumeButton.Enable, True)
 		elif self._wizardState == 9:
 			if temp[0] < profile.getProfileSettingFloat('print_temperature') - 5:
-				wx.CallAfter(self.infoBox.SetInfo, 'Heating up printer: %d/%d' % (temp[0], profile.getProfileSettingFloat('print_temperature')))
+				wx.CallAfter(self.infoBox.SetInfo, _('Heating up printer: %d/%d') % (temp[0], profile.getProfileSettingFloat('print_temperature')))
 			else:
-				wx.CallAfter(self.infoBox.SetAttention, 'The printer is hot now. Please insert some PLA filament into the printer.')
+				wx.CallAfter(self.infoBox.SetAttention, _('The printer is hot now. Please insert some PLA filament into the printer.'))
 				wx.CallAfter(self.resumeButton.Enable, True)
 				self._wizardState = 10
 
@@ -1160,7 +1160,7 @@ class bedLevelWizardMain(InfoPage):
 			return
 		if self.comm.isOperational():
 			if self._wizardState == 0:
-				wx.CallAfter(self.infoBox.SetAttention, 'Use the up/down buttons to move the bed and adjust your Z endstop.')
+				wx.CallAfter(self.infoBox.SetAttention, _('Use the up/down buttons to move the bed and adjust your Z endstop.'))
 				wx.CallAfter(self.upButton.Enable, True)
 				wx.CallAfter(self.downButton.Enable, True)
 				wx.CallAfter(self.upButton2.Enable, True)
@@ -1275,7 +1275,7 @@ class headOffsetCalibrationPage(InfoPage):
 				return
 			profile.putPreference('extruder_offset_x1', self.textEntry.GetValue())
 			self._wizardState = 5
-			self.infoBox.SetAttention('Please measure the distance between the horizontal lines in millimeters.')
+			self.infoBox.SetAttention(_('Please measure the distance between the horizontal lines in millimeters.'))
 			self.textEntry.SetValue('0.0')
 			self.textEntry.Enable(True)
 		elif self._wizardState == 5:
@@ -1285,7 +1285,7 @@ class headOffsetCalibrationPage(InfoPage):
 				return
 			profile.putPreference('extruder_offset_y1', self.textEntry.GetValue())
 			self._wizardState = 6
-			self.infoBox.SetBusy('Printing the fine calibration lines.')
+			self.infoBox.SetBusy(_('Printing the fine calibration lines.'))
 			self.textEntry.SetValue('')
 			self.textEntry.Enable(False)
 			self.resumeButton.Enable(False)
@@ -1340,7 +1340,7 @@ class headOffsetCalibrationPage(InfoPage):
 			x = profile.getMachineSettingFloat('extruder_offset_x1')
 			x += -1.0 + n * 0.1
 			profile.putPreference('extruder_offset_x1', '%0.2f' % (x))
-			self.infoBox.SetAttention('Which horizontal line number lays perfect on top of each other? Front most line is zero.')
+			self.infoBox.SetAttention(_('Which horizontal line number lays perfect on top of each other? Front most line is zero.'))
 			self.textEntry.SetValue('10')
 			self._wizardState = 8
 		elif self._wizardState == 8:
@@ -1351,7 +1351,7 @@ class headOffsetCalibrationPage(InfoPage):
 			y = profile.getMachineSettingFloat('extruder_offset_y1')
 			y += -1.0 + n * 0.1
 			profile.putPreference('extruder_offset_y1', '%0.2f' % (y))
-			self.infoBox.SetInfo('Calibration finished. Offsets are: %s %s' % (profile.getMachineSettingFloat('extruder_offset_x1'), profile.getMachineSettingFloat('extruder_offset_y1')))
+			self.infoBox.SetInfo(_('Calibration finished. Offsets are: %s %s') % (profile.getMachineSettingFloat('extruder_offset_x1'), profile.getMachineSettingFloat('extruder_offset_y1')))
 			self.infoBox.SetReadyIndicator()
 			self._wizardState = 8
 			self.comm.close()
@@ -1373,7 +1373,7 @@ class headOffsetCalibrationPage(InfoPage):
 			return
 		if self.comm.isOperational():
 			if self._wizardState == 0:
-				wx.CallAfter(self.infoBox.SetInfo, 'Homing printer and heating up both extruders.')
+				wx.CallAfter(self.infoBox.SetInfo, _('Homing printer and heating up both extruders.'))
 				self.comm.sendCommand('M105')
 				self.comm.sendCommand('M104 S220 T0')
 				self.comm.sendCommand('M104 S220 T1')
@@ -1383,21 +1383,21 @@ class headOffsetCalibrationPage(InfoPage):
 			if not self.comm.isPrinting():
 				if self._wizardState == 3:
 					self._wizardState = 4
-					wx.CallAfter(self.infoBox.SetAttention, 'Please measure the distance between the vertical lines in millimeters.')
+					wx.CallAfter(self.infoBox.SetAttention, _('Please measure the distance between the vertical lines in millimeters.'))
 					wx.CallAfter(self.textEntry.SetValue, '0.0')
 					wx.CallAfter(self.textEntry.Enable, True)
 					wx.CallAfter(self.resumeButton.Enable, True)
 					wx.CallAfter(self.resumeButton.SetFocus)
 				elif self._wizardState == 6:
 					self._wizardState = 7
-					wx.CallAfter(self.infoBox.SetAttention, 'Which vertical line number lays perfect on top of each other? Leftmost line is zero.')
+					wx.CallAfter(self.infoBox.SetAttention, _('Which vertical line number lays perfect on top of each other? Leftmost line is zero.'))
 					wx.CallAfter(self.textEntry.SetValue, '10')
 					wx.CallAfter(self.textEntry.Enable, True)
 					wx.CallAfter(self.resumeButton.Enable, True)
 					wx.CallAfter(self.resumeButton.SetFocus)
 
 		elif self.comm.isError():
-			wx.CallAfter(self.infoBox.SetError, 'Failed to establish connection with the printer.', 'http://wiki.ultimaker.com/Cura:_Connection_problems')
+			wx.CallAfter(self.infoBox.SetError, _('Failed to establish connection with the printer.', 'http://wiki.ultimaker.com/Cura:_Connection_problems'))
 
 	def mcMessage(self, message):
 		pass
