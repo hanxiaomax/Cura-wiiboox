@@ -1,3 +1,4 @@
+#coding:utf-8
 """
 MachineCom handles communication with GCode based printers trough (USB) serial ports.
 For actual printing of objects this module is used from Cura.serialCommunication and ran in a separate process.

@@ -298,10 +298,10 @@ if [ $BUILD_TARGET = "win32" ]; then
 	downloadURL http://sourceforge.net/projects/comtypes/files/comtypes/0.6.2/comtypes-0.6.2.win32.exe
 	downloadURL http://www.uwe-sieber.de/files/ejectmedia.zip
 	#Get the power module for python
-	
-	#Ugly hack：comment out to use custom engine
 	rm -rf Power
 	git clone https://github.com/GreatFruitOmsk/Power
+	#Ugly hack：comment out to use custom engine
+	
 	#rm -rf CuraEngine
 	#git clone ${CURA_ENGINE_REPO}
     #if [ $? != 0 ]; then echo "Failed to clone CuraEngine"; exit 1; fi

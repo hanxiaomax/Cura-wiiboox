@@ -1,3 +1,4 @@
+#coding:utf-8
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
 import os
@@ -293,9 +294,10 @@ class PrintrbotPage(InfoPage):
 				profile.putMachineSetting('extruder_head_size_max_y', '0')
 				profile.putMachineSetting('extruder_head_size_height', '0')
 
+
 class OtherMachineSelectPage(InfoPage):
 	def __init__(self, parent):
-		super(OtherMachineSelectPage, self).__init__(parent, "Other machine information")
+		super(OtherMachineSelectPage, self).__init__(parent, _("Other machine information"))
 
 		self.AddText(_("The following pre-defined machine profiles are available"))
 		self.AddText(_("Note that these profiles are not guaranteed to give good results,\nor work at all. Extra tweaks might be required.\nIf you find issues with the predefined profiles,\nor want an extra profile.\nPlease report it at the github issue tracker."))
@@ -310,7 +312,7 @@ class OtherMachineSelectPage(InfoPage):
 			self.options.append(item)
 		self.AddSeperator()
 
-		item = self.AddRadioButton(_('Custom...'))
+		#item = self.AddRadioButton(_('Custom...'))
 
 		item.SetValue(True)
 		item.Bind(wx.EVT_RADIOBUTTON, self.OnOtherSelect)
@@ -374,9 +376,11 @@ class MachineSelectPage(InfoPage):
 		super(MachineSelectPage, self).__init__(parent, _("Select your machine"))
 		self.AddText(_("What kind of machine do you have:"))
 
+		#定制内容
 		self.Ultimaker2Radio = self.AddRadioButton("Ultimaker2", style=wx.RB_GROUP)
 		self.Ultimaker2Radio.SetValue(True)
 		self.Ultimaker2Radio.Bind(wx.EVT_RADIOBUTTON, self.OnUltimaker2Select)
+
 		self.UltimakerRadio = self.AddRadioButton("Ultimaker Original")
 		self.UltimakerRadio.Bind(wx.EVT_RADIOBUTTON, self.OnUltimakerSelect)
 
@@ -385,12 +389,16 @@ class MachineSelectPage(InfoPage):
 
 		self.OtherRadio = self.AddRadioButton(_("Other (Ex: RepRap, MakerBot)"))
 		self.OtherRadio.Bind(wx.EVT_RADIOBUTTON, self.OnOtherSelect)
+
+
 		self.AddSeperator()
+		"""
 		self.AddText(_("The collection of anonymous usage information helps with the continued improvement of Cura."))
 		self.AddText(_("This does NOT submit your models online nor gathers any privacy related information."))
 		self.SubmitUserStats = self.AddCheckbox(_("Submit anonymous usage information:"))
 		self.AddText(_("For full details see: http://wiki.ultimaker.com/Cura:stats"))
 		self.SubmitUserStats.SetValue(True)
+		"""
 
 	def OnUltimaker2Select(self, e):
 		wx.wizard.WizardPageSimple.Chain(self, self.GetParent().ultimaker2ReadyPage)
@@ -500,7 +508,7 @@ class UltimakerFirmwareUpgradePage(InfoPage):
 		self.AddText(_("The firmware shipping with new Ultimakers works, but upgrades\nhave been made to make better prints, and make calibration easier."))
 		self.AddHiddenSeperator()
 		self.AddText(_("Cura requires these new features and thus\nyour firmware will most likely need to be upgraded.\nYou will get the chance to do so now."))
-		upgradeButton, skipUpgradeButton = self.AddDualButton('Upgrade to Marlin firmware', 'Skip upgrade')
+		upgradeButton, skipUpgradeButton = self.AddDualButton(_('Upgrade to Marlin firmware'), _('Skip upgrade'))
 		upgradeButton.Bind(wx.EVT_BUTTON, self.OnUpgradeClick)
 		skipUpgradeButton.Bind(wx.EVT_BUTTON, self.OnSkipClick)
 		self.AddHiddenSeperator()
@@ -526,7 +534,7 @@ class UltimakerFirmwareUpgradePage(InfoPage):
 
 class UltimakerCheckupPage(InfoPage):
 	def __init__(self, parent):
-		super(UltimakerCheckupPage, self).__init__(parent, "Ultimaker Checkup")
+		super(UltimakerCheckupPage, self).__init__(parent, _("Ultimaker Checkup"))
 
 		self.checkBitmap = wx.Bitmap(resources.getPathForImage('checkmark.png'))
 		self.crossBitmap = wx.Bitmap(resources.getPathForImage('cross.png'))
@@ -602,7 +610,7 @@ class UltimakerCheckupPage(InfoPage):
 
 	def mcTempUpdate(self, temp, bedTemp, targetTemp, bedTargetTemp):
 		if not self.comm.isOperational():
-			return
+ 			return
 		if self.checkupState == 0:
 			self.tempCheckTimeout = 20
 			if temp[self.checkExtruderNr] > 70:
@@ -750,22 +758,22 @@ class UltimakerCheckupPage(InfoPage):
 
 class UltimakerCalibrationPage(InfoPage):
 	def __init__(self, parent):
-		super(UltimakerCalibrationPage, self).__init__(parent, "Ultimaker Calibration")
+		super(UltimakerCalibrationPage, self).__init__(parent, _("Ultimaker Calibration"))
 
-		self.AddText("Your Ultimaker requires some calibration.")
-		self.AddText("This calibration is needed for a proper extrusion amount.")
+		self.AddText(_("Your Ultimaker requires some calibration."))
+		self.AddText(_("This calibration is needed for a proper extrusion amount."))
 		self.AddSeperator()
-		self.AddText("The following values are needed:")
-		self.AddText("* Diameter of filament")
-		self.AddText("* Number of steps per mm of filament extrusion")
+		self.AddText(_("The following values are needed:"))
+		self.AddText(_("* Diameter of filament"))
+		self.AddText(_("* Number of steps per mm of filament extrusion"))
 		self.AddSeperator()
-		self.AddText("The better you have calibrated these values, the better your prints\nwill become.")
+		self.AddText(_("The better you have calibrated these values, the better your prints\nwill become."))
 		self.AddSeperator()
-		self.AddText("First we need the diameter of your filament:")
+		self.AddText(_("First we need the diameter of your filament:"))
 		self.filamentDiameter = self.AddTextCtrl(profile.getProfileSetting('filament_diameter'))
 		self.AddText(
-			"If you do not own digital Calipers that can measure\nat least 2 digits then use 2.89mm.\nWhich is the average diameter of most filament.")
-		self.AddText("Note: This value can be changed later at any time.")
+			_("If you do not own digital Calipers that can measure\nat least 2 digits then use 2.89mm.\nWhich is the average diameter of most filament."))
+		self.AddText(_("Note: This value can be changed later at any time."))
 
 	def StoreData(self):
 		profile.putProfileSetting('filament_diameter', self.filamentDiameter.GetValue())
@@ -773,7 +781,7 @@ class UltimakerCalibrationPage(InfoPage):
 
 class UltimakerCalibrateStepsPerEPage(InfoPage):
 	def __init__(self, parent):
-		super(UltimakerCalibrateStepsPerEPage, self).__init__(parent, "Ultimaker Calibration")
+		super(UltimakerCalibrateStepsPerEPage, self).__init__(parent, _("Ultimaker Calibration"))
 
 		#if profile.getMachineSetting('steps_per_e') == '0':
 		#	profile.putMachineSetting('steps_per_e', '865.888')
@@ -920,22 +928,27 @@ class configWizard(wx.wizard.Wizard):
 
 		self.ultimaker2ReadyPage = Ultimaker2ReadyPage(self)
 
-		wx.wizard.WizardPageSimple.Chain(self.firstInfoPage, self.machineSelectPage)
-		#wx.wizard.WizardPageSimple.Chain(self.machineSelectPage, self.ultimaker2ReadyPage)
-		wx.wizard.WizardPageSimple.Chain(self.machineSelectPage, self.ultimakerSelectParts)
-		wx.wizard.WizardPageSimple.Chain(self.ultimakerSelectParts, self.ultimakerFirmwareUpgradePage)
+		# wx.wizard.WizardPageSimple.Chain(self.firstInfoPage, self.machineSelectPage)
+		# #wx.wizard.WizardPageSimple.Chain(self.machineSelectPage, self.ultimaker2ReadyPage)
+		# wx.wizard.WizardPageSimple.Chain(self.machineSelectPage, self.ultimakerSelectParts)
+		# wx.wizard.WizardPageSimple.Chain(self.ultimakerSelectParts, self.ultimakerFirmwareUpgradePage)
+		# wx.wizard.WizardPageSimple.Chain(self.ultimakerFirmwareUpgradePage, self.ultimakerCheckupPage)
+		# wx.wizard.WizardPageSimple.Chain(self.ultimakerCheckupPage, self.bedLevelPage)
+		# #wx.wizard.WizardPageSimple.Chain(self.ultimakerCalibrationPage, self.ultimakerCalibrateStepsPerEPage)
+
+		# wx.wizard.WizardPageSimple.Chain(self.printrbotSelectType, self.otherMachineInfoPage)
+
+		# wx.wizard.WizardPageSimple.Chain(self.otherMachineSelectPage, self.customRepRapInfoPage)
+#定制内容:改变wizard chain结构
+		wx.wizard.WizardPageSimple.Chain(self.firstInfoPage, self.otherMachineSelectPage)
+		wx.wizard.WizardPageSimple.Chain(self.otherMachineSelectPage, self.ultimakerFirmwareUpgradePage)
 		wx.wizard.WizardPageSimple.Chain(self.ultimakerFirmwareUpgradePage, self.ultimakerCheckupPage)
 		wx.wizard.WizardPageSimple.Chain(self.ultimakerCheckupPage, self.bedLevelPage)
-		#wx.wizard.WizardPageSimple.Chain(self.ultimakerCalibrationPage, self.ultimakerCalibrateStepsPerEPage)
-
-		wx.wizard.WizardPageSimple.Chain(self.printrbotSelectType, self.otherMachineInfoPage)
-
-		wx.wizard.WizardPageSimple.Chain(self.otherMachineSelectPage, self.customRepRapInfoPage)
 
 		self.FitToPage(self.firstInfoPage)
 		self.GetPageAreaSizer().Add(self.firstInfoPage)
-
 		self.RunWizard(self.firstInfoPage)
+		
 		self.Destroy()
 
 	def OnPageChanging(self, e):
@@ -1149,7 +1162,7 @@ class bedLevelWizardMain(InfoPage):
 			wx.CallAfter(self.resumeButton.Enable, True)
 		elif self._wizardState == 9:
 			if temp[0] < profile.getProfileSettingFloat('print_temperature') - 5:
-				wx.CallAfter(self.infoBox.SetInfo, _('Heating up printer: %d/%d') % (temp[0], profile.getProfileSettingFloat('print_temperature')))
+				wx.CallAfter(self.infoBox.SetInfo, 'Heating up printer: %d/%d' % (temp[0], profile.getProfileSettingFloat('print_temperature')))
 			else:
 				wx.CallAfter(self.infoBox.SetAttention, _('The printer is hot now. Please insert some PLA filament into the printer.'))
 				wx.CallAfter(self.resumeButton.Enable, True)
@@ -1351,7 +1364,7 @@ class headOffsetCalibrationPage(InfoPage):
 			y = profile.getMachineSettingFloat('extruder_offset_y1')
 			y += -1.0 + n * 0.1
 			profile.putPreference('extruder_offset_y1', '%0.2f' % (y))
-			self.infoBox.SetInfo(_('Calibration finished. Offsets are: %s %s') % (profile.getMachineSettingFloat('extruder_offset_x1'), profile.getMachineSettingFloat('extruder_offset_y1')))
+			self.infoBox.SetInfo('Calibration finished. Offsets are: %s %s' % (profile.getMachineSettingFloat('extruder_offset_x1'), profile.getMachineSettingFloat('extruder_offset_y1')))
 			self.infoBox.SetReadyIndicator()
 			self._wizardState = 8
 			self.comm.close()
