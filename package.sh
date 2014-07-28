@@ -301,7 +301,7 @@ if [ $BUILD_TARGET = "win32" ]; then
 	
 	#Ugly hack：comment out to use custom engine
 	rm -rf Power
-	#git clone https://github.com/GreatFruitOmsk/Power
+	git clone https://github.com/GreatFruitOmsk/Power
 	#rm -rf CuraEngine
 	#git clone ${CURA_ENGINE_REPO}
     #if [ $? != 0 ]; then echo "Failed to clone CuraEngine"; exit 1; fi
