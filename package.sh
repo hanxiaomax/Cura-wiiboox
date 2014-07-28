@@ -298,11 +298,13 @@ if [ $BUILD_TARGET = "win32" ]; then
 	downloadURL http://sourceforge.net/projects/comtypes/files/comtypes/0.6.2/comtypes-0.6.2.win32.exe
 	downloadURL http://www.uwe-sieber.de/files/ejectmedia.zip
 	#Get the power module for python
+	
+	#Ugly hack：comment out to use custom engine
 	rm -rf Power
-	git clone https://github.com/GreatFruitOmsk/Power
-	rm -rf CuraEngine
-	git clone ${CURA_ENGINE_REPO}
-    if [ $? != 0 ]; then echo "Failed to clone CuraEngine"; exit 1; fi
+	#git clone https://github.com/GreatFruitOmsk/Power
+	#rm -rf CuraEngine
+	#git clone ${CURA_ENGINE_REPO}
+    #if [ $? != 0 ]; then echo "Failed to clone CuraEngine"; exit 1; fi
 fi
 
 #############################
@@ -360,9 +362,10 @@ if [ $BUILD_TARGET = "win32" ]; then
 	#Remove the gle files because they require MSVCR71.dll, which is not included. We also don't need gle, so it's safe to remove it.
 	rm -rf ${TARGET_DIR}/python/Lib/OpenGL/DLLS/gle*
 
+	#Ugly hack：comment out to use custom engine
     #Build the C++ engine
-	mingw32-make -C CuraEngine VERSION=${BUILD_NAME}
-    if [ $? != 0 ]; then echo "Failed to build CuraEngine"; exit 1; fi
+	#mingw32-make -C CuraEngine VERSION=${BUILD_NAME}
+    #if [ $? != 0 ]; then echo "Failed to build CuraEngine"; exit 1; fi
 fi
 
 #add Cura
