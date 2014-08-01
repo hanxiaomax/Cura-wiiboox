@@ -11,7 +11,7 @@ from Cura.util import resources
 
 class preferencesDialog(wx.Dialog):
 	def __init__(self, parent):
-		super(preferencesDialog, self).__init__(None, title="Preferences")
+		super(preferencesDialog, self).__init__(None, title=_("Preferences"))
 
 		wx.EVT_CLOSE(self, self.OnClose)
 
