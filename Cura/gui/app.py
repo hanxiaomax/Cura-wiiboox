@@ -1,12 +1,13 @@
 #coding:utf-8
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
-
+#主模块不能使用相对引用
 import sys
 import os
 import platform
 import shutil
 import glob
 import warnings
+
 
 try:
     #Only try to import the _core to save import time
@@ -19,6 +20,7 @@ class CuraApp(wx.App):
 	def __init__(self, files):
 		if platform.system() == "Windows" and not 'PYCHARM_HOSTED' in os.environ:
 			super(CuraApp, self).__init__(redirect=True, filename='output.txt')
+			#super(CuraApp, self).__init__(redirect=True, filename=None)
 		else:
 			super(CuraApp, self).__init__(redirect=False)
 

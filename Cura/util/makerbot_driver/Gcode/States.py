@@ -18,7 +18,7 @@ class GcodeStates(object):
     """
     def __init__(self):
         self._log = logging.getLogger(self.__class__.__name__)
-        self.profile = None #creat 对象之后 会赋值prpfile
+        self.profile = None #creat 露脭脧贸脰庐潞贸 禄谩赂鲁脰碌prpfile
         self.position = makerbot_driver.Gcode.Point()  # Position, In MM!!
         self.values = {}
         self.wait_for_ready_packet_delay = 100  # ms

@@ -36,6 +36,14 @@ from Cura.gui.util import openglGui
 from Cura.gui.util import engineResultView
 from Cura.gui.tools import youmagineGui
 from Cura.gui.tools import imageToMesh
+#ulgy hack
+#TO FIX PATH WITH CHINESE
+reload(sys)
+sys.setdefaultencoding( "utf-8" )
+#ulgy hack
+#TO SAVE GCODE JUST SAVED
+global GCODE_PATH
+GCODE_PATH=profile.getPreference('lastFile')
 
 class SceneView(openglGui.glGuiPanel):
 	def __init__(self, parent):
@@ -60,9 +68,7 @@ class SceneView(openglGui.glGuiPanel):
 		self._platformTexture = None
 		self._isSimpleMode = True
 		self._printerConnectionManager = printerConnectionManager.PrinterConnectionManager()
-		"""上一个gcode文件路径"""
-		self.gcodePath=profile.getPreference('lastFile')
-		self._viewport = None
+		
 		self._modelMatrix = None
 		self._projMatrix = None
 		self.tempMatrix = None
@@ -324,37 +330,39 @@ class SceneView(openglGui.glGuiPanel):
 		if dlg.ShowModal() != wx.ID_OK:
 			dlg.Destroy()
 			return
-		filename = unicode(dlg.GetPath())#处理中文路径
-		self.gcodePath=filename#保存gcode路径到全局 
+		filename = dlg.GetPath()
 
-		qq=open('qq','w')
-		print >>qq,filename,self.gcodePath
-		dlg.Destroy()
-		qq.close()
+		global GCODE_PATH
+		GCODE_PATH=filename #保存gcode路径到全局 
+		
 
-		threading.Thread(target=self._saveGCode,args=(filename,)).start()
+		threading.Thread(target=self._saveGCode,args=(filename,)).start()#args=元组，单个元素要以，结尾
+
 	#定制内容
 	def showSaveX3g(self):
+		global GCODE_PATH
+		gcode_path=GCODE_PATH
+
+		# ffff.close()
+		print >> sys.stderr,gcode_path
 		"show dialog to change gcode into x3g"
 		#TODO:issaved？
 		if len(self._scene._objectList) < 1:
 			return
-		dlg=wx.FileDialog(self, _(u"保存为x3g格式"), os.path.dirname(self.gcodePath),style=wx.FD_SAVE|wx.FD_OVERWRITE_PROMPT)
+
+		#dlg=wx.FileDialog(self, u"保存x3g文件",os.path.dirname(self.gcodePath),style=wx.FD_SAVE|wx.FD_OVERWRITE_PROMPT)
+		dlg=wx.FileDialog(self, gcode_path, os.path.dirname(gcode_path), style=wx.FD_SAVE|wx.FD_OVERWRITE_PROMPT)
 		filename=self._scene._objectList[0].getName() + ".x3g"
 		dlg.SetFilename(filename)
 		dlg.SetWildcard('.x3g')
 		if dlg.ShowModal() != wx.ID_OK:
 			dlg.Destroy()
 			return
-		filename = unicode(dlg.GetPath())
+		dest =dlg.GetPath()
 		dlg.Destroy()
-		ff=open('ff','w')
-		print >>ff,filename,self.gcodePath
-		ff.close()
+		
+		threading.Thread(target=Gcode_to_x3g.Convert_Gcode_to_x3g,args=(dest,gcode_path)).start()
 
-		#use Gcode to x3g to handle this 
-		Gcode_to_x3g.Convert_Gcode_to_x3g(filename,self.gcodePath)
-		#threading.Thread(target=self._saveGCode,args=(filename,)).start()
 			
 
 	def _saveGCode(self, targetFilename, ejectDrive = False):
@@ -600,8 +608,8 @@ class SceneView(openglGui.glGuiPanel):
 		self._engine.runEngine(self._scene)
 		if self._isSimpleMode:
 			profile.resetTempOverride()
-		#定制内容
-		self._getTempGcodeTimer.Strat(500,True)
+		# #定制内容
+		# self._getTempGcodeTimer.Strat(500,True)
 	def _getTempGcode(self,e):
 		temp_gcode_file="tempGcode.gcode"
 		threading.Thread(target=self._saveGCode,args=(temp_gcode_file,)).start()
