@@ -27,6 +27,8 @@ from Cura.util import sliceEngine
 from Cura.util import pluginInfo
 from Cura.util import removableStorage
 from Cura.util import explorer
+#定制内容
+from Cura.util import Gcode_to_x3g
 from Cura.util.printerConnection import printerConnectionManager
 from Cura.gui.util import previewTools
 from Cura.gui.util import openglHelpers
@@ -58,7 +60,8 @@ class SceneView(openglGui.glGuiPanel):
 		self._platformTexture = None
 		self._isSimpleMode = True
 		self._printerConnectionManager = printerConnectionManager.PrinterConnectionManager()
-
+		"""上一个gcode文件路径"""
+		self.gcodePath=profile.getPreference('lastFile')
 		self._viewport = None
 		self._modelMatrix = None
 		self._projMatrix = None
@@ -66,6 +69,7 @@ class SceneView(openglGui.glGuiPanel):
 
 		self.openFileButton      = openglGui.glButton(self, 4, _("Load"), (0,0), self.showLoadModel)
 		self.printButton         = openglGui.glButton(self, 6, _("Print"), (1,0), self.OnPrintButton)
+		self.tox3gButton         = openglGui.glButton(self, 2, _("X3G"), (3,0), self.OnX3gButton)
 		self.printButton.setDisabled(True)
 
 		group = []
@@ -105,7 +109,7 @@ class SceneView(openglGui.glGuiPanel):
 		self.scaleUniform = openglGui.glCheckbox(self.scaleForm, True, (1,8), None)
 
 		self.viewSelection = openglGui.glComboButton(self, _("View mode"), [7,19,11,15,23], [_("Normal"), _("Overhang"), _("Transparent"), _("X-Ray"), _("Layers")], (-1,0), self.OnViewChange)
-
+		#注释掉以下两行将导致模型无法导入
 		self.youMagineButton = openglGui.glButton(self, 26, _("Share on YouMagine"), (2,0), lambda button: youmagineGui.youmagineManager(self.GetTopLevelParent(), self._scene))
 		self.youMagineButton.setDisabled(True)
 
@@ -114,7 +118,11 @@ class SceneView(openglGui.glGuiPanel):
 		self._engine = sliceEngine.Engine(self._updateEngineProgress)
 		self._engineResultView = engineResultView.engineResultView(self)
 		self._sceneUpdateTimer = wx.Timer(self)
+		# 定制内容
+		# self._getTempGcodeTimer = wx.Timer(self)
 		self.Bind(wx.EVT_TIMER, self._onRunEngine, self._sceneUpdateTimer)
+		# 定制内容
+		# self.Bind(wx.EVT_TIMER, self._getTempGcode, self._getTempGcodeTimer)
 		self.Bind(wx.EVT_MOUSEWHEEL, self.OnMouseWheel)
 		self.Bind(wx.EVT_LEAVE_WINDOW, self.OnMouseLeave)
 
@@ -238,6 +246,7 @@ class SceneView(openglGui.glGuiPanel):
 			dlg.Destroy()
 			return
 		filename = dlg.GetPath()
+
 		dlg.Destroy()
 		meshLoader.saveMeshes(filename, self._scene.objects())
 
@@ -283,6 +292,9 @@ class SceneView(openglGui.glGuiPanel):
 			self.Bind(wx.EVT_MENU, lambda e: self._showEngineLog(), menu.Append(-1, _("Slice engine log...")))
 			self.PopupMenu(menu)
 			menu.Destroy()
+	def OnX3gButton(self,button=2):#第二个参数不能少
+		self.showSaveX3g()
+		
 
 	def _openPrintWindowForConnection(self, connection):
 		if connection.window is None or not connection.window:
@@ -301,7 +313,7 @@ class SceneView(openglGui.glGuiPanel):
 				self.notification.message("Cannot start print, because other print still running.")
 			else:
 				self.notification.message("Failed to start print...")
-
+	#TODO:默认关闭
 	def showSaveGCode(self):
 		if len(self._scene._objectList) < 1:
 			return
@@ -312,10 +324,38 @@ class SceneView(openglGui.glGuiPanel):
 		if dlg.ShowModal() != wx.ID_OK:
 			dlg.Destroy()
 			return
-		filename = dlg.GetPath()
+		filename = unicode(dlg.GetPath())#处理中文路径
+		self.gcodePath=filename#保存gcode路径到全局 
+
+		qq=open('qq','w')
+		print >>qq,filename,self.gcodePath
 		dlg.Destroy()
+		qq.close()
 
 		threading.Thread(target=self._saveGCode,args=(filename,)).start()
+	#定制内容
+	def showSaveX3g(self):
+		"show dialog to change gcode into x3g"
+		#TODO:issaved？
+		if len(self._scene._objectList) < 1:
+			return
+		dlg=wx.FileDialog(self, _(u"保存为x3g格式"), os.path.dirname(self.gcodePath),style=wx.FD_SAVE|wx.FD_OVERWRITE_PROMPT)
+		filename=self._scene._objectList[0].getName() + ".x3g"
+		dlg.SetFilename(filename)
+		dlg.SetWildcard('.x3g')
+		if dlg.ShowModal() != wx.ID_OK:
+			dlg.Destroy()
+			return
+		filename = unicode(dlg.GetPath())
+		dlg.Destroy()
+		ff=open('ff','w')
+		print >>ff,filename,self.gcodePath
+		ff.close()
+
+		#use Gcode to x3g to handle this 
+		Gcode_to_x3g.Convert_Gcode_to_x3g(filename,self.gcodePath)
+		#threading.Thread(target=self._saveGCode,args=(filename,)).start()
+			
 
 	def _saveGCode(self, targetFilename, ejectDrive = False):
 		data = self._engine.getResult().getGCode()
@@ -560,6 +600,11 @@ class SceneView(openglGui.glGuiPanel):
 		self._engine.runEngine(self._scene)
 		if self._isSimpleMode:
 			profile.resetTempOverride()
+		#定制内容
+		self._getTempGcodeTimer.Strat(500,True)
+	def _getTempGcode(self,e):
+		temp_gcode_file="tempGcode.gcode"
+		threading.Thread(target=self._saveGCode,args=(temp_gcode_file,)).start()
 
 	def _updateEngineProgress(self, progressValue):
 		result = self._engine.getResult()

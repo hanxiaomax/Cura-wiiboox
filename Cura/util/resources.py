@@ -1,3 +1,4 @@
+#coding:utf-8
 """
 Helper module to get easy access to the path where resources are stored.
 This is because the resource location is depended on the packaging method and OS
@@ -48,7 +49,10 @@ def getPathForFirmware(name):
 def getDefaultMachineProfiles():
 	path = os.path.normpath(os.path.join(resourceBasePath, 'machine_profiles', '*.ini'))
 	return glob.glob(path)
-
+#定制内容：获取gcode转x3g所需的profile
+def getProfile4Gcode2X3g(profile):
+	return getPathForResource(resourceBasePath,'jsonprofiles',profile)
+	
 def setupLocalization(selectedLanguage = None):
 
 	#Default to Chinese
