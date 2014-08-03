@@ -46,14 +46,15 @@ class preferencesDialog(wx.Dialog):
 		#configBase.SettingRow(right, 'save_profile')
 
 		#configBase.TitleRow(right, 'SD Card settings')
-
-		configBase.TitleRow(right, _("Cura settings"))
-		configBase.SettingRow(right, 'auto_detect_sd')
-		configBase.SettingRow(right, 'check_for_updates')
-		configBase.SettingRow(right, 'submit_slice_information')
+		configBase.TitleRow(right, '')
+		
+		# configBase.TitleRow(right, _("Cura settings"))
+		# configBase.SettingRow(right, 'auto_detect_sd')
+		# configBase.SettingRow(right, 'check_for_updates')
+		# configBase.SettingRow(right, 'submit_slice_information')
 
 		self.okButton = wx.Button(right, -1, 'Ok')
-		right.GetSizer().Add(self.okButton, (right.GetSizer().GetRows(), 0), flag=wx.BOTTOM, border=5)
+		right.GetSizer().Add(self.okButton, (right.GetSizer().GetRows(), 0), flag=wx.BOTTOM, border=50)
 		self.okButton.Bind(wx.EVT_BUTTON, lambda e: self.Close())
 
 		main.Fit()
