@@ -34,7 +34,7 @@ from Cura.gui.util import previewTools
 from Cura.gui.util import openglHelpers
 from Cura.gui.util import openglGui
 from Cura.gui.util import engineResultView
-from Cura.gui.tools import youmagineGui
+#from Cura.gui.tools import youmagineGui
 from Cura.gui.tools import imageToMesh
 #ulgy hack
 #TO FIX PATH WITH CHINESE
@@ -44,6 +44,9 @@ sys.setdefaultencoding( "utf-8" )
 #TO SAVE GCODE JUST SAVED
 global GCODE_PATH
 GCODE_PATH=profile.getPreference('lastFile')
+global saved
+saved=True
+
 
 class SceneView(openglGui.glGuiPanel):
 	def __init__(self, parent):
@@ -68,7 +71,8 @@ class SceneView(openglGui.glGuiPanel):
 		self._platformTexture = None
 		self._isSimpleMode = True
 		self._printerConnectionManager = printerConnectionManager.PrinterConnectionManager()
-		
+		#
+		#self._saved=False
 		self._modelMatrix = None
 		self._projMatrix = None
 		self.tempMatrix = None
@@ -77,6 +81,7 @@ class SceneView(openglGui.glGuiPanel):
 		self.printButton         = openglGui.glButton(self, 6, _("Print"), (1,0), self.OnPrintButton)
 		self.tox3gButton         = openglGui.glButton(self, 2, _("X3G"), (3,0), self.OnX3gButton)
 		self.printButton.setDisabled(True)
+		self.tox3gButton.setDisabled(True)
 
 		group = []
 		self.rotateToolButton = openglGui.glRadioButton(self, 8, _("Rotate"), (0,-1), group, self.OnToolSelect)
@@ -116,8 +121,8 @@ class SceneView(openglGui.glGuiPanel):
 
 		self.viewSelection = openglGui.glComboButton(self, _("View mode"), [7,19,11,15,23], [_("Normal"), _("Overhang"), _("Transparent"), _("X-Ray"), _("Layers")], (-1,0), self.OnViewChange)
 		#注释掉以下两行将导致模型无法导入
-		self.youMagineButton = openglGui.glButton(self, 26, _("Share on YouMagine"), (2,0), lambda button: youmagineGui.youmagineManager(self.GetTopLevelParent(), self._scene))
-		self.youMagineButton.setDisabled(True)
+		# self.youMagineButton = openglGui.glButton(self, 26, _("Share on YouMagine"), (2,0), lambda button: youmagineGui.youmagineManager(self.GetTopLevelParent(), self._scene))
+		# self.youMagineButton.setDisabled(True)
 
 		self.notification = openglGui.glNotification(self, (0, 0))
 
@@ -148,11 +153,11 @@ class SceneView(openglGui.glGuiPanel):
 		self.printButton.setBottomText('')
 		self.viewSelection.setValue(4)
 		self.printButton.setDisabled(False)
-		self.youMagineButton.setDisabled(True)
+		# self.youMagineButton.setDisabled(True)
 		self.OnViewChange()
 
 	def loadSceneFiles(self, filenames):
-		self.youMagineButton.setDisabled(False)
+		#self.youMagineButton.setDisabled(False)
 		#if self.viewSelection.getValue() == 4:
 		#	self.viewSelection.setValue(0)
 		#	self.OnViewChange()
@@ -319,7 +324,7 @@ class SceneView(openglGui.glGuiPanel):
 				self.notification.message("Cannot start print, because other print still running.")
 			else:
 				self.notification.message("Failed to start print...")
-	#TODO:默认关闭
+	
 	def showSaveGCode(self):
 		if len(self._scene._objectList) < 1:
 			return
@@ -330,26 +335,24 @@ class SceneView(openglGui.glGuiPanel):
 		if dlg.ShowModal() != wx.ID_OK:
 			dlg.Destroy()
 			return
+		self.setSaveStatus(True)
+		self.tox3gButton.setDisabled(not self.isSaved())#状态要随时更新
 		filename = dlg.GetPath()
-
-		global GCODE_PATH
-		GCODE_PATH=filename #保存gcode路径到全局 
-		
-
 		threading.Thread(target=self._saveGCode,args=(filename,)).start()#args=元组，单个元素要以，结尾
+		
+		
+		
 
 	#定制内容
 	def showSaveX3g(self):
 		global GCODE_PATH
 		gcode_path=GCODE_PATH
 
-		# ffff.close()
-		print >> sys.stderr,gcode_path
-		"show dialog to change gcode into x3g"
-		#TODO:issaved？
-		if len(self._scene._objectList) < 1:
-			return
 
+		print gcode_path
+		"show dialog to change gcode into x3g"
+		
+		self.tox3gButton.setDisabled(not self.isSaved())
 		#dlg=wx.FileDialog(self, u"保存x3g文件",os.path.dirname(self.gcodePath),style=wx.FD_SAVE|wx.FD_OVERWRITE_PROMPT)
 		dlg=wx.FileDialog(self, gcode_path, os.path.dirname(gcode_path), style=wx.FD_SAVE|wx.FD_OVERWRITE_PROMPT)
 		filename=self._scene._objectList[0].getName() + ".x3g"
@@ -359,10 +362,25 @@ class SceneView(openglGui.glGuiPanel):
 			dlg.Destroy()
 			return
 		dest =dlg.GetPath()
-		dlg.Destroy()
-		
-		threading.Thread(target=Gcode_to_x3g.Convert_Gcode_to_x3g,args=(dest,gcode_path)).start()
 
+		dlg.Destroy()
+		threading.Thread(target=Gcode_to_x3g.Convert_Gcode_to_x3g,args=(dest,gcode_path)).start()
+			
+	def setSaveStatus(self,issaved):
+		global saved
+		if issaved:
+			saved=True
+		else:
+			saved=False
+
+	def isSaved(self):
+		global saved
+		if saved:
+			print "True"
+			return saved
+		else:
+			print "False"
+			return saved
 			
 
 	def _saveGCode(self, targetFilename, ejectDrive = False):
@@ -378,6 +396,7 @@ class SceneView(openglGui.glGuiPanel):
 					fdst.write(buf)
 					self.printButton.setProgressBar(float(fsrc.tell()) / size)
 					self._queueRefresh()
+
 		except:
 			import sys, traceback
 			traceback.print_exc()
@@ -475,6 +494,7 @@ class SceneView(openglGui.glGuiPanel):
 		self._selectObject(self._selectedObj)
 		self.updateProfileToControls()
 		self.sceneUpdated()
+		
 
 	def OnScaleMax(self, button):
 		if self._selectedObj is None:
@@ -601,6 +621,7 @@ class SceneView(openglGui.glGuiPanel):
 		self._engine.abortEngine()
 		self._scene.updateSizeOffsets()
 		self.QueueRefresh()
+		self.setSaveStatus(False)
 
 	def _onRunEngine(self, e):
 		if self._isSimpleMode:
@@ -608,12 +629,7 @@ class SceneView(openglGui.glGuiPanel):
 		self._engine.runEngine(self._scene)
 		if self._isSimpleMode:
 			profile.resetTempOverride()
-		# #定制内容
-		# self._getTempGcodeTimer.Strat(500,True)
-	def _getTempGcode(self,e):
-		temp_gcode_file="tempGcode.gcode"
-		threading.Thread(target=self._saveGCode,args=(temp_gcode_file,)).start()
-
+	
 	def _updateEngineProgress(self, progressValue):
 		result = self._engine.getResult()
 		finished = result is not None and result.isFinished()
@@ -666,6 +682,7 @@ class SceneView(openglGui.glGuiPanel):
 					if obj.getScale()[0] < 1.0:
 						self.notification.message("Warning: Object scaled down.")
 		self.sceneUpdated()
+		self.tox3gButton.setDisabled(not self.isSaved())
 
 	def _deleteObject(self, obj):
 		if obj == self._selectedObj:
