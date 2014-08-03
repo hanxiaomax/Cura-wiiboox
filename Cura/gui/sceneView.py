@@ -70,6 +70,7 @@ class SceneView(openglGui.glGuiPanel):
 		self._projMatrix = None
 		self.tempMatrix = None
 		self.GCODE_PATH=profile.getPreference('lastFile')
+		#self._loadgcodefile=None
 
 		self.openFileButton      = openglGui.glButton(self, 4, _("Load"), (0,0), self.showLoadModel)
 		self.printButton         = openglGui.glButton(self, 6, _("Print"), (1,0), self.OnPrintButton)
@@ -165,6 +166,10 @@ class SceneView(openglGui.glGuiPanel):
 			ext = os.path.splitext(filename)[1].lower()
 			if ext == '.g' or ext == '.gcode':
 				gcodeFilename = filename
+				self.GCODE_PATH=filename##
+				self.setSaveStatus(True)
+				self.tox3gButton.setDisabled(not self.isSaved())
+
 				mainWindow.addToModelMRU(filename)
 		if gcodeFilename is not None:
 			self.loadGCodeFile(gcodeFilename)
