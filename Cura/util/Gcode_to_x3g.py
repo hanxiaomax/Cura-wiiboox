@@ -5,6 +5,7 @@ import optparse
 import sys
 import os
 import threading
+#TODO:添加保存完成提示
 #ugly hack:add makerbot_driver to sys.path to import
 driver_path=os.path.dirname(__file__)
 sys.path.append(driver_path)
@@ -39,3 +40,4 @@ def Convert_Gcode_to_x3g(dest,gcode_path):
         for line in f:
             parser.execute_line(line)
     parser.s3g.writer.file.close()
+

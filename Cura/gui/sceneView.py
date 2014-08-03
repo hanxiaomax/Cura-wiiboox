@@ -44,9 +44,6 @@ sys.setdefaultencoding( "utf-8" )
 #TO SAVE GCODE JUST SAVED
 global GCODE_PATH
 GCODE_PATH=profile.getPreference('lastFile')
-global saved
-saved=True
-
 
 class SceneView(openglGui.glGuiPanel):
 	def __init__(self, parent):
@@ -71,8 +68,7 @@ class SceneView(openglGui.glGuiPanel):
 		self._platformTexture = None
 		self._isSimpleMode = True
 		self._printerConnectionManager = printerConnectionManager.PrinterConnectionManager()
-		#
-		#self._saved=False
+		self.saved=True
 		self._modelMatrix = None
 		self._projMatrix = None
 		self.tempMatrix = None
@@ -329,7 +325,7 @@ class SceneView(openglGui.glGuiPanel):
 		if len(self._scene._objectList) < 1:
 			return
 		dlg=wx.FileDialog(self, _("Save toolpath"), os.path.dirname(profile.getPreference('lastFile')), style=wx.FD_SAVE|wx.FD_OVERWRITE_PROMPT)
-		filename = self._scene._objectList[0].getName() + profile.getGCodeExtension()
+		filename = self._scene._objectList[0].getName() + profile.getGCodeExtension()#跟随stl文件的名词
 		dlg.SetFilename(filename)
 		dlg.SetWildcard('Toolpath (*%s)|*%s;*%s' % (profile.getGCodeExtension(), profile.getGCodeExtension(), profile.getGCodeExtension()[0:2]))
 		if dlg.ShowModal() != wx.ID_OK:
@@ -338,6 +334,8 @@ class SceneView(openglGui.glGuiPanel):
 		self.setSaveStatus(True)
 		self.tox3gButton.setDisabled(not self.isSaved())#状态要随时更新
 		filename = dlg.GetPath()
+		global GCODE_PATH
+		GCODE_PATH=filename
 		threading.Thread(target=self._saveGCode,args=(filename,)).start()#args=元组，单个元素要以，结尾
 		
 		
@@ -354,8 +352,10 @@ class SceneView(openglGui.glGuiPanel):
 		
 		self.tox3gButton.setDisabled(not self.isSaved())
 		#dlg=wx.FileDialog(self, u"保存x3g文件",os.path.dirname(self.gcodePath),style=wx.FD_SAVE|wx.FD_OVERWRITE_PROMPT)
-		dlg=wx.FileDialog(self, gcode_path, os.path.dirname(gcode_path), style=wx.FD_SAVE|wx.FD_OVERWRITE_PROMPT)
-		filename=self._scene._objectList[0].getName() + ".x3g"
+		dlg=wx.FileDialog(self, _("save x3g file"), os.path.dirname(gcode_path), style=wx.FD_SAVE|wx.FD_OVERWRITE_PROMPT)
+		#filename=self._scene._objectList[0].getName() + ".x3g" 不应该再跟随stl名称
+		filename=os.path.splitext(gcode_path)[0] + ".x3g"#获取刚才保存的Gcode的文件名
+
 		dlg.SetFilename(filename)
 		dlg.SetWildcard('.x3g')
 		if dlg.ShowModal() != wx.ID_OK:
@@ -365,22 +365,19 @@ class SceneView(openglGui.glGuiPanel):
 
 		dlg.Destroy()
 		threading.Thread(target=Gcode_to_x3g.Convert_Gcode_to_x3g,args=(dest,gcode_path)).start()
+		
 			
 	def setSaveStatus(self,issaved):
-		global saved
-		if issaved:
-			saved=True
-		else:
-			saved=False
+		self.saved=issaved
 
 	def isSaved(self):
-		global saved
-		if saved:
+		# global saved
+		if self.saved:
 			print "True"
-			return saved
+			return self.saved
 		else:
 			print "False"
-			return saved
+			return self.saved
 			
 
 	def _saveGCode(self, targetFilename, ejectDrive = False):
