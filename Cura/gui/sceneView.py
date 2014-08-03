@@ -114,9 +114,6 @@ class SceneView(openglGui.glGuiPanel):
 		self.scaleUniform = openglGui.glCheckbox(self.scaleForm, True, (1,8), None)
 
 		self.viewSelection = openglGui.glComboButton(self, _("View mode"), [7,19,11,15,23], [_("Normal"), _("Overhang"), _("Transparent"), _("X-Ray"), _("Layers")], (-1,0), self.OnViewChange)
-		#注释掉以下两行将导致模型无法导入
-		# self.youMagineButton = openglGui.glButton(self, 26, _("Share on YouMagine"), (2,0), lambda button: youmagineGui.youmagineManager(self.GetTopLevelParent(), self._scene))
-		# self.youMagineButton.setDisabled(True)
 
 		self.notification = openglGui.glNotification(self, (0, 0))
 
@@ -335,39 +332,27 @@ class SceneView(openglGui.glGuiPanel):
 		self.GCODE_PATH=filename
 		threading.Thread(target=self._saveGCode,args=(filename,)).start()#args=元组，单个元素要以，结尾
 		
-		
-		
+
 
 	#定制内容
 	def showSaveX3g(self):
 		"show dialog to change gcode into x3g"
 		gcode_path=self.GCODE_PATH
 		self.tox3gButton.setDisabled(not self.isSaved())
-		
 		#dlg=wx.FileDialog(self, u"保存x3g文件",os.path.dirname(self.gcodePath),style=wx.FD_SAVE|wx.FD_OVERWRITE_PROMPT)
 		dlg=wx.FileDialog(self, _("save x3g file"), os.path.dirname(gcode_path), style=wx.FD_SAVE|wx.FD_OVERWRITE_PROMPT)
 		#filename=self._scene._objectList[0].getName() + ".x3g" 不应该再跟随stl名称
 		filename=os.path.basename(gcode_path)#获取刚才保存的Gcode的文件名
 		filename=os.path.splitext(filename)[0]#去除扩展名
-
 		dlg.SetFilename(filename)
 		dlg.SetWildcard('.x3g')
 		if dlg.ShowModal() != wx.ID_OK:
 			dlg.Destroy()
 			return
 		dest =dlg.GetPath()
-
 		dlg.Destroy()
-		
 		threading.Thread(target=Gcode_to_x3g.Convert_Gcode_to_x3g,args=(dest,gcode_path)).start()
 
-		
-		# message_dlg = wx.MessageDialog(self, filename+_(" Have been saved to：\n")+dest,_('Finished'), wx.OK|wx.ICON_INFORMATION)
-		# message_dlg.ShowModal()
-		# message_dlg.Destroy()
-
-
-			
 	def setSaveStatus(self,issaved):
 		self.saved=issaved
 
