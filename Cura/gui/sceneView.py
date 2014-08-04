@@ -69,7 +69,7 @@ class SceneView(openglGui.glGuiPanel):
 		self._modelMatrix = None
 		self._projMatrix = None
 		self.tempMatrix = None
-		self.GCODE_PATH=profile.getPreference('lastFile')
+		self.GCODE_PATH=None#profile.getPreference('lastFile')
 		#self._loadgcodefile=None
 
 		self.openFileButton      = openglGui.glButton(self, 4, _("Load"), (0,0), self.showLoadModel)
@@ -325,7 +325,7 @@ class SceneView(openglGui.glGuiPanel):
 		if len(self._scene._objectList) < 1:
 			return
 		dlg=wx.FileDialog(self, _("Save toolpath"), os.path.dirname(profile.getPreference('lastFile')), style=wx.FD_SAVE|wx.FD_OVERWRITE_PROMPT)
-		filename = self._scene._objectList[0].getName() + profile.getGCodeExtension()#跟随stl文件的名词
+		filename = self._scene._objectList[0].getName() + profile.getGCodeExtension()#跟随stl文件的名称
 		dlg.SetFilename(filename)
 		dlg.SetWildcard('Toolpath (*%s)|*%s;*%s' % (profile.getGCodeExtension(), profile.getGCodeExtension(), profile.getGCodeExtension()[0:2]))
 		if dlg.ShowModal() != wx.ID_OK:

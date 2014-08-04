@@ -46,23 +46,23 @@ class preferencesDialog(wx.Dialog):
 		#configBase.SettingRow(right, 'save_profile')
 
 		#configBase.TitleRow(right, 'SD Card settings')
-		configBase.TitleRow(right, '')
+		#configBase.TitleRow(right, '')
 		
-		# configBase.TitleRow(right, _("Cura settings"))
+		configBase.TitleRow(right, _("Cura settings"))
 		# configBase.SettingRow(right, 'auto_detect_sd')
-		# configBase.SettingRow(right, 'check_for_updates')
+		configBase.SettingRow(right, 'check_for_updates')
 		# configBase.SettingRow(right, 'submit_slice_information')
 
-		self.okButton = wx.Button(right, -1, 'Ok')
-		right.GetSizer().Add(self.okButton, (right.GetSizer().GetRows(), 0), flag=wx.BOTTOM, border=50)
-		self.okButton.Bind(wx.EVT_BUTTON, lambda e: self.Close())
+		#self.okButton = wx.Button(self, -1, 'Ok')
+		#right.GetSizer().Add(self.okButton, (right.GetSizer().GetRows(), 0), flag=wx.BOTTOM|wx.LEFT, border=50)#
+		#self.okButton.Bind(wx.EVT_BUTTON, lambda e: self.Close())
 
 		main.Fit()
 		self.Fit()
 
-	def OnClose(self, e):
-		#self.parent.reloadSettingPanels()
-		self.Destroy()
+	# def OnClose(self, e):
+	# 	#self.parent.reloadSettingPanels()
+	# 	self.Destroy()
 
 class machineSettingsDialog(wx.Dialog):
 	def __init__(self, parent):

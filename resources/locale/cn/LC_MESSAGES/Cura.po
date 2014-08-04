@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-04 10:14+0800\n"
-"PO-Revision-Date: 2014-08-04 10:25+0800\n"
+"PO-Revision-Date: 2014-08-04 11:38+0800\n"
 "Last-Translator: Lingfeng Ai <hanxiaomax@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
@@ -2642,7 +2642,7 @@ msgstr "切片引擎记录"
 
 #: D:\localgit\Cura\gui/sceneView.py:327 D:\localgit\Cura\gui/sceneView.py:982
 msgid "Save toolpath"
-msgstr "保存喷头路径"
+msgstr "保存Gcode文件"
 
 #: D:\localgit\Cura\gui/sceneView.py:348
 msgid "save x3g file"
