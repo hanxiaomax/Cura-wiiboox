@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-28 14:41+0800\n"
-"PO-Revision-Date: 2014-07-28 15:11+0800\n"
+"POT-Creation-Date: 2014-08-04 10:14+0800\n"
+"PO-Revision-Date: 2014-08-04 10:25+0800\n"
 "Last-Translator: Lingfeng Ai <hanxiaomax@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
@@ -36,11 +36,11 @@ msgstr ""
 "Cura由Ultimaker公司负责研发和维护。\n"
 "本汉化软件由Wiiboox公司进行汉化和定制。"
 
-#: D:\localgit\Cura\gui/app.py:145 D:\localgit\Cura\gui/mainWindow.py:575
+#: D:\localgit\Cura\gui/app.py:147 D:\localgit\Cura\gui/mainWindow.py:575
 msgid "A new version of Cura is available, would you like to download?"
 msgstr "发现新版本的Cura，您是否要下载？"
 
-#: D:\localgit\Cura\gui/app.py:145 D:\localgit\Cura\gui/mainWindow.py:575
+#: D:\localgit\Cura\gui/app.py:147 D:\localgit\Cura\gui/mainWindow.py:575
 msgid "New version available"
 msgstr "发现新版本"
 
@@ -294,7 +294,7 @@ msgid "Show error log"
 msgstr "显示错误记录"
 
 #: D:\localgit\Cura\gui/configWizard.py:597
-#: D:\localgit\Cura\gui/configWizard.py:1237
+#: D:\localgit\Cura\gui/configWizard.py:1236
 msgid "Connecting to machine."
 msgstr "连接打印机"
 
@@ -327,8 +327,8 @@ msgid "Communication State: %s"
 msgstr "通信状态：%s"
 
 #: D:\localgit\Cura\gui/configWizard.py:670
-#: D:\localgit\Cura\gui/configWizard.py:1196
-#: D:\localgit\Cura\gui/configWizard.py:1414
+#: D:\localgit\Cura\gui/configWizard.py:1195
+#: D:\localgit\Cura\gui/configWizard.py:1413
 msgid "Failed to establish connection with the printer."
 msgstr "与打印机建立连接失败"
 
@@ -389,11 +389,11 @@ msgstr "* 挤出1mm料丝所需步进电机步数"
 msgid ""
 "The better you have calibrated these values, the better your prints\n"
 "will become."
-msgstr ""
+msgstr "您将这些参数调试的越好，您的机器打印质量就越好"
 
 #: D:\localgit\Cura\gui/configWizard.py:772
 msgid "First we need the diameter of your filament:"
-msgstr ""
+msgstr "首先，我们需要您提供料丝的直径"
 
 #: D:\localgit\Cura\gui/configWizard.py:775
 msgid ""
@@ -489,179 +489,179 @@ msgstr "Cura已经准备就绪"
 msgid "Configuration Wizard"
 msgstr "设置向导"
 
-#: D:\localgit\Cura\gui/configWizard.py:970
-#: D:\localgit\Cura\gui/configWizard.py:1427
+#: D:\localgit\Cura\gui/configWizard.py:969
+#: D:\localgit\Cura\gui/configWizard.py:1426
 msgid "Bed leveling wizard"
 msgstr "平台调平向导"
 
-#: D:\localgit\Cura\gui/configWizard.py:972
+#: D:\localgit\Cura\gui/configWizard.py:971
 msgid "This wizard will help you in leveling your printer bed"
 msgstr "本向导将帮助您进行打印平台调平"
 
-#: D:\localgit\Cura\gui/configWizard.py:974
+#: D:\localgit\Cura\gui/configWizard.py:973
 msgid "It will do the following steps"
 msgstr "将会进行以下步骤："
 
-#: D:\localgit\Cura\gui/configWizard.py:975
+#: D:\localgit\Cura\gui/configWizard.py:974
 msgid "* Move the printer head to each corner"
 msgstr "*将喷头分别移动到4个角"
 
-#: D:\localgit\Cura\gui/configWizard.py:976
+#: D:\localgit\Cura\gui/configWizard.py:975
 msgid "  and let you adjust the height of the bed to the nozzle"
 msgstr "您需要在这个过程中调节平台与喷头的距离"
 
-#: D:\localgit\Cura\gui/configWizard.py:977
+#: D:\localgit\Cura\gui/configWizard.py:976
 msgid "* Print a line around the bed to check if it is level"
 msgstr "*沿平台四周打印一条线以检查是否调平"
 
-#: D:\localgit\Cura\gui/configWizard.py:980
-#: D:\localgit\Cura\gui/configWizard.py:1213
+#: D:\localgit\Cura\gui/configWizard.py:979
+#: D:\localgit\Cura\gui/configWizard.py:1212
 msgid "Connect to printer"
 msgstr "连接打印机"
 
-#: D:\localgit\Cura\gui/configWizard.py:984
-#: D:\localgit\Cura\gui/configWizard.py:1218
+#: D:\localgit\Cura\gui/configWizard.py:983
+#: D:\localgit\Cura\gui/configWizard.py:1217
 msgid "Resume"
 msgstr "继续"
 
-#: D:\localgit\Cura\gui/configWizard.py:985
+#: D:\localgit\Cura\gui/configWizard.py:984
 msgid "Up 0.2mm"
 msgstr "向上 0.2mm"
 
-#: D:\localgit\Cura\gui/configWizard.py:985
+#: D:\localgit\Cura\gui/configWizard.py:984
 msgid "Down 0.2mm"
 msgstr "向下 0.2mm"
 
-#: D:\localgit\Cura\gui/configWizard.py:986
+#: D:\localgit\Cura\gui/configWizard.py:985
 msgid "Up 10mm"
 msgstr "向上 10mm"
 
-#: D:\localgit\Cura\gui/configWizard.py:986
+#: D:\localgit\Cura\gui/configWizard.py:985
 msgid "Down 10mm"
 msgstr "向下 10mm"
 
-#: D:\localgit\Cura\gui/configWizard.py:1050
+#: D:\localgit\Cura\gui/configWizard.py:1049
 msgid "Homing printer..."
 msgstr "打印机回零..."
 
-#: D:\localgit\Cura\gui/configWizard.py:1060
+#: D:\localgit\Cura\gui/configWizard.py:1059
 msgid "Moving head to back center..."
 msgstr "将喷头移动至后部中心位置..."
 
-#: D:\localgit\Cura\gui/configWizard.py:1067
+#: D:\localgit\Cura\gui/configWizard.py:1066
 msgid "Moving head to back left corner..."
 msgstr "将喷头移动至左后角..."
 
-#: D:\localgit\Cura\gui/configWizard.py:1075
-#: D:\localgit\Cura\gui/configWizard.py:1090
+#: D:\localgit\Cura\gui/configWizard.py:1074
+#: D:\localgit\Cura\gui/configWizard.py:1089
 msgid "Moving head to front right corner..."
 msgstr "将喷头移动右前角..."
 
-#: D:\localgit\Cura\gui/configWizard.py:1082
+#: D:\localgit\Cura\gui/configWizard.py:1081
 msgid "Moving head to back right corner..."
 msgstr "将喷头移动至右后角..."
 
-#: D:\localgit\Cura\gui/configWizard.py:1097
+#: D:\localgit\Cura\gui/configWizard.py:1096
 msgid "Heating up printer..."
 msgstr "打印机加热中..."
 
-#: D:\localgit\Cura\gui/configWizard.py:1104
+#: D:\localgit\Cura\gui/configWizard.py:1103
 msgid "Printing a square on the printer bed at 0.3mm height."
 msgstr "在打印平台打印高度为0.3mm的方块。"
 
-#: D:\localgit\Cura\gui/configWizard.py:1141
+#: D:\localgit\Cura\gui/configWizard.py:1140
 msgid "Log:"
 msgstr "记录："
 
-#: D:\localgit\Cura\gui/configWizard.py:1146
+#: D:\localgit\Cura\gui/configWizard.py:1145
 msgid ""
 "Adjust the front left screw of your printer bed\n"
 "So the nozzle just hits the bed."
 msgstr "请调节打印平台左前方调平螺丝，使喷头刚好接触平台。"
 
-#: D:\localgit\Cura\gui/configWizard.py:1151
+#: D:\localgit\Cura\gui/configWizard.py:1150
 msgid ""
 "Adjust the back screw of your printer bed\n"
 "So the nozzle just hits the bed."
 msgstr "请调节打印平台后方调平螺丝，使喷头刚好接触平台。"
 
-#: D:\localgit\Cura\gui/configWizard.py:1153
+#: D:\localgit\Cura\gui/configWizard.py:1152
 msgid ""
 "Adjust the back left screw of your printer bed\n"
 "So the nozzle just hits the bed."
 msgstr "请调节打印平台左后方调平螺丝，使喷头刚好接触平台。"
 
-#: D:\localgit\Cura\gui/configWizard.py:1158
+#: D:\localgit\Cura\gui/configWizard.py:1157
 msgid ""
 "Adjust the back right screw of your printer bed\n"
 "So the nozzle just hits the bed."
 msgstr "请调节打印平台右后方调平螺丝，使喷头刚好接触平台。"
 
-#: D:\localgit\Cura\gui/configWizard.py:1162
+#: D:\localgit\Cura\gui/configWizard.py:1161
 msgid ""
 "Adjust the front right screw of your printer bed\n"
 "So the nozzle just hits the bed."
 msgstr "请调节打印平台右前方调平螺丝，使喷头刚好接触平台。"
 
-#: D:\localgit\Cura\gui/configWizard.py:1168
+#: D:\localgit\Cura\gui/configWizard.py:1167
 msgid ""
 "The printer is hot now. Please insert some PLA filament into the printer."
 msgstr "打印机加热完成。请插入PLA料丝。"
 
-#: D:\localgit\Cura\gui/configWizard.py:1177
+#: D:\localgit\Cura\gui/configWizard.py:1176
 msgid "Use the up/down buttons to move the bed and adjust your Z endstop."
 msgstr "请使用上/下按钮来移动平台，调节Z轴限位开关"
 
-#: D:\localgit\Cura\gui/configWizard.py:1190
+#: D:\localgit\Cura\gui/configWizard.py:1189
 msgid ""
 "Calibration finished.\n"
 "The squares on the bed should slightly touch each other."
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:1210
+#: D:\localgit\Cura\gui/configWizard.py:1209
 msgid "Printer head offset calibration"
 msgstr "喷头偏置校准"
 
-#: D:\localgit\Cura\gui/configWizard.py:1211
+#: D:\localgit\Cura\gui/configWizard.py:1210
 msgid ""
 "This wizard will help you in calibrating the printer head offsets of your "
 "dual extrusion machine"
 msgstr "本向导将帮助您设置双喷头打印机"
 
-#: D:\localgit\Cura\gui/configWizard.py:1243
+#: D:\localgit\Cura\gui/configWizard.py:1242
 msgid "Printing initial calibration cross"
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:1292
+#: D:\localgit\Cura\gui/configWizard.py:1291
 msgid ""
 "Please measure the distance between the horizontal lines in millimeters."
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:1302
+#: D:\localgit\Cura\gui/configWizard.py:1301
 msgid "Printing the fine calibration lines."
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:1357
+#: D:\localgit\Cura\gui/configWizard.py:1356
 msgid ""
 "Which horizontal line number lays perfect on top of each other? Front most "
 "line is zero."
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:1390
+#: D:\localgit\Cura\gui/configWizard.py:1389
 msgid "Homing printer and heating up both extruders."
 msgstr "喷头归零并且加热两个喷头。"
 
-#: D:\localgit\Cura\gui/configWizard.py:1400
+#: D:\localgit\Cura\gui/configWizard.py:1399
 msgid "Please measure the distance between the vertical lines in millimeters."
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:1407
+#: D:\localgit\Cura\gui/configWizard.py:1406
 msgid ""
 "Which vertical line number lays perfect on top of each other? Leftmost line "
 "is zero."
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:1455
+#: D:\localgit\Cura\gui/configWizard.py:1454
 msgid "Head offset wizard"
 msgstr "启动喷头偏置向导"
 
@@ -755,7 +755,7 @@ msgstr "清空打印平台"
 msgid "Print...\tCTRL+P"
 msgstr "打印...\tCTRL+P"
 
-#: D:\localgit\Cura\gui/mainWindow.py:83 D:\localgit\Cura\gui/sceneView.py:282
+#: D:\localgit\Cura\gui/mainWindow.py:83 D:\localgit\Cura\gui/sceneView.py:298
 msgid "Save GCode..."
 msgstr "保存GCode..."
 
@@ -1108,6 +1108,10 @@ msgstr "您需要在添加插件前，先选择一个插件。"
 msgid "Error: no plugin selected"
 msgstr "错误：没有选择插件"
 
+#: D:\localgit\Cura\gui/preferencesDialog.py:14
+msgid "Preferences"
+msgstr "首选项"
+
 #: D:\localgit\Cura\gui/preferencesDialog.py:28
 msgid "Print window"
 msgstr "打印窗口"
@@ -1125,50 +1129,46 @@ msgstr "语言"
 msgid "Filament settings"
 msgstr "料丝设置"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:50
-msgid "Cura settings"
-msgstr "Cura软件设置"
-
-#: D:\localgit\Cura\gui/preferencesDialog.py:68
-#: D:\localgit\Cura\gui/preferencesDialog.py:83
+#: D:\localgit\Cura\gui/preferencesDialog.py:69
+#: D:\localgit\Cura\gui/preferencesDialog.py:84
 msgid "Machine settings"
 msgstr "机器设置"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:94
+#: D:\localgit\Cura\gui/preferencesDialog.py:95
 msgid "Printer head size"
 msgstr "喷头尺寸"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:102
+#: D:\localgit\Cura\gui/preferencesDialog.py:103
 #, python-format
 msgid "Extruder %d"
 msgstr "挤出器 %d"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:106
+#: D:\localgit\Cura\gui/preferencesDialog.py:107
 msgid "Communication settings"
 msgstr "通信设置"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:123
+#: D:\localgit\Cura\gui/preferencesDialog.py:124
 msgid "Add new machine"
 msgstr "添加新打印机"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:127
+#: D:\localgit\Cura\gui/preferencesDialog.py:128
 msgid "Remove machine"
 msgstr "删除打印机"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:131
-#: D:\localgit\Cura\gui/preferencesDialog.py:170
+#: D:\localgit\Cura\gui/preferencesDialog.py:132
+#: D:\localgit\Cura\gui/preferencesDialog.py:171
 msgid "Change machine name"
 msgstr "修改机器名称"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:155
+#: D:\localgit\Cura\gui/preferencesDialog.py:156
 msgid "Cannot remove the last machine configuration in Cura"
 msgstr "无法删除Cura中最近使用的机器配置"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:155
+#: D:\localgit\Cura\gui/preferencesDialog.py:156
 msgid "Machine remove error"
 msgstr "删除机器错误"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:170
+#: D:\localgit\Cura\gui/preferencesDialog.py:171
 msgid "Enter the new name:"
 msgstr "输入新名字："
 
@@ -1201,7 +1201,7 @@ msgid "Connect"
 msgstr "连接"
 
 #: D:\localgit\Cura\gui/printWindow.py:340
-#: D:\localgit\Cura\gui/sceneView.py:68
+#: D:\localgit\Cura\gui/sceneView.py:76
 msgid "Print"
 msgstr "打印"
 
@@ -2527,185 +2527,189 @@ msgid ""
 "results and is not recommended."
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:67
+#: D:\localgit\Cura\gui/sceneView.py:75
 msgid "Load"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:72
+#: D:\localgit\Cura\gui/sceneView.py:77
+msgid "X3G"
+msgstr ""
+
+#: D:\localgit\Cura\gui/sceneView.py:82
 msgid "Rotate"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:73
+#: D:\localgit\Cura\gui/sceneView.py:83
 msgid "Scale"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:74
+#: D:\localgit\Cura\gui/sceneView.py:84
 msgid "Mirror"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:76 D:\localgit\Cura\gui/sceneView.py:79
+#: D:\localgit\Cura\gui/sceneView.py:86 D:\localgit\Cura\gui/sceneView.py:89
 msgid "Reset"
 msgstr "重置"
 
-#: D:\localgit\Cura\gui/sceneView.py:77
+#: D:\localgit\Cura\gui/sceneView.py:87
 msgid "Lay flat"
 msgstr "平躺"
 
-#: D:\localgit\Cura\gui/sceneView.py:80
+#: D:\localgit\Cura\gui/sceneView.py:90
 msgid "To max"
 msgstr "至最大值"
 
-#: D:\localgit\Cura\gui/sceneView.py:82
+#: D:\localgit\Cura\gui/sceneView.py:92
 msgid "Mirror X"
 msgstr "X 镜像"
 
-#: D:\localgit\Cura\gui/sceneView.py:83
+#: D:\localgit\Cura\gui/sceneView.py:93
 msgid "Mirror Y"
 msgstr "Y 镜像"
 
-#: D:\localgit\Cura\gui/sceneView.py:84
+#: D:\localgit\Cura\gui/sceneView.py:94
 msgid "Mirror Z"
 msgstr "Z 镜像"
 
-#: D:\localgit\Cura\gui/sceneView.py:92
+#: D:\localgit\Cura\gui/sceneView.py:102
 msgid "Scale X"
 msgstr "X 缩放"
 
-#: D:\localgit\Cura\gui/sceneView.py:94
+#: D:\localgit\Cura\gui/sceneView.py:104
 msgid "Scale Y"
 msgstr "Y 缩放"
 
-#: D:\localgit\Cura\gui/sceneView.py:96
+#: D:\localgit\Cura\gui/sceneView.py:106
 msgid "Scale Z"
 msgstr "Z 缩放"
 
-#: D:\localgit\Cura\gui/sceneView.py:98
+#: D:\localgit\Cura\gui/sceneView.py:108
 msgid "Size X (mm)"
 msgstr "x方向尺寸（毫米）"
 
-#: D:\localgit\Cura\gui/sceneView.py:100
+#: D:\localgit\Cura\gui/sceneView.py:110
 msgid "Size Y (mm)"
 msgstr "Y方向尺寸（毫米）"
 
-#: D:\localgit\Cura\gui/sceneView.py:102
+#: D:\localgit\Cura\gui/sceneView.py:112
 msgid "Size Z (mm)"
 msgstr "Z方向尺寸（毫米）"
 
-#: D:\localgit\Cura\gui/sceneView.py:104
+#: D:\localgit\Cura\gui/sceneView.py:114
 msgid "Uniform scale"
 msgstr "等比例缩放"
 
-#: D:\localgit\Cura\gui/sceneView.py:107
+#: D:\localgit\Cura\gui/sceneView.py:117
 msgid "View mode"
 msgstr "观察模式"
 
-#: D:\localgit\Cura\gui/sceneView.py:107
+#: D:\localgit\Cura\gui/sceneView.py:117
 msgid "Normal"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:107
+#: D:\localgit\Cura\gui/sceneView.py:117
 msgid "Overhang"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:107
+#: D:\localgit\Cura\gui/sceneView.py:117
 msgid "Transparent"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:107
+#: D:\localgit\Cura\gui/sceneView.py:117
 msgid "X-Ray"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:107
+#: D:\localgit\Cura\gui/sceneView.py:117
 msgid "Layers"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:109
-msgid "Share on YouMagine"
-msgstr ""
-
-#: D:\localgit\Cura\gui/sceneView.py:207
+#: D:\localgit\Cura\gui/sceneView.py:222
 msgid "Open 3D model"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:232
+#: D:\localgit\Cura\gui/sceneView.py:247
 msgid "Save 3D model"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:279 D:\localgit\Cura\gui/sceneView.py:921
+#: D:\localgit\Cura\gui/sceneView.py:295 D:\localgit\Cura\gui/sceneView.py:979
 #, python-format
 msgid "Print with %s"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:283
+#: D:\localgit\Cura\gui/sceneView.py:299
 msgid "Slice engine log..."
 msgstr "切片引擎记录"
 
-#: D:\localgit\Cura\gui/sceneView.py:308 D:\localgit\Cura\gui/sceneView.py:924
+#: D:\localgit\Cura\gui/sceneView.py:327 D:\localgit\Cura\gui/sceneView.py:982
 msgid "Save toolpath"
 msgstr "保存喷头路径"
 
-#: D:\localgit\Cura\gui/sceneView.py:337
+#: D:\localgit\Cura\gui/sceneView.py:348
+msgid "save x3g file"
+msgstr "保存x3g格式文件"
+
+#: D:\localgit\Cura\gui/sceneView.py:392
 msgid "Failed to save"
 msgstr "保存失败"
 
-#: D:\localgit\Cura\gui/sceneView.py:356
+#: D:\localgit\Cura\gui/sceneView.py:411
 msgid "The slicing engine reported the following"
 msgstr "切片引擎报告"
 
-#: D:\localgit\Cura\gui/sceneView.py:356
+#: D:\localgit\Cura\gui/sceneView.py:411
 msgid "Engine log..."
 msgstr "引擎记录"
 
-#: D:\localgit\Cura\gui/sceneView.py:495
+#: D:\localgit\Cura\gui/sceneView.py:551
 msgid "How many copies do you want?"
 msgstr "需要多少份？"
 
-#: D:\localgit\Cura\gui/sceneView.py:495
+#: D:\localgit\Cura\gui/sceneView.py:551
 msgid "Number of copies"
 msgstr "份数"
 
-#: D:\localgit\Cura\gui/sceneView.py:495
+#: D:\localgit\Cura\gui/sceneView.py:551
 msgid "Multiply"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:513
+#: D:\localgit\Cura\gui/sceneView.py:569
 #, python-format
 msgid "Could not create more than %d items"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:787
+#: D:\localgit\Cura\gui/sceneView.py:845
 msgid "Center on platform"
 msgstr "居中"
 
-#: D:\localgit\Cura\gui/sceneView.py:788
+#: D:\localgit\Cura\gui/sceneView.py:846
 msgid "Delete object"
 msgstr "删除物体"
 
-#: D:\localgit\Cura\gui/sceneView.py:789
+#: D:\localgit\Cura\gui/sceneView.py:847
 msgid "Multiply object"
 msgstr "打印多个副本"
 
-#: D:\localgit\Cura\gui/sceneView.py:790
+#: D:\localgit\Cura\gui/sceneView.py:848
 msgid "Split object into parts"
 msgstr "把物体切分成几个部分"
 
-#: D:\localgit\Cura\gui/sceneView.py:792
+#: D:\localgit\Cura\gui/sceneView.py:850
 msgid "Dual extrusion merge"
 msgstr "！双喷头合并"
 
-#: D:\localgit\Cura\gui/sceneView.py:794
+#: D:\localgit\Cura\gui/sceneView.py:852
 msgid "Delete all objects"
 msgstr "删除全部物体"
 
-#: D:\localgit\Cura\gui/sceneView.py:795
+#: D:\localgit\Cura\gui/sceneView.py:853
 msgid "Reload all objects"
 msgstr "重新加载所有物体"
 
-#: D:\localgit\Cura\gui/sceneView.py:918
+#: D:\localgit\Cura\gui/sceneView.py:976
 msgid "Toolpath to SD"
 msgstr "保存喷头路径到SD卡"
 
-#: D:\localgit\Cura\gui/sceneView.py:1212
+#: D:\localgit\Cura\gui/sceneView.py:1270
 msgid "Overhang view not working due to lack of OpenGL shaders support."
 msgstr ""
 
@@ -2975,6 +2979,9 @@ msgid ""
 "Only follow the mesh surfaces of the 3D model, do not do anything else. No "
 "infill, no top/bottom, nothing."
 msgstr ""
+
+#~ msgid "Cura settings"
+#~ msgstr "Cura软件设置"
 
 #~ msgid "Custom..."
 #~ msgstr "自定义..."

@@ -335,6 +335,7 @@ class SceneView(openglGui.glGuiPanel):
 		self.tox3gButton.setDisabled(not self.isSaved())#状态要随时更新
 		filename = dlg.GetPath()
 		self.GCODE_PATH=filename
+		profile.putPreference('lastFile', filename)
 		threading.Thread(target=self._saveGCode,args=(filename,)).start()#args=元组，单个元素要以，结尾
 		
 
