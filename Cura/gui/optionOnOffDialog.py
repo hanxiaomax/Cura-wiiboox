@@ -1,8 +1,6 @@
 # coding=utf-8
-__copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
-
+__author__ = 'Lingfeng Ai'
 import wx
-
 from Cura.gui import configWizard
 from Cura.gui import configBase
 from Cura.util import machineCom
@@ -10,62 +8,27 @@ from Cura.util import profile
 from Cura.util import pluginInfo
 from Cura.util import resources
 
-
-class preferencesDialog(wx.Dialog):
+class optionOnOffDialog(wx.Dialog):
 	def __init__(self, parent):
-		super(preferencesDialog, self).__init__(None, title=_("Preferences"))
-
+		super(optionOnOffDialog, self).__init__(None, title=_(u"高级设置面板过滤器"),style=wx.DEFAULT_DIALOG_STYLE|wx.RESIZE_BORDER)
 		wx.EVT_CLOSE(self, self.OnClose)
-
 		self.parent = parent
-		extruderCount = int(profile.getMachineSetting('extruder_amount'))
-
 		self.panel = configBase.configPanelBase(self)
-
 		left, right, main = self.panel.CreateConfigPanel(self)
-
-		printWindowTypes = ['Basic']
-		for p in pluginInfo.getPluginList('printwindow'):
-			printWindowTypes.append(p.getName())
-		configBase.TitleRow(left, _("Print window"))
-		configBase.SettingRow(left, 'printing_window', printWindowTypes)
-
-		configBase.TitleRow(left, _("Colours"))
-		configBase.SettingRow(left, 'model_colour', wx.Colour)
-		for i in xrange(1, extruderCount):
-			configBase.SettingRow(left, 'model_colour%d' % (i + 1), wx.Colour)
-
-		if len(resources.getLanguageOptions()) > 1:
-			configBase.TitleRow(left, _("Language"))
-			configBase.SettingRow(left, 'language', map(lambda n: n[1], resources.getLanguageOptions()))
-
-		configBase.TitleRow(right, _("Filament settings"))
-		configBase.SettingRow(right, 'filament_physical_density')
-		configBase.SettingRow(right, 'filament_cost_kg')
-		configBase.SettingRow(right, 'filament_cost_meter')
-
-		# configBase.TitleRow(right, 'Slicer settings')
-		# configBase.SettingRow(right, 'save_profile')
-
-		#configBase.TitleRow(right, 'SD Card settings')
-		#configBase.TitleRow(right, '')
-
-		configBase.TitleRow(right, _("Cura settings"))
-		# configBase.SettingRow(right, 'auto_detect_sd')
-		configBase.SettingRow(right, 'check_for_updates')
-		# configBase.SettingRow(right, 'submit_slice_information')
-
-		#self.okButton = wx.Button(self, -1, 'Ok')
-		#right.GetSizer().Add(self.okButton, (right.GetSizer().GetRows(), 0), flag=wx.BOTTOM|wx.LEFT, border=50)#
-		#self.okButton.Bind(wx.EVT_BUTTON, lambda e: self.Close())
+		self.y=0
+		for name in profile.getSubCategoriesFor('expert'):
+			print name
+			self.y+=25
+			i = wx.CheckBox(self, -1, label=name,pos=(20,self.y),style=wx.ALIGN_LEFT)
+			#self.SetValue(self.setting.getValue(self.settingIndex))
+			#i.Bind(wx.EVT_CHECKBOX, self.OnSettingChange)
 
 		main.Fit()
 		self.Fit()
 
 	def OnClose(self, e):
-		# self.parent.reloadSettingPanels()
+		#self.parent.reloadSettingPanels()
 		self.Destroy()
-
 
 class machineSettingsDialog(wx.Dialog):
 	def __init__(self, parent):
@@ -103,7 +66,7 @@ class machineSettingsDialog(wx.Dialog):
 			configBase.SettingRow(right, 'extruder_head_size_height', index=idx)
 
 			for i in xrange(1, extruderCount):
-				configBase.TitleRow(left, _("Extruder %d") % (i + 1))
+				configBase.TitleRow(left, _("Extruder %d") % (i+1))
 				configBase.SettingRow(left, 'extruder_offset_x%d' % (i), index=idx)
 				configBase.SettingRow(left, 'extruder_offset_y%d' % (i), index=idx)
 
@@ -123,6 +86,7 @@ class machineSettingsDialog(wx.Dialog):
 		self.okButton.Bind(wx.EVT_BUTTON, lambda e: self.Close())
 		self.buttonPanel.GetSizer().Add(self.okButton, flag=wx.ALL, border=5)
 
+
 		self.addButton = wx.Button(self.buttonPanel, -1, _('Add new machine'))
 		self.addButton.Bind(wx.EVT_BUTTON, self.OnAddMachine)
 		self.buttonPanel.GetSizer().Add(self.addButton, flag=wx.ALL, border=5)
@@ -134,6 +98,7 @@ class machineSettingsDialog(wx.Dialog):
 		self.renButton = wx.Button(self.buttonPanel, -1, _('Change machine name'))
 		self.renButton.Bind(wx.EVT_BUTTON, self.OnRenameMachine)
 		self.buttonPanel.GetSizer().Add(self.renButton, flag=wx.ALL, border=5)
+
 
 		main.Fit()
 		self.Fit()
@@ -154,8 +119,7 @@ class machineSettingsDialog(wx.Dialog):
 
 	def OnRemoveMachine(self, e):
 		if profile.getMachineCount() < 2:
-			wx.MessageBox(_("Cannot remove the last machine configuration in Cura"), _("Machine remove error"),
-			              wx.OK | wx.ICON_ERROR)
+			wx.MessageBox(_("Cannot remove the last machine configuration in Cura"), _("Machine remove error"), wx.OK | wx.ICON_ERROR)
 			return
 
 		self.Hide()
@@ -170,8 +134,7 @@ class machineSettingsDialog(wx.Dialog):
 
 
 	def OnRenameMachine(self, e):
-		dialog = wx.TextEntryDialog(self, _("Enter the new name:"), _("Change machine name"),
-		                            self.nb.GetPageText(self.nb.GetSelection()))
+		dialog = wx.TextEntryDialog(self, _("Enter the new name:"), _("Change machine name"), self.nb.GetPageText(self.nb.GetSelection()))
 		if dialog.ShowModal() != wx.ID_OK:
 			return
 		self.nb.SetPageText(self.nb.GetSelection(), dialog.GetValue())

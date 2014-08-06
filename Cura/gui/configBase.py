@@ -1,3 +1,4 @@
+# coding=utf-8
 from __future__ import division
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
@@ -11,10 +12,9 @@ class configPanelBase(wx.Panel):
 	"A base class for configuration dialogs. Handles creation of settings, and popups"
 	def __init__(self, parent, changeCallback = None):
 		super(configPanelBase, self).__init__(parent)
-		
 		self.settingControlList = []
-		
 		#Create the popup window
+		# INFO:气球提示框设置
 		self.popup = wx.PopupWindow(self, flags=wx.BORDER_SIMPLE)
 		self.popup.SetBackgroundColour(wx.SystemSettings.GetColour(wx.SYS_COLOUR_INFOBK))
 		self.popup.setting = None
@@ -32,7 +32,7 @@ class configPanelBase(wx.Panel):
 		return leftConfigPanel, rightConfigPanel
 	
 	def CreateConfigPanel(self, parent):
-		configPanel = wx.Panel(parent);
+		configPanel = wx.Panel(parent)  # CHANGED
 		leftConfigPanel = wx.Panel(configPanel)
 		rightConfigPanel = wx.Panel(configPanel)
 
@@ -40,10 +40,9 @@ class configPanelBase(wx.Panel):
 		leftConfigPanel.SetSizer(sizer)
 		sizer = wx.GridBagSizer(2, 2)
 		rightConfigPanel.SetSizer(sizer)
-
 		sizer = wx.BoxSizer(wx.HORIZONTAL)
 		configPanel.SetSizer(sizer)
-		sizer.Add(leftConfigPanel, border=35, flag=wx.RIGHT)
+		sizer.Add(leftConfigPanel, border=0, flag=wx.RIGHT)  #INFO：面板两行间距
 		sizer.Add(rightConfigPanel)
 		leftConfigPanel.main = self
 		rightConfigPanel.main = self

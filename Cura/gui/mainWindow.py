@@ -30,6 +30,7 @@ from Cura.util import version
 import platform
 from Cura.util import meshLoader
 
+
 class mainWindow(wx.Frame):
 	def __init__(self):
 		super(mainWindow, self).__init__(None, title='Cura - ' + version.getVersion())
@@ -182,6 +183,14 @@ class mainWindow(wx.Frame):
 		self.Bind(wx.EVT_MENU, self.OnHeadOffsetWizard, self.headOffsetWizardMenuItem)
 
 		self.menubar.Append(expertMenu, _("Expert"))
+		# 自定义工具
+		if version.isDevVersion():
+			optOnOffMenu = wx.Menu()
+			# submenu=wx.Menu()
+			# menuCustomMenu.AppendMenu(-1,u"高级设置",submenu)
+			i = optOnOffMenu.Append(-1, u'高级设置面板')
+			self.Bind(wx.EVT_MENU, self.OnoptOnOffMenu, i)
+			self.menubar.Append(optOnOffMenu, _(u"显示/隐藏选项"))
 
 		helpMenu = wx.Menu()
 		i = helpMenu.Append(-1, _("Online documentation..."))
@@ -568,7 +577,12 @@ class mainWindow(wx.Frame):
 		except:
 			print _("Could not write to clipboard, unable to get ownership. Another program is using the clipboard.")
 
-
+	def OnoptOnOffMenu(self, e):
+		optDialog = optionOnOffDialog.optionOnOffDialog(self)
+		optDialog.Centre()
+		optDialog.Show()
+		optDialog.Raise()
+		wx.CallAfter(optDialog.Show)
 	def OnCheckForUpdate(self, e):
 		newVersion = version.checkForNewerVersion()
 		if newVersion is not None:
