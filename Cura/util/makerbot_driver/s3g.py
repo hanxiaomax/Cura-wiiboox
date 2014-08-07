@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 from __future__ import absolute_import
 # Some utilities for speaking s3g
 import struct
@@ -6,7 +7,6 @@ import struct
 import serial
 import makerbot_driver
 #import uuid
-
 
 class s3g(object):
     """ Represents an interface to a s3g driven bot. Contains methods and functions to

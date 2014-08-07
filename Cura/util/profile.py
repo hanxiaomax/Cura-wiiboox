@@ -1,3 +1,4 @@
+# coding=utf-8
 """
 The profile module contains all the settings for Cura.
 These settings can be globally accessed and modified.
@@ -38,6 +39,10 @@ settingsList = []
 # Each machine has it's own index and unique name.
 _selectedMachineIndex = 0
 
+###########
+# Fliter=[]
+###########
+
 class setting(object):
 	"""
 		A setting object contains a configuration setting. These are globally accessible trough the quick access functions
@@ -68,7 +73,7 @@ class setting(object):
 			validators.validInt(self)
 
 		global settingsDictionary
-		settingsDictionary[name] = self
+		settingsDictionary[name] = self #key:name,value：object
 		global settingsList
 		settingsList.append(self)
 
@@ -250,6 +255,10 @@ setting('fix_horrible_extensive_stitching', False, bool, 'expert', _('Fix horrib
 setting('plugin_config', '', str, 'hidden', 'hidden')
 setting('object_center_x', -1, float, 'hidden', 'hidden')
 setting('object_center_y', -1, float, 'hidden', 'hidden')
+
+
+
+
 
 setting('start.gcode', """;Sliced at: {day} {date} {time}
 ;Basic settings: Layer height: {layer_height} Walls: {wall_thickness} Fill: {fill_density}
@@ -464,6 +473,9 @@ setting('cool_end.gcode', '', str, 'alteration', 'alteration')
 setting('replace.csv', '', str, 'alteration', 'alteration')
 #######################################################################################
 
+
+
+
 setting('preSwitchExtruder.gcode', """;Switch between the current extruder and the next extruder, when printing with multiple extruders.
 ;This code is added before the T(n)
 """, str, 'alteration', 'alteration')
@@ -500,6 +512,10 @@ setting('window_width', '-1', float, 'preference', 'hidden')
 setting('window_height', '-1', float, 'preference', 'hidden')
 setting('window_normal_sash', '320', float, 'preference', 'hidden')
 setting('last_run_version', '', str, 'preference', 'hidden')
+################
+setting('filter',[],list,'preference','hidden')
+###############
+
 
 setting('machine_name', '', str, 'machine', 'hidden')
 setting('machine_type', 'unknown', str, 'machine', 'hidden') #Ultimaker, Ultimaker2, RepRap

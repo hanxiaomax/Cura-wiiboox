@@ -1,12 +1,15 @@
-#-*- coding: utf-8 -*-
+# coding=utf-8
 from __future__ import absolute_import
+__author__ = ['Bob','Lingfeng']
+__copyright__ = "Copyright (C) 2014 Bob,Lingfeng - Released under terms of the AGPLv3 License"
 
 #import optparse 
 import sys
 import os
 import threading
 import wx
-#TODO:添加保存完成提示
+import resources
+from Cura.util import profile
 #ugly hack:add makerbot_driver to sys.path to import
 driver_path=os.path.dirname(__file__)
 sys.path.append(driver_path)
@@ -16,22 +19,46 @@ import makerbot_driver
 #ugly hack:to handle path with chinese
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
-def Convert_Gcode_to_x3g(dest,gcode_path,machine='ReplicatorDual'):
-
-    filename = os.path.basename(gcode_path)#获取主文件名，包括后缀
-    filename = os.path.splitext(filename)[0]#分离文件名和后缀，返回一个list，list[0]为文件名
-    condition = threading.Condition()
-    parser = makerbot_driver.Gcode.GcodeParser()
-    parser.state = makerbot_driver.Gcode.GcodeStates()
-    parser.state.profile = makerbot_driver.Profile(machine)
-    parser.state.values['build_name'] = filename
-    parser.s3g = makerbot_driver.s3g()   
-    parser.s3g.writer = makerbot_driver.Writer.FileWriter(open(dest, 'wb'), condition)
-    with open(gcode_path) as f:
-        for line in f:
-            parser.execute_line(line)
-    parser.s3g.writer.file.close()
-    message_dlg = wx.MessageDialog(None, filename+u" 已经被保存至：\n"+dest,'Finished', wx.OK|wx.ICON_INFORMATION)
-    message_dlg.ShowModal()
-    message_dlg.Destroy()
-
+def Convert_Gcode_to_x3g(dest,gcode_path,machine=profile.getMachineSetting('machine_type').encode('utf-8')):
+	print machine
+	filename = os.path.basename(gcode_path)
+	filename = os.path.splitext(filename)[0]
+	condition = threading.Condition()
+	parser = makerbot_driver.Gcode.GcodeParser()
+	parser.state = makerbot_driver.Gcode.GcodeStates()
+	parser.state.profile = makerbot_driver.Profile(machine)
+	parser.state.values['build_name'] = unicode(filename).encode("utf-8")
+	#INFO :必须使用Unicode.encode("utf-8")否则会出错
+	parser.s3g = makerbot_driver.s3g()
+	parser.s3g.writer = makerbot_driver.Writer.FileWriter(open(dest, 'wb'), condition)
+	keepgoing=True
+	maxline = len(open(gcode_path, "rU").readlines())
+	pos=0
+	dlg = wx.ProgressDialog(_("Saving..."),_("Saving..."),
+	                               maximum =maxline,
+	                               parent=None,
+	                               style = wx.PD_CAN_ABORT
+	                                | wx.PD_APP_MODAL
+	                                | wx.PD_ELAPSED_TIME
+	                                # | wx.PD_ESTIMATED_TIME
+	                                | wx.PD_REMAINING_TIME
+		                           |wx.PD_AUTO_HIDE
+	                                )
+	with open(gcode_path,'r') as f:
+		for line in f:
+			parser.execute_line(line)
+			pos+=1
+			if pos>maxline/2:
+				(keepgoing,skip)=dlg.Update(pos,u'Please wait...')
+			else:
+				(keepgoing,skip)=dlg.Update(pos)
+			if not keepgoing:
+				break
+	dlg.Destroy()
+	if keepgoing:
+		message_dlg = wx.MessageDialog(None,filename+_("has been saved to:\n")+dest,_('Finished'),
+		                               wx.OK|wx.ICON_INFORMATION)
+		message_dlg.ShowModal()
+		message_dlg.Destroy()
+	else:
+		os.remove(dest.encode())

@@ -15,7 +15,7 @@ class GcodeParser(object):
     """
     def __init__(self):
         self.state = makerbot_driver.Gcode.GcodeStates()
-        self.s3g = None # makerbot_driver.s3g脌脿 麓麓陆篓露脭脧贸潞贸赂鲁脰碌
+        self.s3g = None # makerbot_driver.s3g类 创建对象后赋值
         self.environment = {}  #dict
         self.line_number = 1
         self._log = logging.getLogger(self.__class__.__name__)
@@ -44,23 +44,23 @@ class GcodeParser(object):
             126: [self.enable_extra_output, 'T', ''],
             127: [self.disable_extra_output, 'T', ''],
             132: [self.load_position, '', 'XYZAB'],
-            133: [self.wait_for_tool_ready, 'PT', ''],
+            6: [self.wait_for_tool_ready, 'PT', ''], #was 133
             134: [self.wait_for_platform_ready, 'PT', ''],
-            135: [self.change_tool, 'T', ''],
+            108: [self.change_tool, 'T', ''],       #was 135
             136: [self.build_start_notification, '', ''],
             137: [self.build_end_notification, '', ''],
         }
 	
-    def execute_line(self, command):     #陆芒脢脥脪禄脨脨碌脛Gcode
+    def execute_line(self, command):     #解释一行的Gcode
         """
         Execute a line of gcode
         @param string command Gcode command to execute
-        """ #脨猫脪陋脳陋禄炉脦陋ascii赂帽脢陆
+        """ #需要转化为ascii格式
         #If command is in unicode, encode it into ascii
-        if isinstance(command, unicode):#isinstance脢脟Python脰脨碌脛脪禄赂枚脛脷陆篓潞炉脢媒,command脢脟路帽脢脟unicode碌脛脢碌脢碌脌媒
+        if isinstance(command, unicode):#isinstance是Python中的一个内建函数,command是否是unicode的实实例
             self._log.debug('{"event":"encoding_gcode_into_utf8"}')
             command = command.encode("utf8")
-        elif not isinstance(command, str):#虏禄脢脟ascii脭貌卤篓麓铆
+        elif not isinstance(command, str):#不是ascii则报错
             self._log.error('{"event":"gcode_file_in_improper_format"}')
             raise makerbot_driver.Gcode.ImproperGcodeEncodingError
 
@@ -77,7 +77,7 @@ class GcodeParser(object):
                         flags, self.GCODE_INSTRUCTIONS[codes['G']][2])
                     self.GCODE_INSTRUCTIONS[codes['G']
                                             ][0](codes, flags, comment)
-					#麓脣麓娄戮脥脰卤陆脫脭脣脨脨赂脙脰赂脕卯脕脣!!
+					#此处就直接运行该指令了!!
                 else:
                     self._log.error('{"event":"unrecognized_command", "command":%s}', codes['G'])
                     gcode_error = makerbot_driver.Gcode.UnrecognizedCommandError()
@@ -393,8 +393,8 @@ class GcodeParser(object):
             self.s3g.recall_home_positions(axes)
         except Exception:
             raise
-        else:
-            self.state.lose_position(axes)
+        #else:
+            #self.state.lose_position(axes) #avoid UnspecifiedAxisLocationError
 
     def change_tool(self, codes, flags, comments):
         """Sends a chagne tool command to the machine.

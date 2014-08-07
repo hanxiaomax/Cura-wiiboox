@@ -374,7 +374,9 @@ class SceneView(openglGui.glGuiPanel):
 			return
 		dest = dlg.GetPath()
 		dlg.Destroy()
-		threading.Thread(target=Gcode_to_x3g.Convert_Gcode_to_x3g, args=(dest, gcode_path)).start()
+		# threading.Thread(target=Gcode_to_x3g.Convert_Gcode_to_x3g, args=(dest, gcode_path,)).start()
+		# INFO :Ulgy hack for wx.ProgressDialog
+		Gcode_to_x3g.Convert_Gcode_to_x3g(dest,gcode_path)
 
 	def setSaveStatus(self, issaved):
 		self.saved = issaved
@@ -652,9 +654,6 @@ class SceneView(openglGui.glGuiPanel):
 	def _updateEngineProgress(self, progressValue):
 		result = self._engine.getResult()
 		finished = result is not None and result.isFinished()
-
-		if version.isDevVersion():
-			print "_updateEngineProgress"
 
 		if not finished:
 			if self.printButton.getProgressBar() is not None and progressValue >= 0.0 and abs(

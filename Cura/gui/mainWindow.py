@@ -183,14 +183,14 @@ class mainWindow(wx.Frame):
 		self.Bind(wx.EVT_MENU, self.OnHeadOffsetWizard, self.headOffsetWizardMenuItem)
 
 		self.menubar.Append(expertMenu, _("Expert"))
-		# 自定义工具
-		if version.isDevVersion():
-			optOnOffMenu = wx.Menu()
-			# submenu=wx.Menu()
-			# menuCustomMenu.AppendMenu(-1,u"高级设置",submenu)
-			i = optOnOffMenu.Append(-1, u'高级设置面板')
-			self.Bind(wx.EVT_MENU, self.OnoptOnOffMenu, i)
-			self.menubar.Append(optOnOffMenu, _(u"显示/隐藏选项"))
+		# # 自定义工具
+		# if version.isDevVersion():
+		# 	optOnOffMenu = wx.Menu()
+		# 	# submenu=wx.Menu()
+		# 	# menuCustomMenu.AppendMenu(-1,u"高级设置",submenu)
+		# 	i = optOnOffMenu.Append(-1, u'高级设置面板')
+		# 	self.Bind(wx.EVT_MENU, self.OnoptOnOffMenu, i)
+		# 	self.menubar.Append(optOnOffMenu, _(u"显示/隐藏选项"))
 
 		helpMenu = wx.Menu()
 		i = helpMenu.Append(-1, _("Online documentation..."))

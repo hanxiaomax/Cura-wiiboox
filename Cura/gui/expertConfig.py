@@ -4,7 +4,7 @@ import wx
 
 from Cura.gui import configBase
 from Cura.util import profile
-
+from Cura.util import version
 # CHANGED
 from Cura.gui import optionOnOffDialog
 
@@ -25,11 +25,11 @@ class expertConfigWindow(wx.Dialog):
 		# right.GetSizer().Add(self.okButton, (right.GetSizer().GetRows(), 0))
 		# self.Bind(wx.EVT_BUTTON, lambda e: self.Close(), self.okButton)
 		self.Bind(wx.EVT_BUTTON, lambda e: self.Close())
-
-		self.fliterButton = wx.Button(right, -1, _(u'选项过滤器'))
-		right.GetSizer().Add(self.fliterButton, (right.GetSizer().GetRows(), 0))
-		self.Bind(wx.EVT_BUTTON, self.OnfliterButton)
-
+		if version.isDevVersion():
+			self.fliterButton = wx.Button(right, -1, _('option filter'))
+			right.GetSizer().Add(self.fliterButton, (right.GetSizer().GetRows(), 0))
+			self.Bind(wx.EVT_BUTTON, self.OnfliterButton)
+			print
 		main.Fit()
 		self.Fit()
 
@@ -44,14 +44,14 @@ class expertConfigWindow(wx.Dialog):
 		p = left
 		n = 0
 		for title in profile.getSubCategoriesFor(category):
-			# if title not in filter:
-			n += 1 + len(profile.getSettingsForCategory(category, title))
-			if n > count / 2:
-				p = right
-			configBase.TitleRow(p, title)
-			for s in profile.getSettingsForCategory(category, title):
-				if s.checkConditions():
-					configBase.SettingRow(p, s.getName())
+			if title not in profile.getPreference('filter'):
+				n += 1 + len(profile.getSettingsForCategory(category, title))
+				if n > count / 2:
+					p = right
+				configBase.TitleRow(p, title)
+				for s in profile.getSettingsForCategory(category, title):
+					if s.checkConditions():
+						configBase.SettingRow(p, s.getName())
 
 
 
