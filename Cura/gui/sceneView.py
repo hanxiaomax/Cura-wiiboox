@@ -645,8 +645,6 @@ class SceneView(openglGui.glGuiPanel):
 		if self._isSimpleMode:
 			self.GetTopLevelParent().simpleSettingsPanel.setupSlice()
 		self._engine.runEngine(self._scene)
-		if version.isDevVersion():
-			print "_onRunEngine"
 		if self._isSimpleMode:
 			profile.resetTempOverride()
 

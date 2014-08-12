@@ -20,7 +20,6 @@ import makerbot_driver
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
 def Convert_Gcode_to_x3g(dest,gcode_path,machine=profile.getMachineSetting('machine_type').encode('utf-8')):
-	print machine
 	filename = os.path.basename(gcode_path)
 	filename = os.path.splitext(filename)[0]
 	condition = threading.Condition()
@@ -30,7 +29,8 @@ def Convert_Gcode_to_x3g(dest,gcode_path,machine=profile.getMachineSetting('mach
 	parser.state.values['build_name'] = unicode(filename).encode("utf-8")
 	#INFO :必须使用Unicode.encode("utf-8")否则会出错
 	parser.s3g = makerbot_driver.s3g()
-	parser.s3g.writer = makerbot_driver.Writer.FileWriter(open(dest, 'wb'), condition)
+	destfile=open(dest,'wb')
+	parser.s3g.writer = makerbot_driver.Writer.FileWriter(destfile, condition)
 	keepgoing=True
 	maxline = len(open(gcode_path, "rU").readlines())
 	pos=0
@@ -49,7 +49,7 @@ def Convert_Gcode_to_x3g(dest,gcode_path,machine=profile.getMachineSetting('mach
 			parser.execute_line(line)
 			pos+=1
 			if pos>maxline/2:
-				(keepgoing,skip)=dlg.Update(pos,u'Please wait...')
+				(keepgoing,skip)=dlg.Update(pos,_('Please wait...'))
 			else:
 				(keepgoing,skip)=dlg.Update(pos)
 			if not keepgoing:
@@ -61,4 +61,5 @@ def Convert_Gcode_to_x3g(dest,gcode_path,machine=profile.getMachineSetting('mach
 		message_dlg.ShowModal()
 		message_dlg.Destroy()
 	else:
-		os.remove(dest.encode())
+		destfile.close()
+		os.remove(unicode(dest).encode('GBK'))

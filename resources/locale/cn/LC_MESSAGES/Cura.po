@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-04 10:14+0800\n"
-"PO-Revision-Date: 2014-08-04 11:38+0800\n"
+"POT-Creation-Date: 2014-08-07 21:25+0800\n"
+"PO-Revision-Date: 2014-08-07 21:34+0800\n"
 "Last-Translator: Lingfeng Ai <hanxiaomax@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
@@ -21,26 +21,26 @@ msgstr ""
 "X-Poedit-SearchPath-0: D:\\localgit\\Cura\\gui\n"
 "X-Poedit-SearchPath-1: D:\\localgit\\Cura\\util\n"
 
-#: D:\localgit\Cura\gui/aboutWindow.py:11
+#: D:\localgit\Cura\gui/aboutWindow.py:12
 msgid "About"
 msgstr "关于"
 
-#: D:\localgit\Cura\gui/aboutWindow.py:23
+#: D:\localgit\Cura\gui/aboutWindow.py:24
 msgid "Cura"
 msgstr "Cura---wiiboox定制版"
 
-#: D:\localgit\Cura\gui/aboutWindow.py:29
+#: D:\localgit\Cura\gui/aboutWindow.py:30
 msgid "Cura is currently developed and maintained by Ultimaker."
 msgstr ""
 "Cura is currently developed and maintained by Ultimaker.\n"
 "Cura由Ultimaker公司负责研发和维护。\n"
 "本汉化软件由Wiiboox公司进行汉化和定制。"
 
-#: D:\localgit\Cura\gui/app.py:147 D:\localgit\Cura\gui/mainWindow.py:575
+#: D:\localgit\Cura\gui/app.py:147 D:\localgit\Cura\gui/mainWindow.py:589
 msgid "A new version of Cura is available, would you like to download?"
 msgstr "发现新版本的Cura，您是否要下载？"
 
-#: D:\localgit\Cura\gui/app.py:147 D:\localgit\Cura\gui/mainWindow.py:575
+#: D:\localgit\Cura\gui/app.py:147 D:\localgit\Cura\gui/mainWindow.py:589
 msgid "New version available"
 msgstr "发现新版本"
 
@@ -138,12 +138,12 @@ msgid "Machine height (mm)"
 msgstr "机器高度(毫米)"
 
 #: D:\localgit\Cura\gui/configWizard.py:354
-#: D:\localgit\Cura\gui/profile.py:176 D:\localgit\Cura\util/profile.py:175
+#: D:\localgit\Cura\gui/profile.py:173 D:\localgit\Cura\util/profile.py:180
 msgid "Nozzle size (mm)"
 msgstr "喷头尺寸(毫米)"
 
 #: D:\localgit\Cura\gui/configWizard.py:355
-#: D:\localgit\Cura\gui/profile.py:388 D:\localgit\Cura\util/profile.py:512
+#: D:\localgit\Cura\gui/profile.py:385 D:\localgit\Cura\util/profile.py:528
 msgid "Heated bed"
 msgstr "加热板打印平台"
 
@@ -665,9 +665,13 @@ msgstr ""
 msgid "Head offset wizard"
 msgstr "启动喷头偏置向导"
 
-#: D:\localgit\Cura\gui/expertConfig.py:25
+#: D:\localgit\Cura\gui/expertConfig.py:16
 msgid "Expert config"
 msgstr "高级设置"
+
+#: D:\localgit\Cura\gui/expertConfig.py:29
+msgid "option filter"
+msgstr "选项过滤器"
 
 #: D:\localgit\Cura\gui/firmwareInstall.py:47
 msgid ""
@@ -678,7 +682,7 @@ msgstr "对不起，Cura并没有集成一个适合您的机器配置的固件�
 #: D:\localgit\Cura\gui/firmwareInstall.py:47
 #: D:\localgit\Cura\gui/firmwareInstall.py:51
 #: D:\localgit\Cura\gui/firmwareInstall.py:106
-#: D:\localgit\Cura\gui/mainWindow.py:516
+#: D:\localgit\Cura\gui/mainWindow.py:525
 msgid "Firmware update"
 msgstr "固件升级"
 
@@ -735,165 +739,165 @@ msgstr ""
 msgid "Failed to write firmware.\n"
 msgstr "写入固件失败。\n"
 
-#: D:\localgit\Cura\gui/mainWindow.py:71
+#: D:\localgit\Cura\gui/mainWindow.py:72
 msgid "Load model file...\tCTRL+L"
 msgstr "加载模型文件或GCode...\tCTRL+L"
 
-#: D:\localgit\Cura\gui/mainWindow.py:73
+#: D:\localgit\Cura\gui/mainWindow.py:74
 msgid "Save model...\tCTRL+S"
 msgstr "保存模型...\tCTRL+S"
 
-#: D:\localgit\Cura\gui/mainWindow.py:75
+#: D:\localgit\Cura\gui/mainWindow.py:76
 msgid "Reload platform\tF5"
 msgstr "重新加载打印平台"
 
-#: D:\localgit\Cura\gui/mainWindow.py:77
+#: D:\localgit\Cura\gui/mainWindow.py:78
 msgid "Clear platform"
 msgstr "清空打印平台"
 
-#: D:\localgit\Cura\gui/mainWindow.py:81
+#: D:\localgit\Cura\gui/mainWindow.py:82
 msgid "Print...\tCTRL+P"
 msgstr "打印...\tCTRL+P"
 
-#: D:\localgit\Cura\gui/mainWindow.py:83 D:\localgit\Cura\gui/sceneView.py:298
+#: D:\localgit\Cura\gui/mainWindow.py:84 D:\localgit\Cura\gui/sceneView.py:312
 msgid "Save GCode..."
 msgstr "保存GCode..."
 
-#: D:\localgit\Cura\gui/mainWindow.py:85
+#: D:\localgit\Cura\gui/mainWindow.py:86
 msgid "Show slice engine log..."
 msgstr "显示切片引擎记录"
 
-#: D:\localgit\Cura\gui/mainWindow.py:89
+#: D:\localgit\Cura\gui/mainWindow.py:90
 msgid "Open Profile..."
 msgstr "打开配置文件..."
 
-#: D:\localgit\Cura\gui/mainWindow.py:92
+#: D:\localgit\Cura\gui/mainWindow.py:93
 msgid "Save Profile..."
 msgstr "保存配置文件..."
 
-#: D:\localgit\Cura\gui/mainWindow.py:95
+#: D:\localgit\Cura\gui/mainWindow.py:96
 msgid "Load Profile from GCode..."
 msgstr "从GCode加载配置文件..."
 
-#: D:\localgit\Cura\gui/mainWindow.py:99
+#: D:\localgit\Cura\gui/mainWindow.py:100
 msgid "Reset Profile to default"
 msgstr "恢复配置信息至默认状态"
 
-#: D:\localgit\Cura\gui/mainWindow.py:104
+#: D:\localgit\Cura\gui/mainWindow.py:105
 msgid "Preferences...\tCTRL+,"
 msgstr "首选项...\tCTRL+,"
 
-#: D:\localgit\Cura\gui/mainWindow.py:106
-#: D:\localgit\Cura\gui/mainWindow.py:440
+#: D:\localgit\Cura\gui/mainWindow.py:107
+#: D:\localgit\Cura\gui/mainWindow.py:449
 msgid "Machine settings..."
 msgstr "机器设置..."
 
-#: D:\localgit\Cura\gui/mainWindow.py:112
+#: D:\localgit\Cura\gui/mainWindow.py:113
 msgid "Recent Model Files"
 msgstr "最近使用的模型文件"
 
-#: D:\localgit\Cura\gui/mainWindow.py:119
+#: D:\localgit\Cura\gui/mainWindow.py:120
 msgid "Recent Profile Files"
 msgstr "最近使用的配置文件"
 
-#: D:\localgit\Cura\gui/mainWindow.py:125
+#: D:\localgit\Cura\gui/mainWindow.py:126
 msgid "Quit"
 msgstr "退出"
 
-#: D:\localgit\Cura\gui/mainWindow.py:127
+#: D:\localgit\Cura\gui/mainWindow.py:128
 msgid "File"
 msgstr "文件"
 
-#: D:\localgit\Cura\gui/mainWindow.py:135
+#: D:\localgit\Cura\gui/mainWindow.py:136
 msgid "Minecraft map import..."
 msgstr "我的世界（Minecraft）地图导入"
 
-#: D:\localgit\Cura\gui/mainWindow.py:139
+#: D:\localgit\Cura\gui/mainWindow.py:140
 msgid "PID Debugger..."
 msgstr ""
 
-#: D:\localgit\Cura\gui/mainWindow.py:142
+#: D:\localgit\Cura\gui/mainWindow.py:143
 msgid "Copy profile to clipboard"
 msgstr "复制配置文件至剪切板"
 
-#: D:\localgit\Cura\gui/mainWindow.py:146
+#: D:\localgit\Cura\gui/mainWindow.py:147
 msgid "Print all at once"
 msgstr "一次打印全部模型"
 
-#: D:\localgit\Cura\gui/mainWindow.py:148
+#: D:\localgit\Cura\gui/mainWindow.py:149
 msgid "Print one at a time"
 msgstr "一次打印一个模型"
 
-#: D:\localgit\Cura\gui/mainWindow.py:155
+#: D:\localgit\Cura\gui/mainWindow.py:156
 msgid "Tools"
 msgstr "工具"
 
-#: D:\localgit\Cura\gui/mainWindow.py:161 D:\localgit\Cura\gui/profile.py:176
-#: D:\localgit\Cura\util/profile.py:175
+#: D:\localgit\Cura\gui/mainWindow.py:162 D:\localgit\Cura\gui/profile.py:173
+#: D:\localgit\Cura\util/profile.py:180
 msgid "Machine"
 msgstr "机器"
 
-#: D:\localgit\Cura\gui/mainWindow.py:164
+#: D:\localgit\Cura\gui/mainWindow.py:165
 msgid "Switch to quickprint..."
 msgstr "切换到快速打印模式..."
 
-#: D:\localgit\Cura\gui/mainWindow.py:168
+#: D:\localgit\Cura\gui/mainWindow.py:169
 msgid "Switch to full settings..."
 msgstr "切换到完全设置模式..."
 
-#: D:\localgit\Cura\gui/mainWindow.py:173
+#: D:\localgit\Cura\gui/mainWindow.py:174
 msgid "Open expert settings...\tCTRL+E"
 msgstr "打开高级设置...\tCTRL+E"
 
-#: D:\localgit\Cura\gui/mainWindow.py:177
+#: D:\localgit\Cura\gui/mainWindow.py:178
 msgid "Run first run wizard..."
 msgstr "启动首次运行向导..."
 
-#: D:\localgit\Cura\gui/mainWindow.py:179
+#: D:\localgit\Cura\gui/mainWindow.py:180
 msgid "Run bed leveling wizard..."
 msgstr "启动平台调平向导..."
 
-#: D:\localgit\Cura\gui/mainWindow.py:181
+#: D:\localgit\Cura\gui/mainWindow.py:182
 msgid "Run head offset wizard..."
 msgstr "！启动喷头偏置向导"
 
-#: D:\localgit\Cura\gui/mainWindow.py:184
+#: D:\localgit\Cura\gui/mainWindow.py:185
 msgid "Expert"
 msgstr "高级设置"
 
-#: D:\localgit\Cura\gui/mainWindow.py:187
+#: D:\localgit\Cura\gui/mainWindow.py:196
 msgid "Online documentation..."
 msgstr "在线文档..."
 
-#: D:\localgit\Cura\gui/mainWindow.py:189
+#: D:\localgit\Cura\gui/mainWindow.py:198
 msgid "Report a problem..."
 msgstr "报告错误..."
 
-#: D:\localgit\Cura\gui/mainWindow.py:191
+#: D:\localgit\Cura\gui/mainWindow.py:200
 msgid "Check for update..."
 msgstr "检查更新..."
 
-#: D:\localgit\Cura\gui/mainWindow.py:193
+#: D:\localgit\Cura\gui/mainWindow.py:202
 msgid "Open YouMagine website..."
 msgstr "打开 YouMagine 网站"
 
-#: D:\localgit\Cura\gui/mainWindow.py:195
+#: D:\localgit\Cura\gui/mainWindow.py:204
 msgid "About Cura..."
 msgstr "关于Wiiboox定制版Cura..."
 
-#: D:\localgit\Cura\gui/mainWindow.py:197
+#: D:\localgit\Cura\gui/mainWindow.py:206
 msgid "Help"
 msgstr "帮助"
 
-#: D:\localgit\Cura\gui/mainWindow.py:301
+#: D:\localgit\Cura\gui/mainWindow.py:310
 msgid "Loaded new profile from clipboard."
 msgstr "复制配置文件至剪切板"
 
-#: D:\localgit\Cura\gui/mainWindow.py:304
+#: D:\localgit\Cura\gui/mainWindow.py:313
 msgid "Unable to read from clipboard"
 msgstr "无法读取剪切板内容"
 
-#: D:\localgit\Cura\gui/mainWindow.py:349
+#: D:\localgit\Cura\gui/mainWindow.py:358
 msgid ""
 "For \"One at a time\" printing, you need to have entered the correct head "
 "size and gantry height in the machine settings"
@@ -901,27 +905,27 @@ msgstr ""
 "对于\"每次打印一个模型\"模式，你需要在机器设置里面输入正确的喷头尺寸和平台高"
 "度"
 
-#: D:\localgit\Cura\gui/mainWindow.py:349
+#: D:\localgit\Cura\gui/mainWindow.py:358
 msgid "One at a time warning"
 msgstr "每次打印一个模型警告"
 
-#: D:\localgit\Cura\gui/mainWindow.py:446
+#: D:\localgit\Cura\gui/mainWindow.py:455
 msgid "Install default firmware..."
 msgstr "安装默认固件..."
 
-#: D:\localgit\Cura\gui/mainWindow.py:449
+#: D:\localgit\Cura\gui/mainWindow.py:458
 msgid "Install custom firmware..."
 msgstr "安装自定义固件..."
 
-#: D:\localgit\Cura\gui/mainWindow.py:453
+#: D:\localgit\Cura\gui/mainWindow.py:462
 msgid "Select profile file to load"
 msgstr "选择要加载的配置文件"
 
-#: D:\localgit\Cura\gui/mainWindow.py:465
+#: D:\localgit\Cura\gui/mainWindow.py:474
 msgid "Select gcode file to load profile from"
 msgstr "选择Gcode文件以加载配置信息"
 
-#: D:\localgit\Cura\gui/mainWindow.py:481
+#: D:\localgit\Cura\gui/mainWindow.py:490
 msgid ""
 "No profile found in GCode file.\n"
 "This feature only works with GCode files made by Cura 12.07 or newer."
@@ -929,15 +933,15 @@ msgstr ""
 "没有在GCode中发现配置信息。\n"
 "本功能仅适用于由Cura12.07或更高版本生成的GCode代码。"
 
-#: D:\localgit\Cura\gui/mainWindow.py:481
+#: D:\localgit\Cura\gui/mainWindow.py:490
 msgid "Profile load error"
 msgstr "配置文件加载错误"
 
-#: D:\localgit\Cura\gui/mainWindow.py:485
+#: D:\localgit\Cura\gui/mainWindow.py:494
 msgid "Select profile file to save"
 msgstr "选择要保存的配置文件"
 
-#: D:\localgit\Cura\gui/mainWindow.py:496
+#: D:\localgit\Cura\gui/mainWindow.py:505
 msgid ""
 "This will reset all profile settings to defaults.\n"
 "Unless you have saved your current profile, all settings will be lost!\n"
@@ -947,43 +951,43 @@ msgstr ""
 "除非您已经保存最近使用的配置信息，否则所有设置将会丢失!\n"
 "您是否想要重置?"
 
-#: D:\localgit\Cura\gui/mainWindow.py:496
+#: D:\localgit\Cura\gui/mainWindow.py:505
 msgid "Profile reset"
 msgstr "配置信息重置"
 
-#: D:\localgit\Cura\gui/mainWindow.py:516
+#: D:\localgit\Cura\gui/mainWindow.py:525
 msgid ""
 "Warning: Installing a custom firmware does not guarantee that you machine "
 "will function correctly, and could damage your machine."
 msgstr "警告：安装自定义的固件不能保证您的机器正常工作 并可能会损坏您的机器。"
 
-#: D:\localgit\Cura\gui/mainWindow.py:517
+#: D:\localgit\Cura\gui/mainWindow.py:526
 msgid "Open firmware to upload"
 msgstr "打开要上传的固件"
 
-#: D:\localgit\Cura\gui/mainWindow.py:569
+#: D:\localgit\Cura\gui/mainWindow.py:578
 msgid ""
 "Could not write to clipboard, unable to get ownership. Another program is "
 "using the clipboard."
-msgstr ""
+msgstr "无法复制到剪切板，有其他程序正在使用它。"
 
-#: D:\localgit\Cura\gui/mainWindow.py:578
+#: D:\localgit\Cura\gui/mainWindow.py:592
 msgid "You are running the latest version of Cura!"
 msgstr "您正在使用最新版本的Cura！"
 
-#: D:\localgit\Cura\gui/mainWindow.py:578
+#: D:\localgit\Cura\gui/mainWindow.py:592
 msgid "Awesome!"
 msgstr "给力！"
 
-#: D:\localgit\Cura\gui/mainWindow.py:622
+#: D:\localgit\Cura\gui/mainWindow.py:636
 msgid "Basic"
 msgstr "基本"
 
-#: D:\localgit\Cura\gui/mainWindow.py:626
+#: D:\localgit\Cura\gui/mainWindow.py:640
 msgid "Advanced"
 msgstr "高级"
 
-#: D:\localgit\Cura\gui/mainWindow.py:633
+#: D:\localgit\Cura\gui/mainWindow.py:647
 msgid "Plugins"
 msgstr "插件"
 
@@ -1088,6 +1092,14 @@ msgstr ""
 msgid "Install now"
 msgstr "现在安装"
 
+#: D:\localgit\Cura\gui/optionOnOffDialog.py:13
+msgid "高级设置面板过滤器"
+msgstr ""
+
+#: D:\localgit\Cura\gui/optionOnOffDialog.py:19
+msgid "请勾选您需要保留的选项"
+msgstr ""
+
 #: D:\localgit\Cura\gui/pluginPanel.py:27
 msgid "Plugins:"
 msgstr "插件"
@@ -1108,67 +1120,71 @@ msgstr "您需要在添加插件前，先选择一个插件。"
 msgid "Error: no plugin selected"
 msgstr "错误：没有选择插件"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:14
+#: D:\localgit\Cura\gui/preferencesDialog.py:16
 msgid "Preferences"
 msgstr "首选项"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:28
+#: D:\localgit\Cura\gui/preferencesDialog.py:30
 msgid "Print window"
 msgstr "打印窗口"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:31
+#: D:\localgit\Cura\gui/preferencesDialog.py:33
 msgid "Colours"
 msgstr "颜色"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:37
-#: D:\localgit\Cura\gui/profile.py:363 D:\localgit\Cura\util/profile.py:486
+#: D:\localgit\Cura\gui/preferencesDialog.py:39
+#: D:\localgit\Cura\gui/profile.py:360 D:\localgit\Cura\util/profile.py:498
 msgid "Language"
 msgstr "语言"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:40
+#: D:\localgit\Cura\gui/preferencesDialog.py:42
 msgid "Filament settings"
 msgstr "料丝设置"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:69
-#: D:\localgit\Cura\gui/preferencesDialog.py:84
+#: D:\localgit\Cura\gui/preferencesDialog.py:53
+msgid "Cura settings"
+msgstr "Cura软件设置"
+
+#: D:\localgit\Cura\gui/preferencesDialog.py:72
+#: D:\localgit\Cura\gui/preferencesDialog.py:87
 msgid "Machine settings"
 msgstr "机器设置"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:95
+#: D:\localgit\Cura\gui/preferencesDialog.py:98
 msgid "Printer head size"
 msgstr "喷头尺寸"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:103
+#: D:\localgit\Cura\gui/preferencesDialog.py:106
 #, python-format
 msgid "Extruder %d"
 msgstr "挤出器 %d"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:107
+#: D:\localgit\Cura\gui/preferencesDialog.py:110
 msgid "Communication settings"
 msgstr "通信设置"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:124
+#: D:\localgit\Cura\gui/preferencesDialog.py:126
 msgid "Add new machine"
 msgstr "添加新打印机"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:128
+#: D:\localgit\Cura\gui/preferencesDialog.py:130
 msgid "Remove machine"
 msgstr "删除打印机"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:132
-#: D:\localgit\Cura\gui/preferencesDialog.py:171
+#: D:\localgit\Cura\gui/preferencesDialog.py:134
+#: D:\localgit\Cura\gui/preferencesDialog.py:173
 msgid "Change machine name"
 msgstr "修改机器名称"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:156
+#: D:\localgit\Cura\gui/preferencesDialog.py:157
 msgid "Cannot remove the last machine configuration in Cura"
 msgstr "无法删除Cura中最近使用的机器配置"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:156
+#: D:\localgit\Cura\gui/preferencesDialog.py:157
 msgid "Machine remove error"
 msgstr "删除机器错误"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:171
+#: D:\localgit\Cura\gui/preferencesDialog.py:173
 msgid "Enter the new name:"
 msgstr "输入新名字："
 
@@ -1201,7 +1217,7 @@ msgid "Connect"
 msgstr "连接"
 
 #: D:\localgit\Cura\gui/printWindow.py:340
-#: D:\localgit\Cura\gui/sceneView.py:76
+#: D:\localgit\Cura\gui/sceneView.py:75
 msgid "Print"
 msgstr "打印"
 
@@ -1218,21 +1234,21 @@ msgstr "取消打印"
 msgid "Error log"
 msgstr "错误记录"
 
-#: D:\localgit\Cura\gui/profile.py:171 D:\localgit\Cura\gui/profile.py:172
-#: D:\localgit\Cura\gui/profile.py:173 D:\localgit\Cura\gui/profile.py:201
-#: D:\localgit\Cura\gui/profile.py:202 D:\localgit\Cura\gui/profile.py:204
-#: D:\localgit\Cura\util/profile.py:170 D:\localgit\Cura\util/profile.py:171
-#: D:\localgit\Cura\util/profile.py:172 D:\localgit\Cura\util/profile.py:200
-#: D:\localgit\Cura\util/profile.py:202 D:\localgit\Cura\util/profile.py:204
-#: D:\localgit\Cura\util/profile.py:206
+#: D:\localgit\Cura\gui/profile.py:168 D:\localgit\Cura\gui/profile.py:169
+#: D:\localgit\Cura\gui/profile.py:170 D:\localgit\Cura\gui/profile.py:198
+#: D:\localgit\Cura\gui/profile.py:199 D:\localgit\Cura\gui/profile.py:201
+#: D:\localgit\Cura\util/profile.py:175 D:\localgit\Cura\util/profile.py:176
+#: D:\localgit\Cura\util/profile.py:177 D:\localgit\Cura\util/profile.py:205
+#: D:\localgit\Cura\util/profile.py:207 D:\localgit\Cura\util/profile.py:209
+#: D:\localgit\Cura\util/profile.py:211
 msgid "Quality"
 msgstr "质量"
 
-#: D:\localgit\Cura\gui/profile.py:171 D:\localgit\Cura\util/profile.py:170
+#: D:\localgit\Cura\gui/profile.py:168 D:\localgit\Cura\util/profile.py:175
 msgid "Layer height (mm)"
 msgstr "层高（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:171 D:\localgit\Cura\util/profile.py:170
+#: D:\localgit\Cura\gui/profile.py:168 D:\localgit\Cura\util/profile.py:175
 msgid ""
 "Layer height in millimeters.\n"
 "This is the most important setting to determine the quality of your print. "
@@ -1243,11 +1259,11 @@ msgstr ""
 "这是决定您的打印产品质量最重要的参数，一般质量为0.1毫米，高质量为0.06毫米，您"
 "最高可以设置0.25毫米，进行快速的，低质量的打印"
 
-#: D:\localgit\Cura\gui/profile.py:172 D:\localgit\Cura\util/profile.py:171
+#: D:\localgit\Cura\gui/profile.py:169 D:\localgit\Cura\util/profile.py:176
 msgid "Shell thickness (mm)"
 msgstr "外壳层厚（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:172 D:\localgit\Cura\util/profile.py:171
+#: D:\localgit\Cura\gui/profile.py:169 D:\localgit\Cura\util/profile.py:176
 msgid ""
 "Thickness of the outside shell in the horizontal direction.\n"
 "This is used in combination with the nozzle size to define the number\n"
@@ -1256,11 +1272,11 @@ msgstr ""
 "水平方向最外层表面的厚度。\n"
 "需要同喷头尺寸一起使用，来确定外轮廓线的数量和宽度。"
 
-#: D:\localgit\Cura\gui/profile.py:173 D:\localgit\Cura\util/profile.py:172
+#: D:\localgit\Cura\gui/profile.py:170 D:\localgit\Cura\util/profile.py:177
 msgid "Enable retraction"
 msgstr "开启料丝回抽"
 
-#: D:\localgit\Cura\gui/profile.py:173 D:\localgit\Cura\util/profile.py:172
+#: D:\localgit\Cura\gui/profile.py:170 D:\localgit\Cura\util/profile.py:177
 msgid ""
 "Retract the filament when the nozzle is moving over a none-printed area. "
 "Details about the retraction can be configured in the advanced tab."
@@ -1268,16 +1284,16 @@ msgstr ""
 "当喷头在非打印区域上方移动时回抽料丝。关于回抽的详细设置可以在高级选项卡中找"
 "到。"
 
-#: D:\localgit\Cura\gui/profile.py:174 D:\localgit\Cura\gui/profile.py:175
-#: D:\localgit\Cura\util/profile.py:173 D:\localgit\Cura\util/profile.py:174
+#: D:\localgit\Cura\gui/profile.py:171 D:\localgit\Cura\gui/profile.py:172
+#: D:\localgit\Cura\util/profile.py:178 D:\localgit\Cura\util/profile.py:179
 msgid "Fill"
 msgstr "填充"
 
-#: D:\localgit\Cura\gui/profile.py:174 D:\localgit\Cura\util/profile.py:173
+#: D:\localgit\Cura\gui/profile.py:171 D:\localgit\Cura\util/profile.py:178
 msgid "Bottom/Top thickness (mm)"
 msgstr "底部/顶部 厚度（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:174 D:\localgit\Cura\util/profile.py:173
+#: D:\localgit\Cura\gui/profile.py:171 D:\localgit\Cura\util/profile.py:178
 msgid ""
 "This controls the thickness of the bottom and top layers, the amount of "
 "solid layers put down is calculated by the layer thickness and this value.\n"
@@ -1287,11 +1303,11 @@ msgstr ""
 "这项参数控制底部和顶部层的厚度，底部实心层的数量由本参数和层厚来计算得出。\n"
 "本参数应该是层厚的倍数。并且保持本参数和您的外壁厚度相近，以保证强度。"
 
-#: D:\localgit\Cura\gui/profile.py:175 D:\localgit\Cura\util/profile.py:174
+#: D:\localgit\Cura\gui/profile.py:172 D:\localgit\Cura\util/profile.py:179
 msgid "Fill Density (%)"
 msgstr "填充密度（%）"
 
-#: D:\localgit\Cura\gui/profile.py:175 D:\localgit\Cura\util/profile.py:174
+#: D:\localgit\Cura\gui/profile.py:172 D:\localgit\Cura\util/profile.py:179
 msgid ""
 "This controls how densely filled the insides of your print will be. For a "
 "solid part use 100%, for an empty part use 0%. A value around 20% is usually "
@@ -1303,7 +1319,7 @@ msgstr ""
 "下20%的填充率足够了。\n"
 "这项参数不会影响模型的外部，仅仅影响模型的强度。"
 
-#: D:\localgit\Cura\gui/profile.py:176 D:\localgit\Cura\util/profile.py:175
+#: D:\localgit\Cura\gui/profile.py:173 D:\localgit\Cura\util/profile.py:180
 msgid ""
 "The nozzle size is very important, this is used to calculate the line width "
 "of the infill, and used to calculate the amount of outside wall lines and "
@@ -1311,20 +1327,20 @@ msgid ""
 msgstr ""
 "喷头的尺寸非常重要，用以计算填充线宽，以及为壁厚参数计算轮廓线数和厚度。"
 
-#: D:\localgit\Cura\gui/profile.py:177 D:\localgit\Cura\gui/profile.py:178
-#: D:\localgit\Cura\gui/profile.py:179 D:\localgit\Cura\gui/profile.py:180
-#: D:\localgit\Cura\gui/profile.py:181 D:\localgit\Cura\gui/profile.py:182
-#: D:\localgit\Cura\util/profile.py:176 D:\localgit\Cura\util/profile.py:177
-#: D:\localgit\Cura\util/profile.py:178 D:\localgit\Cura\util/profile.py:179
-#: D:\localgit\Cura\util/profile.py:180 D:\localgit\Cura\util/profile.py:181
+#: D:\localgit\Cura\gui/profile.py:174 D:\localgit\Cura\gui/profile.py:175
+#: D:\localgit\Cura\gui/profile.py:176 D:\localgit\Cura\gui/profile.py:177
+#: D:\localgit\Cura\gui/profile.py:178 D:\localgit\Cura\gui/profile.py:179
+#: D:\localgit\Cura\util/profile.py:181 D:\localgit\Cura\util/profile.py:182
+#: D:\localgit\Cura\util/profile.py:183 D:\localgit\Cura\util/profile.py:184
+#: D:\localgit\Cura\util/profile.py:185 D:\localgit\Cura\util/profile.py:186
 msgid "Speed and Temperature"
 msgstr "速度和温度"
 
-#: D:\localgit\Cura\gui/profile.py:177 D:\localgit\Cura\util/profile.py:176
+#: D:\localgit\Cura\gui/profile.py:174 D:\localgit\Cura\util/profile.py:181
 msgid "Print speed (mm/s)"
 msgstr "打印速度（毫米/秒）"
 
-#: D:\localgit\Cura\gui/profile.py:177 D:\localgit\Cura\util/profile.py:176
+#: D:\localgit\Cura\gui/profile.py:174 D:\localgit\Cura\util/profile.py:181
 msgid ""
 "Speed at which printing happens. A well adjusted Ultimaker can reach 150mm/"
 "s, but for good quality prints you want to print slower. Printing speed "
@@ -1335,70 +1351,70 @@ msgstr ""
 "但是打印的慢一些可以提高打印质量。打印速度受很多因素影响。\n"
 "因此您最好选用不同参数进行试验以达到最佳。"
 
-#: D:\localgit\Cura\gui/profile.py:178 D:\localgit\Cura\util/profile.py:177
+#: D:\localgit\Cura\gui/profile.py:175 D:\localgit\Cura\util/profile.py:182
 msgid "Printing temperature (C)"
 msgstr "打印温度（摄氏度）"
 
-#: D:\localgit\Cura\gui/profile.py:178 D:\localgit\Cura\gui/profile.py:179
-#: D:\localgit\Cura\gui/profile.py:180 D:\localgit\Cura\gui/profile.py:181
-#: D:\localgit\Cura\util/profile.py:177 D:\localgit\Cura\util/profile.py:178
-#: D:\localgit\Cura\util/profile.py:179 D:\localgit\Cura\util/profile.py:180
+#: D:\localgit\Cura\gui/profile.py:175 D:\localgit\Cura\gui/profile.py:176
+#: D:\localgit\Cura\gui/profile.py:177 D:\localgit\Cura\gui/profile.py:178
+#: D:\localgit\Cura\util/profile.py:182 D:\localgit\Cura\util/profile.py:183
+#: D:\localgit\Cura\util/profile.py:184 D:\localgit\Cura\util/profile.py:185
 msgid ""
 "Temperature used for printing. Set at 0 to pre-heat yourself.\n"
 "For PLA a value of 210C is usually used.\n"
 "For ABS a value of 230C or higher is required."
 msgstr "打印温度。"
 
-#: D:\localgit\Cura\gui/profile.py:179 D:\localgit\Cura\util/profile.py:178
+#: D:\localgit\Cura\gui/profile.py:176 D:\localgit\Cura\util/profile.py:183
 msgid "2nd nozzle temperature (C)"
 msgstr "第二喷头温度（摄氏度）"
 
-#: D:\localgit\Cura\gui/profile.py:180 D:\localgit\Cura\util/profile.py:179
+#: D:\localgit\Cura\gui/profile.py:177 D:\localgit\Cura\util/profile.py:184
 msgid "3th nozzle temperature (C)"
 msgstr "第三喷头温度（摄氏度）"
 
-#: D:\localgit\Cura\gui/profile.py:181 D:\localgit\Cura\util/profile.py:180
+#: D:\localgit\Cura\gui/profile.py:178 D:\localgit\Cura\util/profile.py:185
 msgid "4th nozzle temperature (C)"
 msgstr "第三喷头温度（摄氏度）"
 
-#: D:\localgit\Cura\gui/profile.py:182 D:\localgit\Cura\util/profile.py:181
+#: D:\localgit\Cura\gui/profile.py:179 D:\localgit\Cura\util/profile.py:186
 msgid "Bed temperature (C)"
 msgstr "打印平台温度（摄氏度）"
 
-#: D:\localgit\Cura\gui/profile.py:182 D:\localgit\Cura\util/profile.py:181
+#: D:\localgit\Cura\gui/profile.py:179 D:\localgit\Cura\util/profile.py:186
 msgid ""
 "Temperature used for the heated printer bed. Set at 0 to pre-heat yourself."
 msgstr "打印平台温度"
 
-#: D:\localgit\Cura\gui/profile.py:183 D:\localgit\Cura\gui/profile.py:184
-#: D:\localgit\Cura\util/profile.py:182 D:\localgit\Cura\util/profile.py:183
+#: D:\localgit\Cura\gui/profile.py:180 D:\localgit\Cura\gui/profile.py:181
+#: D:\localgit\Cura\util/profile.py:187 D:\localgit\Cura\util/profile.py:188
 msgid "None"
 msgstr "不使用（None）"
 
-#: D:\localgit\Cura\gui/profile.py:183 D:\localgit\Cura\util/profile.py:182
+#: D:\localgit\Cura\gui/profile.py:180 D:\localgit\Cura\util/profile.py:187
 msgid "Touching buildplate"
 msgstr "外部支撑（Touching buildplate）"
 
-#: D:\localgit\Cura\gui/profile.py:183 D:\localgit\Cura\util/profile.py:182
+#: D:\localgit\Cura\gui/profile.py:180 D:\localgit\Cura\util/profile.py:187
 msgid "Everywhere"
 msgstr "完全支撑（Everywhere）"
 
-#: D:\localgit\Cura\gui/profile.py:183 D:\localgit\Cura\gui/profile.py:184
-#: D:\localgit\Cura\gui/profile.py:185 D:\localgit\Cura\gui/profile.py:224
-#: D:\localgit\Cura\gui/profile.py:225 D:\localgit\Cura\gui/profile.py:226
-#: D:\localgit\Cura\gui/profile.py:227 D:\localgit\Cura\gui/profile.py:228
-#: D:\localgit\Cura\util/profile.py:182 D:\localgit\Cura\util/profile.py:183
-#: D:\localgit\Cura\util/profile.py:184 D:\localgit\Cura\util/profile.py:226
-#: D:\localgit\Cura\util/profile.py:227 D:\localgit\Cura\util/profile.py:228
-#: D:\localgit\Cura\util/profile.py:229 D:\localgit\Cura\util/profile.py:230
+#: D:\localgit\Cura\gui/profile.py:180 D:\localgit\Cura\gui/profile.py:181
+#: D:\localgit\Cura\gui/profile.py:182 D:\localgit\Cura\gui/profile.py:221
+#: D:\localgit\Cura\gui/profile.py:222 D:\localgit\Cura\gui/profile.py:223
+#: D:\localgit\Cura\gui/profile.py:224 D:\localgit\Cura\gui/profile.py:225
+#: D:\localgit\Cura\util/profile.py:187 D:\localgit\Cura\util/profile.py:188
+#: D:\localgit\Cura\util/profile.py:189 D:\localgit\Cura\util/profile.py:231
+#: D:\localgit\Cura\util/profile.py:232 D:\localgit\Cura\util/profile.py:233
+#: D:\localgit\Cura\util/profile.py:234 D:\localgit\Cura\util/profile.py:235
 msgid "Support"
 msgstr "支撑"
 
-#: D:\localgit\Cura\gui/profile.py:183 D:\localgit\Cura\util/profile.py:182
+#: D:\localgit\Cura\gui/profile.py:180 D:\localgit\Cura\util/profile.py:187
 msgid "Support type"
 msgstr "支撑类型"
 
-#: D:\localgit\Cura\gui/profile.py:183 D:\localgit\Cura\util/profile.py:182
+#: D:\localgit\Cura\gui/profile.py:180 D:\localgit\Cura\util/profile.py:187
 msgid ""
 "Type of support structure build.\n"
 "\"Touching buildplate\" is the most commonly used support setting.\n"
@@ -1413,28 +1429,28 @@ msgstr ""
 "外部支撑（Touching buildplate）：仅在支撑会和打印平台接触的位置使用支撑\n"
 "完全支撑（Everywhere）：在全部模型中使用支撑，包括模型某些部分的上表面。"
 
-#: D:\localgit\Cura\gui/profile.py:184 D:\localgit\Cura\gui/profile.py:231
-#: D:\localgit\Cura\util/profile.py:183 D:\localgit\Cura\util/profile.py:236
+#: D:\localgit\Cura\gui/profile.py:181 D:\localgit\Cura\gui/profile.py:228
+#: D:\localgit\Cura\util/profile.py:188 D:\localgit\Cura\util/profile.py:241
 msgid "Brim"
 msgstr "边沿"
 
-#: D:\localgit\Cura\gui/profile.py:184 D:\localgit\Cura\gui/profile.py:232
-#: D:\localgit\Cura\gui/profile.py:233 D:\localgit\Cura\gui/profile.py:234
-#: D:\localgit\Cura\gui/profile.py:235 D:\localgit\Cura\gui/profile.py:236
-#: D:\localgit\Cura\gui/profile.py:237 D:\localgit\Cura\gui/profile.py:238
-#: D:\localgit\Cura\gui/profile.py:239 D:\localgit\Cura\util/profile.py:183
-#: D:\localgit\Cura\util/profile.py:237 D:\localgit\Cura\util/profile.py:238
-#: D:\localgit\Cura\util/profile.py:239 D:\localgit\Cura\util/profile.py:240
-#: D:\localgit\Cura\util/profile.py:241 D:\localgit\Cura\util/profile.py:242
-#: D:\localgit\Cura\util/profile.py:243 D:\localgit\Cura\util/profile.py:244
+#: D:\localgit\Cura\gui/profile.py:181 D:\localgit\Cura\gui/profile.py:229
+#: D:\localgit\Cura\gui/profile.py:230 D:\localgit\Cura\gui/profile.py:231
+#: D:\localgit\Cura\gui/profile.py:232 D:\localgit\Cura\gui/profile.py:233
+#: D:\localgit\Cura\gui/profile.py:234 D:\localgit\Cura\gui/profile.py:235
+#: D:\localgit\Cura\gui/profile.py:236 D:\localgit\Cura\util/profile.py:188
+#: D:\localgit\Cura\util/profile.py:242 D:\localgit\Cura\util/profile.py:243
+#: D:\localgit\Cura\util/profile.py:244 D:\localgit\Cura\util/profile.py:245
+#: D:\localgit\Cura\util/profile.py:246 D:\localgit\Cura\util/profile.py:247
+#: D:\localgit\Cura\util/profile.py:248 D:\localgit\Cura\util/profile.py:249
 msgid "Raft"
-msgstr "衬垫"
+msgstr "底部衬垫"
 
-#: D:\localgit\Cura\gui/profile.py:184 D:\localgit\Cura\util/profile.py:183
+#: D:\localgit\Cura\gui/profile.py:181 D:\localgit\Cura\util/profile.py:188
 msgid "Platform adhesion type"
 msgstr "打印平台粘附底座类型"
 
-#: D:\localgit\Cura\gui/profile.py:184 D:\localgit\Cura\util/profile.py:183
+#: D:\localgit\Cura\gui/profile.py:181 D:\localgit\Cura\util/profile.py:188
 msgid ""
 "Different options that help in preventing corners from lifting due to "
 "warping.\n"
@@ -1450,23 +1466,23 @@ msgstr ""
 "打印一个较薄的层。\n"
 "（注意：打开Brim或者Raft都会自动关闭skirt）"
 
-#: D:\localgit\Cura\gui/profile.py:185 D:\localgit\Cura\util/profile.py:184
+#: D:\localgit\Cura\gui/profile.py:182 D:\localgit\Cura\util/profile.py:189
 msgid "Both"
-msgstr "两者皆有"
+msgstr "选择两者"
 
-#: D:\localgit\Cura\gui/profile.py:185 D:\localgit\Cura\util/profile.py:184
+#: D:\localgit\Cura\gui/profile.py:182 D:\localgit\Cura\util/profile.py:189
 msgid "First extruder"
-msgstr "第一挤出器"
+msgstr "第一喷头"
 
-#: D:\localgit\Cura\gui/profile.py:185 D:\localgit\Cura\util/profile.py:184
+#: D:\localgit\Cura\gui/profile.py:182 D:\localgit\Cura\util/profile.py:189
 msgid "Second extruder"
-msgstr "第二挤出器"
+msgstr "第二喷头"
 
-#: D:\localgit\Cura\gui/profile.py:185 D:\localgit\Cura\util/profile.py:184
+#: D:\localgit\Cura\gui/profile.py:182 D:\localgit\Cura\util/profile.py:189
 msgid "Support dual extrusion"
-msgstr "支持双喷头"
+msgstr "选择打印支撑的喷头"
 
-#: D:\localgit\Cura\gui/profile.py:185 D:\localgit\Cura\util/profile.py:184
+#: D:\localgit\Cura\gui/profile.py:182 D:\localgit\Cura\util/profile.py:189
 msgid ""
 "Which extruder to use for support material, for break-away support you can "
 "use both extruders.\n"
@@ -1480,17 +1496,17 @@ msgstr ""
 "致更多的挤出器转换。\n"
 "你也可以使用第二个挤出器输送可溶性支撑材料。"
 
-#: D:\localgit\Cura\gui/profile.py:186 D:\localgit\Cura\gui/profile.py:187
-#: D:\localgit\Cura\gui/profile.py:188 D:\localgit\Cura\util/profile.py:185
-#: D:\localgit\Cura\util/profile.py:186 D:\localgit\Cura\util/profile.py:187
+#: D:\localgit\Cura\gui/profile.py:183 D:\localgit\Cura\gui/profile.py:184
+#: D:\localgit\Cura\gui/profile.py:185 D:\localgit\Cura\util/profile.py:190
+#: D:\localgit\Cura\util/profile.py:191 D:\localgit\Cura\util/profile.py:192
 msgid "Dual extrusion"
 msgstr "双喷头"
 
-#: D:\localgit\Cura\gui/profile.py:186 D:\localgit\Cura\util/profile.py:185
+#: D:\localgit\Cura\gui/profile.py:183 D:\localgit\Cura\util/profile.py:190
 msgid "Wipe&prime tower"
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:186 D:\localgit\Cura\util/profile.py:185
+#: D:\localgit\Cura\gui/profile.py:183 D:\localgit\Cura\util/profile.py:190
 msgid ""
 "The wipe-tower is a tower printed on every layer when switching between "
 "nozzles.\n"
@@ -1498,11 +1514,11 @@ msgid ""
 "print the 2nd color."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:187 D:\localgit\Cura\util/profile.py:186
+#: D:\localgit\Cura\gui/profile.py:184 D:\localgit\Cura\util/profile.py:191
 msgid "Wipe&prime tower volume per layer (mm3)"
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:187 D:\localgit\Cura\util/profile.py:186
+#: D:\localgit\Cura\gui/profile.py:184 D:\localgit\Cura\util/profile.py:191
 msgid ""
 "The amount of material put in the wipe/prime tower.\n"
 "This is done in volume because in general you want to extrude a\n"
@@ -1511,11 +1527,11 @@ msgid ""
 "This means that with thinner layers, your tower gets bigger."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:188 D:\localgit\Cura\util/profile.py:187
+#: D:\localgit\Cura\gui/profile.py:185 D:\localgit\Cura\util/profile.py:192
 msgid "Ooze shield"
 msgstr "渗出防护层（ooze shield）"
 
-#: D:\localgit\Cura\gui/profile.py:188 D:\localgit\Cura\util/profile.py:187
+#: D:\localgit\Cura\gui/profile.py:185 D:\localgit\Cura\util/profile.py:192
 msgid ""
 "The ooze shield is a 1 line thick shell around the object which stands a few "
 "mm from the object.\n"
@@ -1524,131 +1540,133 @@ msgstr ""
 "渗出防护层（ooze shield）是一条线粗细的层，它会超出模型边界几毫米。\n"
 "这个防护层会阻挡双挤出模式下空闲喷头流出的料丝"
 
-#: D:\localgit\Cura\gui/profile.py:189 D:\localgit\Cura\gui/profile.py:190
-#: D:\localgit\Cura\gui/profile.py:191 D:\localgit\Cura\gui/profile.py:192
-#: D:\localgit\Cura\gui/profile.py:193 D:\localgit\Cura\util/profile.py:188
-#: D:\localgit\Cura\util/profile.py:189 D:\localgit\Cura\util/profile.py:190
-#: D:\localgit\Cura\util/profile.py:191 D:\localgit\Cura\util/profile.py:192
+#: D:\localgit\Cura\gui/profile.py:186 D:\localgit\Cura\gui/profile.py:187
+#: D:\localgit\Cura\gui/profile.py:188 D:\localgit\Cura\gui/profile.py:189
+#: D:\localgit\Cura\gui/profile.py:190 D:\localgit\Cura\util/profile.py:193
+#: D:\localgit\Cura\util/profile.py:194 D:\localgit\Cura\util/profile.py:195
+#: D:\localgit\Cura\util/profile.py:196 D:\localgit\Cura\util/profile.py:197
 msgid "Filament"
 msgstr "料丝"
 
-#: D:\localgit\Cura\gui/profile.py:189 D:\localgit\Cura\util/profile.py:188
+#: D:\localgit\Cura\gui/profile.py:186 D:\localgit\Cura\util/profile.py:193
 msgid "Diameter (mm)"
 msgstr "直径（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:189 D:\localgit\Cura\util/profile.py:188
+#: D:\localgit\Cura\gui/profile.py:186 D:\localgit\Cura\util/profile.py:193
 msgid ""
 "Diameter of your filament, as accurately as possible.\n"
 "If you cannot measure this value you will have to calibrate it, a higher "
 "number means less extrusion, a smaller number generates more extrusion."
 msgstr "@料丝直径，越准确越好"
 
-#: D:\localgit\Cura\gui/profile.py:190 D:\localgit\Cura\util/profile.py:189
+#: D:\localgit\Cura\gui/profile.py:187 D:\localgit\Cura\util/profile.py:194
 msgid "Diameter2 (mm)"
 msgstr "直径2（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:190 D:\localgit\Cura\util/profile.py:189
+#: D:\localgit\Cura\gui/profile.py:187 D:\localgit\Cura\util/profile.py:194
 msgid ""
 "Diameter of your filament for the 2nd nozzle. Use 0 to use the same diameter "
 "as for nozzle 1."
 msgstr "第二喷头的料丝直径。设置为0则保持和第一喷头料丝一致的直径"
 
-#: D:\localgit\Cura\gui/profile.py:191 D:\localgit\Cura\util/profile.py:190
+#: D:\localgit\Cura\gui/profile.py:188 D:\localgit\Cura\util/profile.py:195
 msgid "Diameter3 (mm)"
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:191 D:\localgit\Cura\util/profile.py:190
+#: D:\localgit\Cura\gui/profile.py:188 D:\localgit\Cura\util/profile.py:195
 msgid ""
 "Diameter of your filament for the 3th nozzle. Use 0 to use the same diameter "
 "as for nozzle 1."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:192 D:\localgit\Cura\util/profile.py:191
+#: D:\localgit\Cura\gui/profile.py:189 D:\localgit\Cura\util/profile.py:196
 msgid "Diameter4 (mm)"
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:192 D:\localgit\Cura\util/profile.py:191
+#: D:\localgit\Cura\gui/profile.py:189 D:\localgit\Cura\util/profile.py:196
 msgid ""
 "Diameter of your filament for the 4th nozzle. Use 0 to use the same diameter "
 "as for nozzle 1."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:193 D:\localgit\Cura\util/profile.py:192
+#: D:\localgit\Cura\gui/profile.py:190 D:\localgit\Cura\util/profile.py:197
 msgid "Flow (%)"
 msgstr "流动率（%）"
 
-#: D:\localgit\Cura\gui/profile.py:193 D:\localgit\Cura\util/profile.py:192
+#: D:\localgit\Cura\gui/profile.py:190 D:\localgit\Cura\util/profile.py:197
 msgid ""
 "Flow compensation, the amount of material extruded is multiplied by this "
 "value"
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:194 D:\localgit\Cura\gui/profile.py:195
-#: D:\localgit\Cura\gui/profile.py:196 D:\localgit\Cura\gui/profile.py:197
-#: D:\localgit\Cura\gui/profile.py:198 D:\localgit\Cura\gui/profile.py:199
-#: D:\localgit\Cura\gui/profile.py:200 D:\localgit\Cura\util/profile.py:193
-#: D:\localgit\Cura\util/profile.py:194 D:\localgit\Cura\util/profile.py:195
-#: D:\localgit\Cura\util/profile.py:196 D:\localgit\Cura\util/profile.py:197
-#: D:\localgit\Cura\util/profile.py:198 D:\localgit\Cura\util/profile.py:199
+#: D:\localgit\Cura\gui/profile.py:191 D:\localgit\Cura\gui/profile.py:192
+#: D:\localgit\Cura\gui/profile.py:193 D:\localgit\Cura\gui/profile.py:194
+#: D:\localgit\Cura\gui/profile.py:195 D:\localgit\Cura\gui/profile.py:196
+#: D:\localgit\Cura\gui/profile.py:197 D:\localgit\Cura\util/profile.py:198
+#: D:\localgit\Cura\util/profile.py:199 D:\localgit\Cura\util/profile.py:200
+#: D:\localgit\Cura\util/profile.py:201 D:\localgit\Cura\util/profile.py:202
+#: D:\localgit\Cura\util/profile.py:203 D:\localgit\Cura\util/profile.py:204
 msgid "Retraction"
 msgstr "料丝回抽"
 
-#: D:\localgit\Cura\gui/profile.py:194 D:\localgit\Cura\util/profile.py:193
+#: D:\localgit\Cura\gui/profile.py:191 D:\localgit\Cura\util/profile.py:198
 msgid "Speed (mm/s)"
 msgstr "速度（毫米/秒）"
 
-#: D:\localgit\Cura\gui/profile.py:194 D:\localgit\Cura\util/profile.py:193
+#: D:\localgit\Cura\gui/profile.py:191 D:\localgit\Cura\util/profile.py:198
 msgid ""
 "Speed at which the filament is retracted, a higher retraction speed works "
 "better. But a very high retraction speed can lead to filament grinding."
 msgstr "料丝回抽的速度，速度较高效果也较好。但是如果速度太快会磨损料丝。"
 
-#: D:\localgit\Cura\gui/profile.py:195 D:\localgit\Cura\util/profile.py:194
+#: D:\localgit\Cura\gui/profile.py:192 D:\localgit\Cura\util/profile.py:199
 msgid "Distance (mm)"
 msgstr "距离（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:195 D:\localgit\Cura\util/profile.py:194
+#: D:\localgit\Cura\gui/profile.py:192 D:\localgit\Cura\util/profile.py:199
 msgid ""
 "Amount of retraction, set at 0 for no retraction at all. A value of 4.5mm "
 "seems to generate good results."
 msgstr "料丝回抽量。设置为0则不进行回吸。设置为4.5mm会有比较好的效果"
 
-#: D:\localgit\Cura\gui/profile.py:196 D:\localgit\Cura\util/profile.py:195
+#: D:\localgit\Cura\gui/profile.py:193 D:\localgit\Cura\util/profile.py:200
 msgid "Dual extrusion switch amount (mm)"
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:196 D:\localgit\Cura\util/profile.py:195
+#: D:\localgit\Cura\gui/profile.py:193 D:\localgit\Cura\util/profile.py:200
 msgid ""
 "Amount of retraction when switching nozzle with dual-extrusion, set at 0 for "
 "no retraction at all. A value of 16.0mm seems to generate good results."
 msgstr ""
+"双喷头打印时，交换喷头时进行料丝回抽了量，设置为0则不进行回抽。设置为16mm效果"
+"比较好。"
 
-#: D:\localgit\Cura\gui/profile.py:197 D:\localgit\Cura\util/profile.py:196
+#: D:\localgit\Cura\gui/profile.py:194 D:\localgit\Cura\util/profile.py:201
 msgid "Minimum travel (mm)"
 msgstr "最小移动距离（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:197 D:\localgit\Cura\util/profile.py:196
+#: D:\localgit\Cura\gui/profile.py:194 D:\localgit\Cura\util/profile.py:201
 msgid ""
 "Minimum amount of travel needed for a retraction to happen at all. To make "
 "sure you do not get a lot of retractions in a small area."
 msgstr "进行料丝回抽的最小移动距离。防止在一个小区域中大量回吸"
 
-#: D:\localgit\Cura\gui/profile.py:198 D:\localgit\Cura\util/profile.py:197
+#: D:\localgit\Cura\gui/profile.py:195 D:\localgit\Cura\util/profile.py:202
 msgid "Enable combing"
 msgstr "允许合并"
 
-#: D:\localgit\Cura\gui/profile.py:198 D:\localgit\Cura\util/profile.py:197
+#: D:\localgit\Cura\gui/profile.py:195 D:\localgit\Cura\util/profile.py:202
 msgid ""
 "Combing is the act of avoiding holes in the print for the head to travel "
 "over. If combing is disabled the printer head moves straight from the start "
 "point to the end point and it will always retract."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:199 D:\localgit\Cura\util/profile.py:198
+#: D:\localgit\Cura\gui/profile.py:196 D:\localgit\Cura\util/profile.py:203
 msgid "Minimal extrusion before retracting (mm)"
 msgstr "料丝回抽前挤出的最少值（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:199 D:\localgit\Cura\util/profile.py:198
+#: D:\localgit\Cura\gui/profile.py:196 D:\localgit\Cura\util/profile.py:203
 msgid ""
 "The minimal amount of extrusion that needs to be done before retracting "
 "again if a retraction needs to happen before this minimal is reached the "
@@ -1659,11 +1677,11 @@ msgstr ""
 "在进行回抽前需要挤出的最小料丝量，在到达这个量之前的回抽将被忽略。\n"
 "\v这样可以避免在一段料丝上频繁回抽，避免磨损料丝。"
 
-#: D:\localgit\Cura\gui/profile.py:200 D:\localgit\Cura\util/profile.py:199
+#: D:\localgit\Cura\gui/profile.py:197 D:\localgit\Cura\util/profile.py:204
 msgid "Z hop when retracting (mm)"
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:200 D:\localgit\Cura\util/profile.py:199
+#: D:\localgit\Cura\gui/profile.py:197 D:\localgit\Cura\util/profile.py:204
 msgid ""
 "When a retraction is done, the head is lifted by this amount to travel over "
 "the print. A value of 0.075 works well. This feature has a lot of positive "
@@ -1672,11 +1690,11 @@ msgstr ""
 "当料丝回抽结束后，喷头抬升一定距离以在打印模型上方移动。该值设为0.075时效果较"
 "好。"
 
-#: D:\localgit\Cura\gui/profile.py:201 D:\localgit\Cura\util/profile.py:200
+#: D:\localgit\Cura\gui/profile.py:198 D:\localgit\Cura\util/profile.py:205
 msgid "Initial layer thickness (mm)"
 msgstr "起始层厚度（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:201 D:\localgit\Cura\util/profile.py:200
+#: D:\localgit\Cura\gui/profile.py:198 D:\localgit\Cura\util/profile.py:205
 msgid ""
 "Layer thickness of the bottom layer. A thicker bottom layer makes sticking "
 "to the bed easier. Set to 0.0 to have the bottom layer thickness the same as "
@@ -1685,11 +1703,11 @@ msgstr ""
 "模型底层厚度。比较厚的层容易将模型固定在打印平台上。设置为0.0，则底层厚度将和"
 "其它层保持一致。"
 
-#: D:\localgit\Cura\gui/profile.py:202 D:\localgit\Cura\util/profile.py:204
+#: D:\localgit\Cura\gui/profile.py:199 D:\localgit\Cura\util/profile.py:209
 msgid "Cut off object bottom (mm)"
 msgstr "切除模型底部（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:202 D:\localgit\Cura\util/profile.py:204
+#: D:\localgit\Cura\gui/profile.py:199 D:\localgit\Cura\util/profile.py:209
 msgid ""
 "Sinks the object into the platform, this can be used for objects that do not "
 "have a flat bottom and thus create a too small first layer."
@@ -1697,29 +1715,29 @@ msgstr ""
 "将模型沉入打印平面，适用于那些不具备平坦底面的模型，\n"
 "这些模型由于没有平坦底面，因此其第一层面积会非常小。"
 
-#: D:\localgit\Cura\gui/profile.py:204 D:\localgit\Cura\util/profile.py:206
+#: D:\localgit\Cura\gui/profile.py:201 D:\localgit\Cura\util/profile.py:211
 msgid "Dual extrusion overlap (mm)"
 msgstr "双喷头挤出叠加量"
 
-#: D:\localgit\Cura\gui/profile.py:204 D:\localgit\Cura\util/profile.py:206
+#: D:\localgit\Cura\gui/profile.py:201 D:\localgit\Cura\util/profile.py:211
 msgid ""
 "Add a certain amount of overlapping extrusion on dual-extrusion prints. This "
 "bonds the different colors together."
 msgstr "双喷头打印时，两种料丝的叠加量。这将使不同颜色的料丝混合。"
 
-#: D:\localgit\Cura\gui/profile.py:205 D:\localgit\Cura\gui/profile.py:206
-#: D:\localgit\Cura\gui/profile.py:207 D:\localgit\Cura\gui/profile.py:208
-#: D:\localgit\Cura\gui/profile.py:209 D:\localgit\Cura\util/profile.py:207
-#: D:\localgit\Cura\util/profile.py:208 D:\localgit\Cura\util/profile.py:209
-#: D:\localgit\Cura\util/profile.py:210 D:\localgit\Cura\util/profile.py:211
+#: D:\localgit\Cura\gui/profile.py:202 D:\localgit\Cura\gui/profile.py:203
+#: D:\localgit\Cura\gui/profile.py:204 D:\localgit\Cura\gui/profile.py:205
+#: D:\localgit\Cura\gui/profile.py:206 D:\localgit\Cura\util/profile.py:212
+#: D:\localgit\Cura\util/profile.py:213 D:\localgit\Cura\util/profile.py:214
+#: D:\localgit\Cura\util/profile.py:215 D:\localgit\Cura\util/profile.py:216
 msgid "Speed"
 msgstr "速度"
 
-#: D:\localgit\Cura\gui/profile.py:205 D:\localgit\Cura\util/profile.py:207
+#: D:\localgit\Cura\gui/profile.py:202 D:\localgit\Cura\util/profile.py:212
 msgid "Travel speed (mm/s)"
 msgstr "喷头运动速度（毫米/秒）"
 
-#: D:\localgit\Cura\gui/profile.py:205 D:\localgit\Cura\util/profile.py:207
+#: D:\localgit\Cura\gui/profile.py:202 D:\localgit\Cura\util/profile.py:212
 msgid ""
 "Speed at which travel moves are done, a well built Ultimaker can reach "
 "speeds of 250mm/s. But some machines might miss steps then."
@@ -1727,11 +1745,11 @@ msgstr ""
 "非打印时喷头的移动速度，一个状态较好的机器可以达到250mm/s。但是有些机器可能会"
 "失步。"
 
-#: D:\localgit\Cura\gui/profile.py:206 D:\localgit\Cura\util/profile.py:208
+#: D:\localgit\Cura\gui/profile.py:203 D:\localgit\Cura\util/profile.py:213
 msgid "Bottom layer speed (mm/s)"
 msgstr "底层打印速度（毫米/秒）"
 
-#: D:\localgit\Cura\gui/profile.py:206 D:\localgit\Cura\util/profile.py:208
+#: D:\localgit\Cura\gui/profile.py:203 D:\localgit\Cura\util/profile.py:213
 msgid ""
 "Print speed for the bottom layer, you want to print the first layer slower "
 "so it sticks better to the printer bed."
@@ -1739,11 +1757,11 @@ msgstr ""
 "模型底层打印速度，第一层打印的时候速度慢一些，这样模型和打印平台的粘附会好一"
 "些"
 
-#: D:\localgit\Cura\gui/profile.py:207 D:\localgit\Cura\util/profile.py:209
+#: D:\localgit\Cura\gui/profile.py:204 D:\localgit\Cura\util/profile.py:214
 msgid "Infill speed (mm/s)"
 msgstr "填充速度"
 
-#: D:\localgit\Cura\gui/profile.py:207 D:\localgit\Cura\util/profile.py:209
+#: D:\localgit\Cura\gui/profile.py:204 D:\localgit\Cura\util/profile.py:214
 msgid ""
 "Speed at which infill parts are printed. If set to 0 then the print speed is "
 "used for the infill. Printing the infill faster can greatly reduce printing "
@@ -1752,11 +1770,11 @@ msgstr ""
 "需要填充部件的填充速度。如果设置为0则会使用打印速度。填充速度加快，可以极大的"
 "缩短打印时间，但是也会影响打印质量"
 
-#: D:\localgit\Cura\gui/profile.py:208 D:\localgit\Cura\util/profile.py:210
+#: D:\localgit\Cura\gui/profile.py:205 D:\localgit\Cura\util/profile.py:215
 msgid "Outer shell speed (mm/s)"
 msgstr "外表面打印速度"
 
-#: D:\localgit\Cura\gui/profile.py:208 D:\localgit\Cura\util/profile.py:210
+#: D:\localgit\Cura\gui/profile.py:205 D:\localgit\Cura\util/profile.py:215
 msgid ""
 "Speed at which outer shell is printed. If set to 0 then the print speed is "
 "used. Printing the outer shell at a lower speed improves the final skin "
@@ -1766,11 +1784,11 @@ msgstr ""
 "模型最外层表面打印速度。如果设置为0，则会使用打印速度。打印最外层时使用较低速"
 "率可以改善表面质量。然而如果外层速率和内层速率差别很大，也会影响打印质量"
 
-#: D:\localgit\Cura\gui/profile.py:209 D:\localgit\Cura\util/profile.py:211
+#: D:\localgit\Cura\gui/profile.py:206 D:\localgit\Cura\util/profile.py:216
 msgid "Inner shell speed (mm/s)"
 msgstr "内表面打印速率"
 
-#: D:\localgit\Cura\gui/profile.py:209 D:\localgit\Cura\util/profile.py:211
+#: D:\localgit\Cura\gui/profile.py:206 D:\localgit\Cura\util/profile.py:216
 msgid ""
 "Speed at which inner shells are printed. If set to 0 then the print speed is "
 "used. Printing the inner shell faster then the outer shell will reduce "
@@ -1780,21 +1798,21 @@ msgstr ""
 "内表面的打印速度。如果设置为0则会使用打印速度。如果内表面打印速度比外表面快，"
 "则可以减少打印时间。最好是把这个速率设置在外表面打印速率和填充/打印速率之间。"
 
-#: D:\localgit\Cura\gui/profile.py:210 D:\localgit\Cura\gui/profile.py:211
-#: D:\localgit\Cura\gui/profile.py:216 D:\localgit\Cura\gui/profile.py:217
-#: D:\localgit\Cura\gui/profile.py:218 D:\localgit\Cura\gui/profile.py:219
-#: D:\localgit\Cura\gui/profile.py:220 D:\localgit\Cura\util/profile.py:212
-#: D:\localgit\Cura\util/profile.py:213 D:\localgit\Cura\util/profile.py:218
-#: D:\localgit\Cura\util/profile.py:219 D:\localgit\Cura\util/profile.py:220
-#: D:\localgit\Cura\util/profile.py:221 D:\localgit\Cura\util/profile.py:222
+#: D:\localgit\Cura\gui/profile.py:207 D:\localgit\Cura\gui/profile.py:208
+#: D:\localgit\Cura\gui/profile.py:213 D:\localgit\Cura\gui/profile.py:214
+#: D:\localgit\Cura\gui/profile.py:215 D:\localgit\Cura\gui/profile.py:216
+#: D:\localgit\Cura\gui/profile.py:217 D:\localgit\Cura\util/profile.py:217
+#: D:\localgit\Cura\util/profile.py:218 D:\localgit\Cura\util/profile.py:223
+#: D:\localgit\Cura\util/profile.py:224 D:\localgit\Cura\util/profile.py:225
+#: D:\localgit\Cura\util/profile.py:226 D:\localgit\Cura\util/profile.py:227
 msgid "Cool"
 msgstr "冷却"
 
-#: D:\localgit\Cura\gui/profile.py:210 D:\localgit\Cura\util/profile.py:212
+#: D:\localgit\Cura\gui/profile.py:207 D:\localgit\Cura\util/profile.py:217
 msgid "Minimal layer time (sec)"
 msgstr "每层花费的最少时间（秒）"
 
-#: D:\localgit\Cura\gui/profile.py:210 D:\localgit\Cura\util/profile.py:212
+#: D:\localgit\Cura\gui/profile.py:207 D:\localgit\Cura\util/profile.py:217
 msgid ""
 "Minimum time spent in a layer, gives the layer time to cool down before the "
 "next layer is put on top. If the layer will be placed down too fast the "
@@ -1805,11 +1823,11 @@ msgstr ""
 "当可能会过早地开始打印下一层时，打印机会减慢速度，以确保每层都能保证设置的最"
 "短时间"
 
-#: D:\localgit\Cura\gui/profile.py:211 D:\localgit\Cura\util/profile.py:213
+#: D:\localgit\Cura\gui/profile.py:208 D:\localgit\Cura\util/profile.py:218
 msgid "Enable cooling fan"
 msgstr "打开冷却风扇"
 
-#: D:\localgit\Cura\gui/profile.py:211 D:\localgit\Cura\util/profile.py:213
+#: D:\localgit\Cura\gui/profile.py:208 D:\localgit\Cura\util/profile.py:218
 msgid ""
 "Enable the cooling fan during the print. The extra cooling from the cooling "
 "fan is essential during faster prints."
@@ -1817,45 +1835,53 @@ msgstr ""
 "在打印过程中打开风扇。在进行快速打印的时候，额外使用冷却风扇进行冷却是必要"
 "的。"
 
-#: D:\localgit\Cura\gui/profile.py:213 D:\localgit\Cura\util/profile.py:215
+#: D:\localgit\Cura\gui/profile.py:210 D:\localgit\Cura\util/profile.py:220
 msgid "Line count"
 msgstr "线数"
 
-#: D:\localgit\Cura\gui/profile.py:213 D:\localgit\Cura\util/profile.py:215
+#: D:\localgit\Cura\gui/profile.py:210 D:\localgit\Cura\util/profile.py:220
 msgid ""
 "The skirt is a line drawn around the object at the first layer. This helps "
 "to prime your extruder, and to see if the object fits on your platform.\n"
 "Setting this to 0 will disable the skirt. Multiple skirt lines can help "
 "priming your extruder better for small objects."
 msgstr ""
+"外圈线：在打印物体的第一层时，喷头会在物体周围挤出一圈料丝。这是为了让喷头准"
+"备好，并且可以检查你的平台是否合适。\n"
+"设置为0的时候，就不会打印「外圈线」。多打印几个外圈线，可以让喷头准备的更充"
+"分，尤其是打印小物体时，很有帮助。"
 
-#: D:\localgit\Cura\gui/profile.py:214 D:\localgit\Cura\util/profile.py:216
+#: D:\localgit\Cura\gui/profile.py:211 D:\localgit\Cura\util/profile.py:221
 msgid "Start distance (mm)"
 msgstr "起始距离（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:214 D:\localgit\Cura\util/profile.py:216
+#: D:\localgit\Cura\gui/profile.py:211 D:\localgit\Cura\util/profile.py:221
 msgid ""
 "The distance between the skirt and the first layer.\n"
 "This is the minimal distance, multiple skirt lines will be put outwards from "
 "this distance."
 msgstr ""
+"外圈线和模型第一层之间的距离。\n"
+"该数值是最小距离，如果打印多圈外圈线，他们会向外部扩展。"
 
-#: D:\localgit\Cura\gui/profile.py:215 D:\localgit\Cura\util/profile.py:217
+#: D:\localgit\Cura\gui/profile.py:212 D:\localgit\Cura\util/profile.py:222
 msgid "Minimal length (mm)"
 msgstr "最小长度（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:215 D:\localgit\Cura\util/profile.py:217
+#: D:\localgit\Cura\gui/profile.py:212 D:\localgit\Cura\util/profile.py:222
 msgid ""
 "The minimal length of the skirt, if this minimal length is not reached it "
 "will add more skirt lines to reach this minimal lenght.\n"
 "Note: If the line count is set to 0 this is ignored."
 msgstr ""
+"外圈线的最短长度，如果未达到该值，则会打印更多圈。\n"
+"注意：如果线数设置为0，则会忽略此数值。"
 
-#: D:\localgit\Cura\gui/profile.py:216 D:\localgit\Cura\util/profile.py:218
+#: D:\localgit\Cura\gui/profile.py:213 D:\localgit\Cura\util/profile.py:223
 msgid "Fan full on at height (mm)"
 msgstr "风扇最大速度开启的高度"
 
-#: D:\localgit\Cura\gui/profile.py:216 D:\localgit\Cura\util/profile.py:218
+#: D:\localgit\Cura\gui/profile.py:213 D:\localgit\Cura\util/profile.py:223
 msgid ""
 "The height at which the fan is turned on completely. For the layers below "
 "this the fan speed is scaled linearly with the fan off at layer 0."
@@ -1863,22 +1889,22 @@ msgstr ""
 "风扇开始以全速运转的高度。\n"
 "当前打印层低于这个高度时，风扇速度以一个线性比例逐步增加。"
 
-#: D:\localgit\Cura\gui/profile.py:217 D:\localgit\Cura\util/profile.py:219
+#: D:\localgit\Cura\gui/profile.py:214 D:\localgit\Cura\util/profile.py:224
 msgid "Fan speed min (%)"
 msgstr "风扇最低转速（%）"
 
-#: D:\localgit\Cura\gui/profile.py:217 D:\localgit\Cura\util/profile.py:219
+#: D:\localgit\Cura\gui/profile.py:214 D:\localgit\Cura\util/profile.py:224
 msgid ""
 "When the fan is turned on, it is enabled at this speed setting. If cool "
 "slows down the layer, the fan is adjusted between the min and max speed. "
 "Minimal fan speed is used if the layer is not slowed down due to cooling."
 msgstr "当风扇打开后，会以此速度运转。"
 
-#: D:\localgit\Cura\gui/profile.py:218 D:\localgit\Cura\util/profile.py:220
+#: D:\localgit\Cura\gui/profile.py:215 D:\localgit\Cura\util/profile.py:225
 msgid "Fan speed max (%)"
 msgstr "风扇最高转速（%）"
 
-#: D:\localgit\Cura\gui/profile.py:218 D:\localgit\Cura\util/profile.py:220
+#: D:\localgit\Cura\gui/profile.py:215 D:\localgit\Cura\util/profile.py:225
 msgid ""
 "When the fan is turned on, it is enabled at this speed setting. If cool "
 "slows down the layer, the fan is adjusted between the min and max speed. "
@@ -1886,38 +1912,40 @@ msgid ""
 "than 200%."
 msgstr "@当风扇打开后，它将使用这个速度。"
 
-#: D:\localgit\Cura\gui/profile.py:219 D:\localgit\Cura\util/profile.py:221
+#: D:\localgit\Cura\gui/profile.py:216 D:\localgit\Cura\util/profile.py:226
 msgid "Minimum speed (mm/s)"
 msgstr "最小速度（毫米/秒）"
 
-#: D:\localgit\Cura\gui/profile.py:219 D:\localgit\Cura\util/profile.py:221
+#: D:\localgit\Cura\gui/profile.py:216 D:\localgit\Cura\util/profile.py:226
 msgid ""
 "The minimal layer time can cause the print to slow down so much it starts to "
 "ooze. The minimal feedrate protects against this. Even if a print gets "
 "slowed down it will never be slower than this minimal speed."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:220 D:\localgit\Cura\util/profile.py:222
+#: D:\localgit\Cura\gui/profile.py:217 D:\localgit\Cura\util/profile.py:227
 msgid "Cool head lift"
-msgstr ""
+msgstr "抬起喷头等待冷却"
 
-#: D:\localgit\Cura\gui/profile.py:220 D:\localgit\Cura\util/profile.py:222
+#: D:\localgit\Cura\gui/profile.py:217 D:\localgit\Cura\util/profile.py:227
 msgid ""
 "Lift the head if the minimal speed is hit because of cool slowdown, and wait "
 "the extra time so the minimal layer time is always hit."
 msgstr ""
+"当系统为了冷却降低打印速度并且达到设定的最低速度时，抬起喷头，以提供额外的冷"
+"却时间来保证每层花费的最少时间"
 
-#: D:\localgit\Cura\gui/profile.py:221 D:\localgit\Cura\gui/profile.py:222
-#: D:\localgit\Cura\gui/profile.py:223 D:\localgit\Cura\util/profile.py:223
-#: D:\localgit\Cura\util/profile.py:224 D:\localgit\Cura\util/profile.py:225
+#: D:\localgit\Cura\gui/profile.py:218 D:\localgit\Cura\gui/profile.py:219
+#: D:\localgit\Cura\gui/profile.py:220 D:\localgit\Cura\util/profile.py:228
+#: D:\localgit\Cura\util/profile.py:229 D:\localgit\Cura\util/profile.py:230
 msgid "Infill"
 msgstr "填充"
 
-#: D:\localgit\Cura\gui/profile.py:221 D:\localgit\Cura\util/profile.py:223
+#: D:\localgit\Cura\gui/profile.py:218 D:\localgit\Cura\util/profile.py:228
 msgid "Solid infill top"
 msgstr "实体填充顶层"
 
-#: D:\localgit\Cura\gui/profile.py:221 D:\localgit\Cura\util/profile.py:223
+#: D:\localgit\Cura\gui/profile.py:218 D:\localgit\Cura\util/profile.py:228
 msgid ""
 "Create a solid top surface, if set to false the top is filled with the fill "
 "percentage. Useful for cups/vases."
@@ -1925,11 +1953,11 @@ msgstr ""
 "打印一个实体的顶层表面，如果设置为「否」，则顶层也会按照填充率的设定进行打"
 "印。对杯/瓶模型很有用。"
 
-#: D:\localgit\Cura\gui/profile.py:222 D:\localgit\Cura\util/profile.py:224
+#: D:\localgit\Cura\gui/profile.py:219 D:\localgit\Cura\util/profile.py:229
 msgid "Solid infill bottom"
 msgstr "实体填充底层"
 
-#: D:\localgit\Cura\gui/profile.py:222 D:\localgit\Cura\util/profile.py:224
+#: D:\localgit\Cura\gui/profile.py:219 D:\localgit\Cura\util/profile.py:229
 msgid ""
 "Create a solid bottom surface, if set to false the bottom is filled with the "
 "fill percentage. Useful for buildings."
@@ -1937,11 +1965,11 @@ msgstr ""
 "打印一个实体的底层表面，如果设置为「否」，则底层也会按照填充率设定进行打印。"
 "对建筑模型很有用。"
 
-#: D:\localgit\Cura\gui/profile.py:223 D:\localgit\Cura\util/profile.py:225
+#: D:\localgit\Cura\gui/profile.py:220 D:\localgit\Cura\util/profile.py:230
 msgid "Infill overlap (%)"
 msgstr "填充交叠"
 
-#: D:\localgit\Cura\gui/profile.py:223 D:\localgit\Cura\util/profile.py:225
+#: D:\localgit\Cura\gui/profile.py:220 D:\localgit\Cura\util/profile.py:230
 msgid ""
 "Amount of overlap between the infill and the walls. There is a slight "
 "overlap with the walls and the infill so the walls connect firmly to the "
@@ -1950,11 +1978,11 @@ msgstr ""
 "填充时占据外壁的比率。如果在外壁和内部填充间有一个少量的交叠，会使得外壁和内"
 "部填充紧密相连。"
 
-#: D:\localgit\Cura\gui/profile.py:224 D:\localgit\Cura\util/profile.py:226
+#: D:\localgit\Cura\gui/profile.py:221 D:\localgit\Cura\util/profile.py:231
 msgid "Structure type"
 msgstr "支撑类型"
 
-#: D:\localgit\Cura\gui/profile.py:224 D:\localgit\Cura\util/profile.py:226
+#: D:\localgit\Cura\gui/profile.py:221 D:\localgit\Cura\util/profile.py:231
 msgid ""
 "The type of support structure.\n"
 "Grid is very strong and can come off in 1 piece, however, sometimes it is "
@@ -1968,54 +1996,56 @@ msgstr ""
 "线型的单线支撑，要一个个取下。去除它们需要花更多功夫，但是因为它强度不高所以"
 "适用在一些精巧的结构上"
 
-#: D:\localgit\Cura\gui/profile.py:225 D:\localgit\Cura\util/profile.py:227
+#: D:\localgit\Cura\gui/profile.py:222 D:\localgit\Cura\util/profile.py:232
 msgid "Overhang angle for support (deg)"
 msgstr "悬臂"
 
-#: D:\localgit\Cura\gui/profile.py:225 D:\localgit\Cura\util/profile.py:227
+#: D:\localgit\Cura\gui/profile.py:222 D:\localgit\Cura\util/profile.py:232
 msgid ""
 "The minimal angle that overhangs need to have to get support. With 0 degree "
 "being horizontal and 90 degree being vertical."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:226 D:\localgit\Cura\util/profile.py:228
+#: D:\localgit\Cura\gui/profile.py:223 D:\localgit\Cura\util/profile.py:233
 msgid "Fill amount (%)"
 msgstr "填充率"
 
-#: D:\localgit\Cura\gui/profile.py:226 D:\localgit\Cura\util/profile.py:228
+#: D:\localgit\Cura\gui/profile.py:223 D:\localgit\Cura\util/profile.py:233
 #, python-format
 msgid ""
 "Amount of infill structure in the support material, less material gives "
 "weaker support which is easier to remove. 15% seems to be a good average."
 msgstr ""
+"支撑结构的填充率，较低的填充率会使得支撑更容易去除，一般来讲15%的填充率效果不"
+"错。"
 
-#: D:\localgit\Cura\gui/profile.py:227 D:\localgit\Cura\util/profile.py:229
+#: D:\localgit\Cura\gui/profile.py:224 D:\localgit\Cura\util/profile.py:234
 msgid "Distance X/Y (mm)"
 msgstr "距离 X/Y (毫米)"
 
-#: D:\localgit\Cura\gui/profile.py:227 D:\localgit\Cura\util/profile.py:229
+#: D:\localgit\Cura\gui/profile.py:224 D:\localgit\Cura\util/profile.py:234
 msgid ""
 "Distance of the support material from the print, in the X/Y directions.\n"
 "0.7mm gives a nice distance from the print so the support does not stick to "
 "the print."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:228 D:\localgit\Cura\util/profile.py:230
+#: D:\localgit\Cura\gui/profile.py:225 D:\localgit\Cura\util/profile.py:235
 msgid "Distance Z (mm)"
 msgstr "距离 Z(毫米)"
 
-#: D:\localgit\Cura\gui/profile.py:228 D:\localgit\Cura\util/profile.py:230
+#: D:\localgit\Cura\gui/profile.py:225 D:\localgit\Cura\util/profile.py:235
 msgid ""
 "Distance from the top/bottom of the support to the print. A small gap here "
 "makes it easier to remove the support but makes the print a bit uglier.\n"
 "0.15mm gives a good seperation of the support material."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:229 D:\localgit\Cura\util/profile.py:232
+#: D:\localgit\Cura\gui/profile.py:226 D:\localgit\Cura\util/profile.py:237
 msgid "Spiralize the outer contour"
 msgstr "外轮廓螺旋化"
 
-#: D:\localgit\Cura\gui/profile.py:229
+#: D:\localgit\Cura\gui/profile.py:226
 msgid ""
 "Spiralize is smoothing out the Z move of the outer edge. This will create a "
 "steady Z increase over the whole print. This feature turns a solid object "
@@ -2024,11 +2054,11 @@ msgstr ""
 "在打印过程中Z轴缓慢移动。该功能会把一个实体变成一个具有实体底部和实体外壁的物"
 "体。"
 
-#: D:\localgit\Cura\gui/profile.py:231 D:\localgit\Cura\util/profile.py:236
+#: D:\localgit\Cura\gui/profile.py:228 D:\localgit\Cura\util/profile.py:241
 msgid "Brim line amount"
 msgstr "边沿（Brim）线数"
 
-#: D:\localgit\Cura\gui/profile.py:231 D:\localgit\Cura\util/profile.py:236
+#: D:\localgit\Cura\gui/profile.py:228 D:\localgit\Cura\util/profile.py:241
 msgid ""
 "The amount of lines used for a brim, more lines means a larger brim which "
 "sticks better, but this also makes your effective print area smaller."
@@ -2036,11 +2066,11 @@ msgstr ""
 "边沿（brim）使用的线数，线数越多，边沿粘附的越强，但是也会使您的有效打印面积"
 "减少。"
 
-#: D:\localgit\Cura\gui/profile.py:232 D:\localgit\Cura\util/profile.py:237
+#: D:\localgit\Cura\gui/profile.py:229 D:\localgit\Cura\util/profile.py:242
 msgid "Extra margin (mm)"
 msgstr "衬垫额外边沿（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:232 D:\localgit\Cura\util/profile.py:237
+#: D:\localgit\Cura\gui/profile.py:229 D:\localgit\Cura\util/profile.py:242
 msgid ""
 "If the raft is enabled, this is the extra raft area around the object which "
 "is also rafted. Increasing this margin will create a stronger raft while "
@@ -2050,61 +2080,61 @@ msgstr ""
 "增加这个值会增加衬垫的强度，但是也会增加打印耗材使用量并占据更多有效的打印空"
 "间"
 
-#: D:\localgit\Cura\gui/profile.py:233 D:\localgit\Cura\util/profile.py:238
+#: D:\localgit\Cura\gui/profile.py:230 D:\localgit\Cura\util/profile.py:243
 msgid "Line spacing (mm)"
 msgstr "线间距（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:233 D:\localgit\Cura\util/profile.py:238
+#: D:\localgit\Cura\gui/profile.py:230 D:\localgit\Cura\util/profile.py:243
 msgid ""
 "When you are using the raft this is the distance between the centerlines of "
 "the raft line."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:234 D:\localgit\Cura\util/profile.py:239
+#: D:\localgit\Cura\gui/profile.py:231 D:\localgit\Cura\util/profile.py:244
 msgid "Base thickness (mm)"
 msgstr "底座厚度（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:234 D:\localgit\Cura\util/profile.py:239
+#: D:\localgit\Cura\gui/profile.py:231 D:\localgit\Cura\util/profile.py:244
 msgid ""
 "When you are using the raft this is the thickness of the base layer which is "
 "put down."
 msgstr "当您使用衬垫时，这是底座的层厚。"
 
-#: D:\localgit\Cura\gui/profile.py:235 D:\localgit\Cura\util/profile.py:240
+#: D:\localgit\Cura\gui/profile.py:232 D:\localgit\Cura\util/profile.py:245
 msgid "Base line width (mm)"
 msgstr "底座线宽（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:235 D:\localgit\Cura\util/profile.py:240
+#: D:\localgit\Cura\gui/profile.py:232 D:\localgit\Cura\util/profile.py:245
 msgid ""
 "When you are using the raft this is the width of the base layer lines which "
 "are put down."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:236 D:\localgit\Cura\util/profile.py:241
+#: D:\localgit\Cura\gui/profile.py:233 D:\localgit\Cura\util/profile.py:246
 msgid "Interface thickness (mm)"
 msgstr "交界面厚度（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:236 D:\localgit\Cura\util/profile.py:241
+#: D:\localgit\Cura\gui/profile.py:233 D:\localgit\Cura\util/profile.py:246
 msgid ""
 "When you are using the raft this is the thickness of the interface layer "
 "which is put down."
 msgstr "当你使用衬垫时，该数值是交界面的厚度"
 
-#: D:\localgit\Cura\gui/profile.py:237 D:\localgit\Cura\util/profile.py:242
+#: D:\localgit\Cura\gui/profile.py:234 D:\localgit\Cura\util/profile.py:247
 msgid "Interface line width (mm)"
 msgstr "交界面线宽（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:237 D:\localgit\Cura\util/profile.py:242
+#: D:\localgit\Cura\gui/profile.py:234 D:\localgit\Cura\util/profile.py:247
 msgid ""
 "When you are using the raft this is the width of the interface layer lines "
 "which are put down."
 msgstr "当你使用衬垫时，该数值是交界面的线宽"
 
-#: D:\localgit\Cura\gui/profile.py:238 D:\localgit\Cura\util/profile.py:243
+#: D:\localgit\Cura\gui/profile.py:235 D:\localgit\Cura\util/profile.py:248
 msgid "Airgap"
 msgstr "间隙"
 
-#: D:\localgit\Cura\gui/profile.py:238 D:\localgit\Cura\util/profile.py:243
+#: D:\localgit\Cura\gui/profile.py:235 D:\localgit\Cura\util/profile.py:248
 msgid ""
 "Gap between the last layer of the raft and the first printing layer. A small "
 "gap of 0.2mm works wonders on PLA and makes the raft easy to remove."
@@ -2112,30 +2142,30 @@ msgstr ""
 "衬垫的最后一层和打印模型的第一层之间的间隙。\n"
 "对于PLA材料，0.2mm的微小间隙使得衬垫容易被取下。"
 
-#: D:\localgit\Cura\gui/profile.py:239 D:\localgit\Cura\util/profile.py:244
+#: D:\localgit\Cura\gui/profile.py:236 D:\localgit\Cura\util/profile.py:249
 msgid "Surface layers"
 msgstr "表面层数"
 
-#: D:\localgit\Cura\gui/profile.py:239 D:\localgit\Cura\util/profile.py:244
+#: D:\localgit\Cura\gui/profile.py:236 D:\localgit\Cura\util/profile.py:249
 msgid ""
 "Amount of surface layers put on top of the raft, these are fully filled "
 "layers on which the model is printed."
 msgstr ""
 "在衬垫(Raft)表面打印的层数，这些是完全填充的表面，模型将在该表面上进行打印。"
 
-#: D:\localgit\Cura\gui/profile.py:240 D:\localgit\Cura\gui/profile.py:241
-#: D:\localgit\Cura\gui/profile.py:242 D:\localgit\Cura\gui/profile.py:243
-#: D:\localgit\Cura\util/profile.py:245 D:\localgit\Cura\util/profile.py:246
-#: D:\localgit\Cura\util/profile.py:247 D:\localgit\Cura\util/profile.py:248
+#: D:\localgit\Cura\gui/profile.py:237 D:\localgit\Cura\gui/profile.py:238
+#: D:\localgit\Cura\gui/profile.py:239 D:\localgit\Cura\gui/profile.py:240
+#: D:\localgit\Cura\util/profile.py:250 D:\localgit\Cura\util/profile.py:251
+#: D:\localgit\Cura\util/profile.py:252 D:\localgit\Cura\util/profile.py:253
 msgid "Fix horrible"
 msgstr "修复"
 
-#: D:\localgit\Cura\gui/profile.py:240 D:\localgit\Cura\util/profile.py:245
+#: D:\localgit\Cura\gui/profile.py:237 D:\localgit\Cura\util/profile.py:250
 msgid "Combine everything (Type-A)"
 msgstr "合并全部 (Type-A)"
 
-#: D:\localgit\Cura\gui/profile.py:240 D:\localgit\Cura\gui/profile.py:241
-#: D:\localgit\Cura\util/profile.py:245 D:\localgit\Cura\util/profile.py:246
+#: D:\localgit\Cura\gui/profile.py:237 D:\localgit\Cura\gui/profile.py:238
+#: D:\localgit\Cura\util/profile.py:250 D:\localgit\Cura\util/profile.py:251
 msgid ""
 "This expert option adds all parts of the model together. The result is "
 "usually that internal cavities disappear. Depending on the model this can be "
@@ -2144,15 +2174,15 @@ msgid ""
 "Type-B ignores all internal holes and only keeps the outside shape per layer."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:241 D:\localgit\Cura\util/profile.py:246
+#: D:\localgit\Cura\gui/profile.py:238 D:\localgit\Cura\util/profile.py:251
 msgid "Combine everything (Type-B)"
 msgstr "合并全部 (Type-B)"
 
-#: D:\localgit\Cura\gui/profile.py:242 D:\localgit\Cura\util/profile.py:247
+#: D:\localgit\Cura\gui/profile.py:239 D:\localgit\Cura\util/profile.py:252
 msgid "Keep open faces"
 msgstr "保持开放面"
 
-#: D:\localgit\Cura\gui/profile.py:242 D:\localgit\Cura\util/profile.py:247
+#: D:\localgit\Cura\gui/profile.py:239 D:\localgit\Cura\util/profile.py:252
 msgid ""
 "This expert option keeps all the open bits of the model intact. Normally "
 "Cura tries to stitch up small holes and remove everything with big holes, "
@@ -2163,11 +2193,11 @@ msgid ""
 "risk."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:243 D:\localgit\Cura\util/profile.py:248
+#: D:\localgit\Cura\gui/profile.py:240 D:\localgit\Cura\util/profile.py:253
 msgid "Extensive stitching"
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:243 D:\localgit\Cura\util/profile.py:248
+#: D:\localgit\Cura\gui/profile.py:240 D:\localgit\Cura\util/profile.py:253
 msgid ""
 "Extensive stitching tries to fix up open holes in the model by closing the "
 "hole with touching polygons. This algorthm is quite expensive and could "
@@ -2179,37 +2209,37 @@ msgstr ""
 "这个算法非常消耗资源，需要花费大量时间进行处理。\n"
 "所有修复操作选项，结果可能会千差万别，您需要承担一定的风险。"
 
-#: D:\localgit\Cura\gui/profile.py:355 D:\localgit\Cura\util/profile.py:477
+#: D:\localgit\Cura\gui/profile.py:352 D:\localgit\Cura\util/profile.py:489
 msgid "Save profile on slice"
 msgstr "！保存切片引擎参数"
 
-#: D:\localgit\Cura\gui/profile.py:355 D:\localgit\Cura\util/profile.py:477
+#: D:\localgit\Cura\gui/profile.py:352 D:\localgit\Cura\util/profile.py:489
 msgid ""
 "When slicing save the profile as [stl_file]_profile.ini next to the model."
 msgstr "保存配置文件为 [stl_file]_profile.ini，与模型文件在同目录。"
 
-#: D:\localgit\Cura\gui/profile.py:356 D:\localgit\Cura\util/profile.py:478
+#: D:\localgit\Cura\gui/profile.py:353 D:\localgit\Cura\util/profile.py:490
 msgid "Cost (price/kg)"
 msgstr "价格（元/千克）"
 
-#: D:\localgit\Cura\gui/profile.py:356 D:\localgit\Cura\util/profile.py:478
+#: D:\localgit\Cura\gui/profile.py:353 D:\localgit\Cura\util/profile.py:490
 msgid "Cost of your filament per kg, to estimate the cost of the final print."
 msgstr "您所使用料丝每千克的价格，用以估算最终成品的价格。"
 
-#: D:\localgit\Cura\gui/profile.py:357 D:\localgit\Cura\util/profile.py:479
+#: D:\localgit\Cura\gui/profile.py:354 D:\localgit\Cura\util/profile.py:491
 msgid "Cost (price/m)"
 msgstr "价格(元/米)"
 
-#: D:\localgit\Cura\gui/profile.py:357 D:\localgit\Cura\util/profile.py:479
+#: D:\localgit\Cura\gui/profile.py:354 D:\localgit\Cura\util/profile.py:491
 msgid ""
 "Cost of your filament per meter, to estimate the cost of the final print."
 msgstr "您所使用料丝每米的价格，用以估算最终成品的价格。"
 
-#: D:\localgit\Cura\gui/profile.py:358 D:\localgit\Cura\util/profile.py:480
+#: D:\localgit\Cura\gui/profile.py:355 D:\localgit\Cura\util/profile.py:492
 msgid "Auto detect SD card drive"
 msgstr "自动检测SD卡"
 
-#: D:\localgit\Cura\gui/profile.py:358 D:\localgit\Cura\util/profile.py:480
+#: D:\localgit\Cura\gui/profile.py:355 D:\localgit\Cura\util/profile.py:492
 msgid ""
 "Auto detect the SD card. You can disable this because on some systems "
 "external hard-drives or USB sticks are detected as SD card."
@@ -2217,27 +2247,27 @@ msgstr ""
 "自动检测SD卡。您可以关闭这些功能，因为在某些系统，外部硬件驱动或是U盘可能被识"
 "别为SD卡。"
 
-#: D:\localgit\Cura\gui/profile.py:359 D:\localgit\Cura\util/profile.py:481
+#: D:\localgit\Cura\gui/profile.py:356 D:\localgit\Cura\util/profile.py:493
 msgid "Check for updates"
 msgstr "检查更新"
 
-#: D:\localgit\Cura\gui/profile.py:359 D:\localgit\Cura\util/profile.py:481
+#: D:\localgit\Cura\gui/profile.py:356 D:\localgit\Cura\util/profile.py:493
 msgid "Check for newer versions of Cura on startup"
 msgstr "检查Cura新版本"
 
-#: D:\localgit\Cura\gui/profile.py:360 D:\localgit\Cura\util/profile.py:482
+#: D:\localgit\Cura\gui/profile.py:357 D:\localgit\Cura\util/profile.py:494
 msgid "Send usage statistics"
 msgstr "发送统计信息"
 
-#: D:\localgit\Cura\gui/profile.py:360 D:\localgit\Cura\util/profile.py:482
+#: D:\localgit\Cura\gui/profile.py:357 D:\localgit\Cura\util/profile.py:494
 msgid "Submit anonymous usage information to improve future versions of Cura"
 msgstr "提交匿名用途信息帮助Cura改进新版本"
 
-#: D:\localgit\Cura\gui/profile.py:362 D:\localgit\Cura\util/profile.py:484
+#: D:\localgit\Cura\gui/profile.py:359 D:\localgit\Cura\util/profile.py:496
 msgid "Density (kg/m3)"
 msgstr "密度"
 
-#: D:\localgit\Cura\gui/profile.py:362 D:\localgit\Cura\util/profile.py:484
+#: D:\localgit\Cura\gui/profile.py:359 D:\localgit\Cura\util/profile.py:496
 msgid ""
 "Weight of the filament per m3. Around 1240 for PLA. And around 1040 for ABS. "
 "This value is used to estimate the weight if the filament used for the print."
@@ -2245,102 +2275,102 @@ msgstr ""
 "每立方米料丝重量。PLA材料大约为1240，ABS材料大约为1040。本项数据用以估算您打"
 "印所使用料丝的质量"
 
-#: D:\localgit\Cura\gui/profile.py:363 D:\localgit\Cura\util/profile.py:486
+#: D:\localgit\Cura\gui/profile.py:360 D:\localgit\Cura\util/profile.py:498
 msgid ""
 "Change the language in which Cura runs. Switching language requires a "
 "restart of Cura"
 msgstr "更改Cura的语言。更换语言需要重启Cura"
 
-#: D:\localgit\Cura\gui/profile.py:366 D:\localgit\Cura\util/profile.py:490
+#: D:\localgit\Cura\gui/profile.py:363 D:\localgit\Cura\util/profile.py:502
 msgid "Model colour"
 msgstr "模型颜色"
 
-#: D:\localgit\Cura\gui/profile.py:366 D:\localgit\Cura\util/profile.py:490
+#: D:\localgit\Cura\gui/profile.py:363 D:\localgit\Cura\util/profile.py:502
 msgid "Display color for first extruder"
 msgstr "第一喷头的显示颜色"
 
-#: D:\localgit\Cura\gui/profile.py:367 D:\localgit\Cura\util/profile.py:491
+#: D:\localgit\Cura\gui/profile.py:364 D:\localgit\Cura\util/profile.py:503
 msgid "Model colour (2)"
 msgstr "模型颜色 (2)"
 
-#: D:\localgit\Cura\gui/profile.py:367 D:\localgit\Cura\util/profile.py:491
+#: D:\localgit\Cura\gui/profile.py:364 D:\localgit\Cura\util/profile.py:503
 msgid "Display color for second extruder"
 msgstr "第二喷头的显示颜色"
 
-#: D:\localgit\Cura\gui/profile.py:368 D:\localgit\Cura\util/profile.py:492
+#: D:\localgit\Cura\gui/profile.py:365 D:\localgit\Cura\util/profile.py:504
 msgid "Model colour (3)"
 msgstr "模型颜色 (3)"
 
-#: D:\localgit\Cura\gui/profile.py:368 D:\localgit\Cura\util/profile.py:492
+#: D:\localgit\Cura\gui/profile.py:365 D:\localgit\Cura\util/profile.py:504
 msgid "Display color for third extruder"
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:369 D:\localgit\Cura\util/profile.py:493
+#: D:\localgit\Cura\gui/profile.py:366 D:\localgit\Cura\util/profile.py:505
 msgid "Model colour (4)"
 msgstr "模型颜色（4）"
 
-#: D:\localgit\Cura\gui/profile.py:369 D:\localgit\Cura\util/profile.py:493
+#: D:\localgit\Cura\gui/profile.py:366 D:\localgit\Cura\util/profile.py:505
 msgid "Display color for forth extruder"
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:370 D:\localgit\Cura\util/profile.py:494
+#: D:\localgit\Cura\gui/profile.py:367 D:\localgit\Cura\util/profile.py:506
 msgid "Printing window type"
 msgstr "打印窗口类型"
 
-#: D:\localgit\Cura\gui/profile.py:370 D:\localgit\Cura\util/profile.py:494
+#: D:\localgit\Cura\gui/profile.py:367 D:\localgit\Cura\util/profile.py:506
 msgid "Select the interface used for USB printing."
 msgstr "选择USB打印时的界面"
 
-#: D:\localgit\Cura\gui/profile.py:382 D:\localgit\Cura\util/profile.py:506
+#: D:\localgit\Cura\gui/profile.py:379 D:\localgit\Cura\util/profile.py:522
 msgid "Maximum width (mm)"
 msgstr "最大宽度（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:382 D:\localgit\Cura\gui/profile.py:383
-#: D:\localgit\Cura\gui/profile.py:384 D:\localgit\Cura\util/profile.py:506
-#: D:\localgit\Cura\util/profile.py:507 D:\localgit\Cura\util/profile.py:508
+#: D:\localgit\Cura\gui/profile.py:379 D:\localgit\Cura\gui/profile.py:380
+#: D:\localgit\Cura\gui/profile.py:381 D:\localgit\Cura\util/profile.py:522
+#: D:\localgit\Cura\util/profile.py:523 D:\localgit\Cura\util/profile.py:524
 msgid "Size of the machine in mm"
 msgstr "机器尺寸（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:383 D:\localgit\Cura\util/profile.py:507
+#: D:\localgit\Cura\gui/profile.py:380 D:\localgit\Cura\util/profile.py:523
 msgid "Maximum depth (mm)"
 msgstr "最大深度（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:384 D:\localgit\Cura\util/profile.py:508
+#: D:\localgit\Cura\gui/profile.py:381 D:\localgit\Cura\util/profile.py:524
 msgid "Maximum height (mm)"
 msgstr "最大高度（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:385 D:\localgit\Cura\util/profile.py:509
+#: D:\localgit\Cura\gui/profile.py:382 D:\localgit\Cura\util/profile.py:525
 msgid "Machine center 0,0"
 msgstr "机器中心 0,0"
 
-#: D:\localgit\Cura\gui/profile.py:385 D:\localgit\Cura\util/profile.py:509
+#: D:\localgit\Cura\gui/profile.py:382 D:\localgit\Cura\util/profile.py:525
 msgid ""
 "Machines firmware defines the center of the bed as 0,0 instead of the front "
 "left corner."
 msgstr "机器固件定义打印平台的中心为0,0，而不是左下角"
 
-#: D:\localgit\Cura\gui/profile.py:386 D:\localgit\Cura\util/profile.py:510
+#: D:\localgit\Cura\gui/profile.py:383 D:\localgit\Cura\util/profile.py:526
 msgid "Build area shape"
 msgstr "打印平台形状:"
 
-#: D:\localgit\Cura\gui/profile.py:386 D:\localgit\Cura\util/profile.py:510
+#: D:\localgit\Cura\gui/profile.py:383 D:\localgit\Cura\util/profile.py:526
 msgid "The shape of machine build area."
 msgstr ""
 "打印平台形状\n"
 "Square：方形\n"
 "Circular：圆形"
 
-#: D:\localgit\Cura\gui/profile.py:388 D:\localgit\Cura\util/profile.py:512
+#: D:\localgit\Cura\gui/profile.py:385 D:\localgit\Cura\util/profile.py:528
 msgid ""
 "If you have an heated bed, this enabled heated bed settings (requires "
 "restart)"
 msgstr "如果您的机器配有加热平台，这将会开启加热板设置（需要重启）"
 
-#: D:\localgit\Cura\gui/profile.py:389 D:\localgit\Cura\util/profile.py:513
+#: D:\localgit\Cura\gui/profile.py:386 D:\localgit\Cura\util/profile.py:529
 msgid "GCode Flavor"
 msgstr "GCode风格"
 
-#: D:\localgit\Cura\gui/profile.py:389 D:\localgit\Cura\util/profile.py:513
+#: D:\localgit\Cura\gui/profile.py:386 D:\localgit\Cura\util/profile.py:529
 msgid ""
 "Flavor of generated GCode.\n"
 "RepRap is normal 5D GCode which works on Marlin/Sprinter based firmwares.\n"
@@ -2359,64 +2389,64 @@ msgstr ""
 "生成基于RPM的Gcode.\n"
 "Mach3使用A,B,C而不是E来表示挤出器。"
 
-#: D:\localgit\Cura\gui/profile.py:390 D:\localgit\Cura\util/profile.py:514
+#: D:\localgit\Cura\gui/profile.py:387 D:\localgit\Cura\util/profile.py:530
 msgid "Extruder count"
 msgstr "挤出器计数"
 
-#: D:\localgit\Cura\gui/profile.py:390 D:\localgit\Cura\util/profile.py:514
+#: D:\localgit\Cura\gui/profile.py:387 D:\localgit\Cura\util/profile.py:530
 msgid "Amount of extruders in your machine."
 msgstr "您使用的打印机喷头个数"
 
-#: D:\localgit\Cura\gui/profile.py:391 D:\localgit\Cura\gui/profile.py:393
-#: D:\localgit\Cura\gui/profile.py:395 D:\localgit\Cura\util/profile.py:515
-#: D:\localgit\Cura\util/profile.py:517 D:\localgit\Cura\util/profile.py:519
+#: D:\localgit\Cura\gui/profile.py:388 D:\localgit\Cura\gui/profile.py:390
+#: D:\localgit\Cura\gui/profile.py:392 D:\localgit\Cura\util/profile.py:531
+#: D:\localgit\Cura\util/profile.py:533 D:\localgit\Cura\util/profile.py:535
 msgid "Offset X"
 msgstr "X轴偏置"
 
-#: D:\localgit\Cura\gui/profile.py:391 D:\localgit\Cura\gui/profile.py:392
-#: D:\localgit\Cura\util/profile.py:515 D:\localgit\Cura\util/profile.py:516
+#: D:\localgit\Cura\gui/profile.py:388 D:\localgit\Cura\gui/profile.py:389
+#: D:\localgit\Cura\util/profile.py:531 D:\localgit\Cura\util/profile.py:532
 msgid "The offset of your secondary extruder compared to the primary."
 msgstr "第二喷头相对于第一喷头的偏置距离"
 
-#: D:\localgit\Cura\gui/profile.py:392 D:\localgit\Cura\gui/profile.py:394
-#: D:\localgit\Cura\gui/profile.py:396 D:\localgit\Cura\util/profile.py:516
-#: D:\localgit\Cura\util/profile.py:518 D:\localgit\Cura\util/profile.py:520
+#: D:\localgit\Cura\gui/profile.py:389 D:\localgit\Cura\gui/profile.py:391
+#: D:\localgit\Cura\gui/profile.py:393 D:\localgit\Cura\util/profile.py:532
+#: D:\localgit\Cura\util/profile.py:534 D:\localgit\Cura\util/profile.py:536
 msgid "Offset Y"
 msgstr "Y轴偏置"
 
-#: D:\localgit\Cura\gui/profile.py:393 D:\localgit\Cura\gui/profile.py:394
-#: D:\localgit\Cura\util/profile.py:517 D:\localgit\Cura\util/profile.py:518
+#: D:\localgit\Cura\gui/profile.py:390 D:\localgit\Cura\gui/profile.py:391
+#: D:\localgit\Cura\util/profile.py:533 D:\localgit\Cura\util/profile.py:534
 msgid "The offset of your tertiary extruder compared to the primary."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:395 D:\localgit\Cura\gui/profile.py:396
-#: D:\localgit\Cura\util/profile.py:519 D:\localgit\Cura\util/profile.py:520
+#: D:\localgit\Cura\gui/profile.py:392 D:\localgit\Cura\gui/profile.py:393
+#: D:\localgit\Cura\util/profile.py:535 D:\localgit\Cura\util/profile.py:536
 msgid "The offset of your forth extruder compared to the primary."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:397 D:\localgit\Cura\util/profile.py:521
+#: D:\localgit\Cura\gui/profile.py:394 D:\localgit\Cura\util/profile.py:537
 msgid "E-Steps per 1mm filament"
 msgstr "挤出每毫米料丝所需的电机步数"
 
-#: D:\localgit\Cura\gui/profile.py:397 D:\localgit\Cura\util/profile.py:521
+#: D:\localgit\Cura\gui/profile.py:394 D:\localgit\Cura\util/profile.py:537
 msgid ""
 "Amount of steps per mm filament extrusion. If set to 0 then this value is "
 "ignored and the value in your firmware is used."
 msgstr "每毫米挤出量所需步进电机的步数。如果设置为0，则会使用固件中设置的值。"
 
-#: D:\localgit\Cura\gui/profile.py:398 D:\localgit\Cura\util/profile.py:522
+#: D:\localgit\Cura\gui/profile.py:395 D:\localgit\Cura\util/profile.py:538
 msgid "Serial port"
 msgstr "串口"
 
-#: D:\localgit\Cura\gui/profile.py:398 D:\localgit\Cura\util/profile.py:522
+#: D:\localgit\Cura\gui/profile.py:395 D:\localgit\Cura\util/profile.py:538
 msgid "Serial port to use for communication with the printer"
 msgstr "用以和打印机通信的串口"
 
-#: D:\localgit\Cura\gui/profile.py:400 D:\localgit\Cura\util/profile.py:524
+#: D:\localgit\Cura\gui/profile.py:397 D:\localgit\Cura\util/profile.py:540
 msgid "Baudrate"
 msgstr "波特率"
 
-#: D:\localgit\Cura\gui/profile.py:400 D:\localgit\Cura\util/profile.py:524
+#: D:\localgit\Cura\gui/profile.py:397 D:\localgit\Cura\util/profile.py:540
 msgid ""
 "Speed of the serial port communication\n"
 "Needs to match your firmware settings\n"
@@ -2426,152 +2456,152 @@ msgstr ""
 "需要和固件设置匹配\n"
 "通常的值为 250000, 115200, 57600"
 
-#: D:\localgit\Cura\gui/profile.py:403 D:\localgit\Cura\util/profile.py:527
+#: D:\localgit\Cura\gui/profile.py:400 D:\localgit\Cura\util/profile.py:543
 msgid "Head size towards X min (mm)"
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:403 D:\localgit\Cura\util/profile.py:527
+#: D:\localgit\Cura\gui/profile.py:400 D:\localgit\Cura\util/profile.py:543
 msgid ""
 "The head size when printing multiple objects, measured from the tip of the "
 "nozzle towards the outer part of the head. 75mm for an Ultimaker if the fan "
 "is on the left side."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:404 D:\localgit\Cura\util/profile.py:528
+#: D:\localgit\Cura\gui/profile.py:401 D:\localgit\Cura\util/profile.py:544
 msgid "Head size towards Y min (mm)"
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:404 D:\localgit\Cura\gui/profile.py:405
-#: D:\localgit\Cura\util/profile.py:528 D:\localgit\Cura\util/profile.py:529
+#: D:\localgit\Cura\gui/profile.py:401 D:\localgit\Cura\gui/profile.py:402
+#: D:\localgit\Cura\util/profile.py:544 D:\localgit\Cura\util/profile.py:545
 msgid ""
 "The head size when printing multiple objects, measured from the tip of the "
 "nozzle towards the outer part of the head. 18mm for an Ultimaker if the fan "
 "is on the left side."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:405 D:\localgit\Cura\util/profile.py:529
+#: D:\localgit\Cura\gui/profile.py:402 D:\localgit\Cura\util/profile.py:545
 msgid "Head size towards X max (mm)"
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:406 D:\localgit\Cura\util/profile.py:530
+#: D:\localgit\Cura\gui/profile.py:403 D:\localgit\Cura\util/profile.py:546
 msgid "Head size towards Y max (mm)"
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:406 D:\localgit\Cura\util/profile.py:530
+#: D:\localgit\Cura\gui/profile.py:403 D:\localgit\Cura\util/profile.py:546
 msgid ""
 "The head size when printing multiple objects, measured from the tip of the "
 "nozzle towards the outer part of the head. 35mm for an Ultimaker if the fan "
 "is on the left side."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:407 D:\localgit\Cura\util/profile.py:531
+#: D:\localgit\Cura\gui/profile.py:404 D:\localgit\Cura\util/profile.py:547
 msgid "Printer gantry height (mm)"
 msgstr "打印高度（毫米）"
 
-#: D:\localgit\Cura\gui/profile.py:407 D:\localgit\Cura\util/profile.py:531
+#: D:\localgit\Cura\gui/profile.py:404 D:\localgit\Cura\util/profile.py:547
 msgid ""
 "The height of the gantry holding up the printer head. If an object is higher "
 "then this then you cannot print multiple objects one for one. 60mm for an "
 "Ultimaker."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:409 D:\localgit\Cura\util/profile.py:533
+#: D:\localgit\Cura\gui/profile.py:406 D:\localgit\Cura\util/profile.py:549
 #, python-format
 msgid "More flow than 150% is rare and usually not recommended."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:410 D:\localgit\Cura\util/profile.py:534
+#: D:\localgit\Cura\gui/profile.py:407 D:\localgit\Cura\util/profile.py:550
 #, python-format
 msgid "Less flow than 50% is rare and usually not recommended."
 msgstr ""
 
-#: D:\localgit\Cura\gui/profile.py:411 D:\localgit\Cura\util/profile.py:535
+#: D:\localgit\Cura\gui/profile.py:408 D:\localgit\Cura\util/profile.py:551
 #, python-format
 msgid ""
 "Thicker layers then %.2fmm (80%% nozzle size) usually give bad results and "
 "are not recommended."
-msgstr ""
+msgstr "层厚度超过%.2fmm(80%喷头直接)通常会带来不好的结果，不推荐这样做。"
 
-#: D:\localgit\Cura\gui/profile.py:413 D:\localgit\Cura\util/profile.py:537
+#: D:\localgit\Cura\gui/profile.py:410 D:\localgit\Cura\util/profile.py:553
 msgid ""
 "It is highly unlikely that your machine can achieve a printing speed above "
 "150mm/s"
 msgstr "您的机器不太可能低于150mm/s的打印速度"
 
-#: D:\localgit\Cura\gui/profile.py:415 D:\localgit\Cura\gui/profile.py:416
-#: D:\localgit\Cura\gui/profile.py:417 D:\localgit\Cura\gui/profile.py:418
-#: D:\localgit\Cura\util/profile.py:539 D:\localgit\Cura\util/profile.py:540
-#: D:\localgit\Cura\util/profile.py:541 D:\localgit\Cura\util/profile.py:542
+#: D:\localgit\Cura\gui/profile.py:412 D:\localgit\Cura\gui/profile.py:413
+#: D:\localgit\Cura\gui/profile.py:414 D:\localgit\Cura\gui/profile.py:415
+#: D:\localgit\Cura\util/profile.py:555 D:\localgit\Cura\util/profile.py:556
+#: D:\localgit\Cura\util/profile.py:557 D:\localgit\Cura\util/profile.py:558
 msgid "Temperatures above 260C could damage your machine, be careful!"
 msgstr "超过260摄氏度的高温会损坏您的机器，小心！"
 
-#: D:\localgit\Cura\gui/profile.py:419 D:\localgit\Cura\gui/profile.py:420
-#: D:\localgit\Cura\gui/profile.py:421 D:\localgit\Cura\gui/profile.py:422
-#: D:\localgit\Cura\util/profile.py:543 D:\localgit\Cura\util/profile.py:544
-#: D:\localgit\Cura\util/profile.py:545 D:\localgit\Cura\util/profile.py:546
+#: D:\localgit\Cura\gui/profile.py:416 D:\localgit\Cura\gui/profile.py:417
+#: D:\localgit\Cura\gui/profile.py:418 D:\localgit\Cura\gui/profile.py:419
+#: D:\localgit\Cura\util/profile.py:559 D:\localgit\Cura\util/profile.py:560
+#: D:\localgit\Cura\util/profile.py:561 D:\localgit\Cura\util/profile.py:562
 msgid ""
 "Are you sure your filament is that thick? Normal filament is around 3mm or "
 "1.75mm."
 msgstr "您确定您的料丝有这么粗吗？通常料丝的直径为3mm或1.75mm"
 
-#: D:\localgit\Cura\gui/profile.py:423 D:\localgit\Cura\util/profile.py:547
+#: D:\localgit\Cura\gui/profile.py:420 D:\localgit\Cura\util/profile.py:563
 msgid ""
 "It is highly unlikely that your machine can achieve a travel speed above "
 "300mm/s"
 msgstr "您的机器不太可能达到300mm/s以上的travel 速度"
 
-#: D:\localgit\Cura\gui/profile.py:424 D:\localgit\Cura\util/profile.py:548
+#: D:\localgit\Cura\gui/profile.py:421 D:\localgit\Cura\util/profile.py:564
 #, python-format
 msgid ""
 "A bottom layer of more then %.2fmm (3/4 nozzle size) usually give bad "
 "results and is not recommended."
-msgstr ""
+msgstr "底层厚度超过%.2fmm(3/4喷头直接)通常会带来不好的结果，不推荐这样做。"
 
-#: D:\localgit\Cura\gui/sceneView.py:75
+#: D:\localgit\Cura\gui/sceneView.py:74
 msgid "Load"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:77
+#: D:\localgit\Cura\gui/sceneView.py:76
 msgid "X3G"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:82
+#: D:\localgit\Cura\gui/sceneView.py:81
 msgid "Rotate"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:83
+#: D:\localgit\Cura\gui/sceneView.py:82
 msgid "Scale"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:84
+#: D:\localgit\Cura\gui/sceneView.py:83
 msgid "Mirror"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:86 D:\localgit\Cura\gui/sceneView.py:89
+#: D:\localgit\Cura\gui/sceneView.py:85 D:\localgit\Cura\gui/sceneView.py:88
 msgid "Reset"
 msgstr "重置"
 
-#: D:\localgit\Cura\gui/sceneView.py:87
+#: D:\localgit\Cura\gui/sceneView.py:86
 msgid "Lay flat"
 msgstr "平躺"
 
-#: D:\localgit\Cura\gui/sceneView.py:90
+#: D:\localgit\Cura\gui/sceneView.py:89
 msgid "To max"
 msgstr "至最大值"
 
-#: D:\localgit\Cura\gui/sceneView.py:92
+#: D:\localgit\Cura\gui/sceneView.py:91
 msgid "Mirror X"
 msgstr "X 镜像"
 
-#: D:\localgit\Cura\gui/sceneView.py:93
+#: D:\localgit\Cura\gui/sceneView.py:92
 msgid "Mirror Y"
 msgstr "Y 镜像"
 
-#: D:\localgit\Cura\gui/sceneView.py:94
+#: D:\localgit\Cura\gui/sceneView.py:93
 msgid "Mirror Z"
 msgstr "Z 镜像"
 
-#: D:\localgit\Cura\gui/sceneView.py:102
+#: D:\localgit\Cura\gui/sceneView.py:101
 msgid "Scale X"
 msgstr "X 缩放"
 
@@ -2579,137 +2609,139 @@ msgstr "X 缩放"
 msgid "Scale Y"
 msgstr "Y 缩放"
 
-#: D:\localgit\Cura\gui/sceneView.py:106
+#: D:\localgit\Cura\gui/sceneView.py:107
 msgid "Scale Z"
 msgstr "Z 缩放"
 
-#: D:\localgit\Cura\gui/sceneView.py:108
+#: D:\localgit\Cura\gui/sceneView.py:110
 msgid "Size X (mm)"
 msgstr "x方向尺寸（毫米）"
 
-#: D:\localgit\Cura\gui/sceneView.py:110
+#: D:\localgit\Cura\gui/sceneView.py:113
 msgid "Size Y (mm)"
 msgstr "Y方向尺寸（毫米）"
 
-#: D:\localgit\Cura\gui/sceneView.py:112
+#: D:\localgit\Cura\gui/sceneView.py:116
 msgid "Size Z (mm)"
 msgstr "Z方向尺寸（毫米）"
 
-#: D:\localgit\Cura\gui/sceneView.py:114
+#: D:\localgit\Cura\gui/sceneView.py:119
 msgid "Uniform scale"
 msgstr "等比例缩放"
 
-#: D:\localgit\Cura\gui/sceneView.py:117
+#: D:\localgit\Cura\gui/sceneView.py:122
 msgid "View mode"
 msgstr "观察模式"
 
-#: D:\localgit\Cura\gui/sceneView.py:117
+#: D:\localgit\Cura\gui/sceneView.py:123
 msgid "Normal"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:117
+#: D:\localgit\Cura\gui/sceneView.py:123
 msgid "Overhang"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:117
+#: D:\localgit\Cura\gui/sceneView.py:123
 msgid "Transparent"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:117
+#: D:\localgit\Cura\gui/sceneView.py:123
 msgid "X-Ray"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:117
+#: D:\localgit\Cura\gui/sceneView.py:124
 msgid "Layers"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:222
+#: D:\localgit\Cura\gui/sceneView.py:226
 msgid "Open 3D model"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:247
+#: D:\localgit\Cura\gui/sceneView.py:254
 msgid "Save 3D model"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:295 D:\localgit\Cura\gui/sceneView.py:979
+#: D:\localgit\Cura\gui/sceneView.py:308
+#: D:\localgit\Cura\gui/sceneView.py:1027
 #, python-format
 msgid "Print with %s"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:299
+#: D:\localgit\Cura\gui/sceneView.py:313
 msgid "Slice engine log..."
 msgstr "切片引擎记录"
 
-#: D:\localgit\Cura\gui/sceneView.py:327 D:\localgit\Cura\gui/sceneView.py:982
+#: D:\localgit\Cura\gui/sceneView.py:342
+#: D:\localgit\Cura\gui/sceneView.py:1030
 msgid "Save toolpath"
 msgstr "保存Gcode文件"
 
-#: D:\localgit\Cura\gui/sceneView.py:348
+#: D:\localgit\Cura\gui/sceneView.py:365
 msgid "save x3g file"
 msgstr "保存x3g格式文件"
 
-#: D:\localgit\Cura\gui/sceneView.py:392
+#: D:\localgit\Cura\gui/sceneView.py:413
 msgid "Failed to save"
 msgstr "保存失败"
 
-#: D:\localgit\Cura\gui/sceneView.py:411
+#: D:\localgit\Cura\gui/sceneView.py:434
 msgid "The slicing engine reported the following"
 msgstr "切片引擎报告"
 
-#: D:\localgit\Cura\gui/sceneView.py:411
+#: D:\localgit\Cura\gui/sceneView.py:434
 msgid "Engine log..."
 msgstr "引擎记录"
 
-#: D:\localgit\Cura\gui/sceneView.py:551
+#: D:\localgit\Cura\gui/sceneView.py:580
 msgid "How many copies do you want?"
 msgstr "需要多少份？"
 
-#: D:\localgit\Cura\gui/sceneView.py:551
+#: D:\localgit\Cura\gui/sceneView.py:580
 msgid "Number of copies"
 msgstr "份数"
 
-#: D:\localgit\Cura\gui/sceneView.py:551
+#: D:\localgit\Cura\gui/sceneView.py:580
 msgid "Multiply"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:569
+#: D:\localgit\Cura\gui/sceneView.py:598
 #, python-format
 msgid "Could not create more than %d items"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:845
+#: D:\localgit\Cura\gui/sceneView.py:887
 msgid "Center on platform"
 msgstr "居中"
 
-#: D:\localgit\Cura\gui/sceneView.py:846
+#: D:\localgit\Cura\gui/sceneView.py:889
 msgid "Delete object"
 msgstr "删除物体"
 
-#: D:\localgit\Cura\gui/sceneView.py:847
+#: D:\localgit\Cura\gui/sceneView.py:890
 msgid "Multiply object"
 msgstr "打印多个副本"
 
-#: D:\localgit\Cura\gui/sceneView.py:848
+#: D:\localgit\Cura\gui/sceneView.py:891
 msgid "Split object into parts"
 msgstr "把物体切分成几个部分"
 
-#: D:\localgit\Cura\gui/sceneView.py:850
+#: D:\localgit\Cura\gui/sceneView.py:895
 msgid "Dual extrusion merge"
 msgstr "！双喷头合并"
 
-#: D:\localgit\Cura\gui/sceneView.py:852
+#: D:\localgit\Cura\gui/sceneView.py:897
 msgid "Delete all objects"
 msgstr "删除全部物体"
 
-#: D:\localgit\Cura\gui/sceneView.py:853
+#: D:\localgit\Cura\gui/sceneView.py:898
 msgid "Reload all objects"
 msgstr "重新加载所有物体"
 
-#: D:\localgit\Cura\gui/sceneView.py:976
+#: D:\localgit\Cura\gui/sceneView.py:1024
 msgid "Toolpath to SD"
 msgstr "保存喷头路径到SD卡"
 
-#: D:\localgit\Cura\gui/sceneView.py:1270
+#: D:\localgit\Cura\gui/sceneView.py:1323
 msgid "Overhang view not working due to lack of OpenGL shaders support."
 msgstr ""
 
@@ -2941,7 +2973,7 @@ msgstr "摄像头错误"
 #: D:\localgit\Cura\gui/util/engineResultView.py:168
 #, python-format
 msgid "Loading toolpath for visualization (%d%%)"
-msgstr ""
+msgstr "视觉化重现喷头路径中。。。(%d%%)"
 
 #: D:\localgit\Cura\gui/util/openglGui.py:242
 msgid "An error has occurred during the 3D view drawing."
@@ -2951,18 +2983,30 @@ msgstr "在进行三维视图建模时发生错误"
 msgid "3D window error"
 msgstr "3D 窗口错误"
 
-#: D:\localgit\Cura\util/profile.py:202
+#: D:\localgit\Cura\util/Gcode_to_x3g.py:37
+msgid "Saving..."
+msgstr "保存中"
+
+#: D:\localgit\Cura\util/Gcode_to_x3g.py:59
+msgid "has been saved to:\n"
+msgstr "已经保存至：\n"
+
+#: D:\localgit\Cura\util/Gcode_to_x3g.py:59
+msgid "Finished"
+msgstr "完成"
+
+#: D:\localgit\Cura\util/profile.py:207
 msgid "Initial layer line width (%)"
 msgstr "起始层线宽比例因数（%）"
 
-#: D:\localgit\Cura\util/profile.py:202
+#: D:\localgit\Cura\util/profile.py:207
 msgid ""
 "Extra width factor for the extrusion on the first layer, on some printers "
 "it's good to have wider extrusion on the first layer to get better bed "
 "adhesion."
 msgstr ""
 
-#: D:\localgit\Cura\util/profile.py:232
+#: D:\localgit\Cura\util/profile.py:237
 msgid ""
 "Spiralize is smoothing out the Z move of the outer edge. This will create a "
 "steady Z increase over the whole print. This feature turns a solid object "
@@ -2970,18 +3014,15 @@ msgid ""
 "This feature used to be called Joris in older versions."
 msgstr ""
 
-#: D:\localgit\Cura\util/profile.py:233
+#: D:\localgit\Cura\util/profile.py:238
 msgid "Only follow mesh surface"
-msgstr ""
+msgstr "进打印模型表面"
 
-#: D:\localgit\Cura\util/profile.py:233
+#: D:\localgit\Cura\util/profile.py:238
 msgid ""
 "Only follow the mesh surfaces of the 3D model, do not do anything else. No "
 "infill, no top/bottom, nothing."
-msgstr ""
-
-#~ msgid "Cura settings"
-#~ msgstr "Cura软件设置"
+msgstr "仅打印3维模型的表面，不进行填充，没有顶部和底部。"
 
 #~ msgid "Custom..."
 #~ msgstr "自定义..."

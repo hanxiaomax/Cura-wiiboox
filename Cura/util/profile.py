@@ -40,7 +40,7 @@ settingsList = []
 _selectedMachineIndex = 0
 
 ###########
-# Fliter=[]
+# Filter=[]
 ###########
 
 class setting(object):
@@ -513,7 +513,7 @@ setting('window_height', '-1', float, 'preference', 'hidden')
 setting('window_normal_sash', '320', float, 'preference', 'hidden')
 setting('last_run_version', '', str, 'preference', 'hidden')
 ################
-setting('filter',[],list,'preference','hidden')
+setting('filter','',list,'preference','hidden')
 ###############
 
 
