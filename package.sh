@@ -21,7 +21,8 @@ BUILD_TARGET=${1:-none}
 ARCHIVE_FOR_DISTRIBUTION=1
 ##Which version name are we appending to the final archive
 
-export BUILD_NAME=14.07-MAC-TEST
+#export BUILD_NAME=14.07-MAC-TEST
+export BUILD_NAME=14.07-wiiboox
 
 TARGET_DIR=Cura-${BUILD_NAME}-${BUILD_TARGET}
 
