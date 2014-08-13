@@ -25,11 +25,10 @@ class expertConfigWindow(wx.Dialog):
 		# right.GetSizer().Add(self.okButton, (right.GetSizer().GetRows(), 0))
 		# self.Bind(wx.EVT_BUTTON, lambda e: self.Close(), self.okButton)
 		self.Bind(wx.EVT_BUTTON, lambda e: self.Close())
-		if version.isDevVersion():
-			self.fliterButton = wx.Button(right, -1, _('option filter'))
-			right.GetSizer().Add(self.fliterButton, (right.GetSizer().GetRows(), 0))
-			self.Bind(wx.EVT_BUTTON, self.OnfliterButton)
-			print
+		# Add options filter to distribution
+		self.fliterButton = wx.Button(right, -1, _('option filter'))
+		right.GetSizer().Add(self.fliterButton, (right.GetSizer().GetRows(), 0))
+		self.Bind(wx.EVT_BUTTON, self.OnfliterButton)
 		main.Fit()
 		self.Fit()
 

@@ -1,5 +1,7 @@
 # coding=utf-8
 __author__ = 'Lingfeng Ai'
+__copyright__ = "Copyright (C) 2014 Lingfeng Ai - Released under terms of the AGPLv3 License"
+
 import wx
 from Cura.gui import configWizard
 from Cura.gui import configBase

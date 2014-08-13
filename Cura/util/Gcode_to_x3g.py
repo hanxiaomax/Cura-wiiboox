@@ -1,7 +1,7 @@
 # coding=utf-8
 from __future__ import absolute_import
-__author__ = ['Bob','Lingfeng']
-__copyright__ = "Copyright (C) 2014 Bob,Lingfeng - Released under terms of the AGPLv3 License"
+__author__ = ['Bob Zhuo','Lingfeng Ai']
+__copyright__ = "Copyright (C) 2014 Bob Zhuo,Lingfeng Ai - Released under terms of the AGPLv3 License"
 #import optparse 
 import sys
 import os
