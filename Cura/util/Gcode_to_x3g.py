@@ -2,7 +2,6 @@
 from __future__ import absolute_import
 __author__ = ['Bob','Lingfeng']
 __copyright__ = "Copyright (C) 2014 Bob,Lingfeng - Released under terms of the AGPLv3 License"
-
 #import optparse 
 import sys
 import os
@@ -13,10 +12,8 @@ from Cura.util import profile
 #ugly hack:add makerbot_driver to sys.path to import
 driver_path=os.path.dirname(__file__)
 sys.path.append(driver_path)
-
 import makerbot_driver
-
-#ugly hack:to handle path with chinese
+#ugly hack:处理中文路径
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
 def Convert_Gcode_to_x3g(dest,gcode_path,machine=profile.getMachineSetting('machine_type').encode('utf-8')):
@@ -29,10 +26,10 @@ def Convert_Gcode_to_x3g(dest,gcode_path,machine=profile.getMachineSetting('mach
 	parser.state.values['build_name'] = unicode(filename).encode("utf-8")
 	#INFO :必须使用Unicode.encode("utf-8")否则会出错
 	parser.s3g = makerbot_driver.s3g()
-	destfile=open(dest,'wb')
+	destfile=open(dest,'wb')# 创建destfile用来关闭文件
 	parser.s3g.writer = makerbot_driver.Writer.FileWriter(destfile, condition)
-	keepgoing=True
-	maxline = len(open(gcode_path, "rU").readlines())
+	keepgoing=True# 进度条是否继续进行
+	maxline = len(open(gcode_path, "rU").readlines())# 计算文件文件行数
 	pos=0
 	dlg = wx.ProgressDialog(_("Saving..."),_("Saving..."),
 	                               maximum =maxline,
@@ -61,5 +58,5 @@ def Convert_Gcode_to_x3g(dest,gcode_path,machine=profile.getMachineSetting('mach
 		message_dlg.ShowModal()
 		message_dlg.Destroy()
 	else:
-		destfile.close()
+		destfile.close()# 首先关闭文件然后才能remove
 		os.remove(unicode(dest).encode('GBK'))
