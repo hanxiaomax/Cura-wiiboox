@@ -146,12 +146,15 @@ class mainWindow(wx.Frame):
 		toolsMenu.AppendSeparator()
 		self.allAtOnceItem = toolsMenu.Append(-1, _("Print all at once"), kind=wx.ITEM_RADIO)
 		self.Bind(wx.EVT_MENU, self.onOneAtATimeSwitch, self.allAtOnceItem)
-		self.oneAtATime = toolsMenu.Append(-1, _("Print one at a time"), kind=wx.ITEM_RADIO)
-		self.Bind(wx.EVT_MENU, self.onOneAtATimeSwitch, self.oneAtATime)
-		if profile.getPreference('oneAtATime') == 'True':
-			self.oneAtATime.Check(True)
-		else:
-			self.allAtOnceItem.Check(True)
+		# 屏蔽了一次打印一个模型的选项
+		# self.oneAtATime = toolsMenu.Append(-1, _("Print one at a time"), kind=wx.ITEM_RADIO)
+		# self.Bind(wx.EVT_MENU, self.onOneAtATimeSwitch, self.oneAtATime)
+
+		# if profile.getPreference('oneAtATime') == 'True':
+		# 	self.oneAtATime.Check(True)
+		# else:
+		# 	self.allAtOnceItem.Check(True)
+		self.allAtOnceItem.Check(True)
 
 		self.menubar.Append(toolsMenu, _("Tools"))
 

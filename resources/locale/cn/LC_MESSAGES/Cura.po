@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-07 21:25+0800\n"
-"PO-Revision-Date: 2014-08-07 21:34+0800\n"
+"PO-Revision-Date: 2014-08-14 16:04+0800\n"
 "Last-Translator: Lingfeng Ai <hanxiaomax@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
@@ -177,7 +177,7 @@ msgstr ""
 
 #: D:\localgit\Cura\gui/configWizard.py:477
 msgid "Extruder drive upgrade"
-msgstr "！挤出器驱动升级"
+msgstr "挤出器驱动升级"
 
 #: D:\localgit\Cura\gui/configWizard.py:478
 msgid "Heated printer bed (kit)"
@@ -287,7 +287,7 @@ msgstr "温度："
 
 #: D:\localgit\Cura\gui/configWizard.py:558
 msgid "Endstops:"
-msgstr "#限位"
+msgstr "限位开关"
 
 #: D:\localgit\Cura\gui/configWizard.py:563
 msgid "Show error log"
@@ -1375,7 +1375,7 @@ msgstr "第三喷头温度（摄氏度）"
 
 #: D:\localgit\Cura\gui/profile.py:178 D:\localgit\Cura\util/profile.py:185
 msgid "4th nozzle temperature (C)"
-msgstr "第三喷头温度（摄氏度）"
+msgstr "第四喷头温度（摄氏度）"
 
 #: D:\localgit\Cura\gui/profile.py:179 D:\localgit\Cura\util/profile.py:186
 msgid "Bed temperature (C)"
@@ -1504,7 +1504,7 @@ msgstr "双喷头"
 
 #: D:\localgit\Cura\gui/profile.py:183 D:\localgit\Cura\util/profile.py:190
 msgid "Wipe&prime tower"
-msgstr ""
+msgstr "擦除和准备塔"
 
 #: D:\localgit\Cura\gui/profile.py:183 D:\localgit\Cura\util/profile.py:190
 msgid ""
@@ -1513,10 +1513,12 @@ msgid ""
 "The old nozzle is wiped off on the tower before the new nozzle is used to "
 "print the 2nd color."
 msgstr ""
+"擦除塔是在交换喷头时，打印一个塔。\n"
+"刚才使用的喷头会在这里清理干净，并准备好下一个喷头用来打印第二种颜色。"
 
 #: D:\localgit\Cura\gui/profile.py:184 D:\localgit\Cura\util/profile.py:191
 msgid "Wipe&prime tower volume per layer (mm3)"
-msgstr ""
+msgstr "每层打印擦除和准备塔的体积"
 
 #: D:\localgit\Cura\gui/profile.py:184 D:\localgit\Cura\util/profile.py:191
 msgid ""
@@ -1772,7 +1774,7 @@ msgstr ""
 
 #: D:\localgit\Cura\gui/profile.py:205 D:\localgit\Cura\util/profile.py:215
 msgid "Outer shell speed (mm/s)"
-msgstr "外表面打印速度"
+msgstr "外表面打印速度（毫米/秒）"
 
 #: D:\localgit\Cura\gui/profile.py:205 D:\localgit\Cura\util/profile.py:215
 msgid ""
@@ -1898,7 +1900,9 @@ msgid ""
 "When the fan is turned on, it is enabled at this speed setting. If cool "
 "slows down the layer, the fan is adjusted between the min and max speed. "
 "Minimal fan speed is used if the layer is not slowed down due to cooling."
-msgstr "当风扇打开后，会以此速度运转。"
+msgstr ""
+"当风扇打开后，会以此速度运转。如果因为需要冷却而降低了打印速度，风扇会在最低"
+"转速和最高转速见进行调整。如果没有减慢速度，则使用最低转速。"
 
 #: D:\localgit\Cura\gui/profile.py:215 D:\localgit\Cura\util/profile.py:225
 msgid "Fan speed max (%)"
@@ -1910,7 +1914,7 @@ msgid ""
 "slows down the layer, the fan is adjusted between the min and max speed. "
 "Maximal fan speed is used if the layer is slowed down due to cooling by more "
 "than 200%."
-msgstr "@当风扇打开后，它将使用这个速度。"
+msgstr "当风扇打开后，它将使用这个速度。"
 
 #: D:\localgit\Cura\gui/profile.py:216 D:\localgit\Cura\util/profile.py:226
 msgid "Minimum speed (mm/s)"
@@ -1922,6 +1926,8 @@ msgid ""
 "ooze. The minimal feedrate protects against this. Even if a print gets "
 "slowed down it will never be slower than this minimal speed."
 msgstr ""
+"每层花费的最少时间这项参数，可能会导致打印速度降低很多，以至于产生漏丝。最低"
+"进给速度用来放置它的发生。即使打印速度被减慢，也绝不会低于该最低速度。"
 
 #: D:\localgit\Cura\gui/profile.py:217 D:\localgit\Cura\util/profile.py:227
 msgid "Cool head lift"
@@ -1998,17 +2004,17 @@ msgstr ""
 
 #: D:\localgit\Cura\gui/profile.py:222 D:\localgit\Cura\util/profile.py:232
 msgid "Overhang angle for support (deg)"
-msgstr "悬臂"
+msgstr "需要支撑的悬臂角度（度）"
 
 #: D:\localgit\Cura\gui/profile.py:222 D:\localgit\Cura\util/profile.py:232
 msgid ""
 "The minimal angle that overhangs need to have to get support. With 0 degree "
 "being horizontal and 90 degree being vertical."
-msgstr ""
+msgstr "需要对悬臂进行支撑的最小角度，0度表示水平，90度表示垂直。"
 
 #: D:\localgit\Cura\gui/profile.py:223 D:\localgit\Cura\util/profile.py:233
 msgid "Fill amount (%)"
-msgstr "填充率"
+msgstr "填充率（%）"
 
 #: D:\localgit\Cura\gui/profile.py:223 D:\localgit\Cura\util/profile.py:233
 #, python-format
@@ -2016,8 +2022,6 @@ msgid ""
 "Amount of infill structure in the support material, less material gives "
 "weaker support which is easier to remove. 15% seems to be a good average."
 msgstr ""
-"支撑结构的填充率，较低的填充率会使得支撑更容易去除，一般来讲15%的填充率效果不"
-"错。"
 
 #: D:\localgit\Cura\gui/profile.py:224 D:\localgit\Cura\util/profile.py:234
 msgid "Distance X/Y (mm)"
@@ -2029,6 +2033,8 @@ msgid ""
 "0.7mm gives a nice distance from the print so the support does not stick to "
 "the print."
 msgstr ""
+"支撑和模型在X/Y方向上的间距。\n"
+"0.7mm的间距效果较好，使得支撑不会粘附在模型上。"
 
 #: D:\localgit\Cura\gui/profile.py:225 D:\localgit\Cura\util/profile.py:235
 msgid "Distance Z (mm)"
@@ -2040,6 +2046,9 @@ msgid ""
 "makes it easier to remove the support but makes the print a bit uglier.\n"
 "0.15mm gives a good seperation of the support material."
 msgstr ""
+"支撑顶部和底部与模型的间距。一个微小的缝隙会使得支撑容易去除。但是会破坏表面"
+"质量\n"
+"0.15mm的间距效果较好。"
 
 #: D:\localgit\Cura\gui/profile.py:226 D:\localgit\Cura\util/profile.py:237
 msgid "Spiralize the outer contour"
@@ -2220,7 +2229,7 @@ msgstr "保存配置文件为 [stl_file]_profile.ini，与模型文件在同目�
 
 #: D:\localgit\Cura\gui/profile.py:353 D:\localgit\Cura\util/profile.py:490
 msgid "Cost (price/kg)"
-msgstr "价格（元/千克）"
+msgstr "成本（元/千克）"
 
 #: D:\localgit\Cura\gui/profile.py:353 D:\localgit\Cura\util/profile.py:490
 msgid "Cost of your filament per kg, to estimate the cost of the final print."
@@ -2228,7 +2237,7 @@ msgstr "您所使用料丝每千克的价格，用以估算最终成品的价格
 
 #: D:\localgit\Cura\gui/profile.py:354 D:\localgit\Cura\util/profile.py:491
 msgid "Cost (price/m)"
-msgstr "价格(元/米)"
+msgstr "成本(元/米)"
 
 #: D:\localgit\Cura\gui/profile.py:354 D:\localgit\Cura\util/profile.py:491
 msgid ""
@@ -2319,7 +2328,7 @@ msgstr "打印窗口类型"
 
 #: D:\localgit\Cura\gui/profile.py:367 D:\localgit\Cura\util/profile.py:506
 msgid "Select the interface used for USB printing."
-msgstr "选择USB打印时的界面"
+msgstr "选择USB打印的接口"
 
 #: D:\localgit\Cura\gui/profile.py:379 D:\localgit\Cura\util/profile.py:522
 msgid "Maximum width (mm)"
@@ -2391,7 +2400,7 @@ msgstr ""
 
 #: D:\localgit\Cura\gui/profile.py:387 D:\localgit\Cura\util/profile.py:530
 msgid "Extruder count"
-msgstr "挤出器计数"
+msgstr "挤出器数量"
 
 #: D:\localgit\Cura\gui/profile.py:387 D:\localgit\Cura\util/profile.py:530
 msgid "Amount of extruders in your machine."
@@ -2520,7 +2529,7 @@ msgstr ""
 msgid ""
 "Thicker layers then %.2fmm (80%% nozzle size) usually give bad results and "
 "are not recommended."
-msgstr "层厚度超过%.2fmm(80%喷头直接)通常会带来不好的结果，不推荐这样做。"
+msgstr ""
 
 #: D:\localgit\Cura\gui/profile.py:410 D:\localgit\Cura\util/profile.py:553
 msgid ""
@@ -2548,7 +2557,7 @@ msgstr "您确定您的料丝有这么粗吗？通常料丝的直径为3mm或1.7
 msgid ""
 "It is highly unlikely that your machine can achieve a travel speed above "
 "300mm/s"
-msgstr "您的机器不太可能达到300mm/s以上的travel 速度"
+msgstr "您的机器不太可能达到300mm/s以上的喷头运动速度"
 
 #: D:\localgit\Cura\gui/profile.py:421 D:\localgit\Cura\util/profile.py:564
 #, python-format
@@ -2743,7 +2752,7 @@ msgstr "保存喷头路径到SD卡"
 
 #: D:\localgit\Cura\gui/sceneView.py:1323
 msgid "Overhang view not working due to lack of OpenGL shaders support."
-msgstr ""
+msgstr "俯瞰视角无法使用，因为确实OpenGL阴影支持。"
 
 #: D:\localgit\Cura\gui/simpleMode.py:20
 msgid "High quality print"
