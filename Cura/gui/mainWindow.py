@@ -79,8 +79,8 @@ class mainWindow(wx.Frame):
 		self.Bind(wx.EVT_MENU, lambda e: self.scene.OnDeleteAll(e), i)
 
 		self.fileMenu.AppendSeparator()
-		i = self.fileMenu.Append(-1, _("Print...\tCTRL+P"))
-		self.Bind(wx.EVT_MENU, lambda e: self.scene.OnPrintButton(1), i)
+		# i = self.fileMenu.Append(-1, _("Print...\tCTRL+P"))
+		# self.Bind(wx.EVT_MENU, lambda e: self.scene.OnPrintButton(1), i)
 		i = self.fileMenu.Append(-1, _("Save GCode..."))
 		self.Bind(wx.EVT_MENU, lambda e: self.scene.showSaveGCode(), i)
 		i = self.fileMenu.Append(-1, _("Show slice engine log..."))
@@ -93,9 +93,9 @@ class mainWindow(wx.Frame):
 		i = self.fileMenu.Append(-1, _("Save Profile..."))
 		self.normalModeOnlyItems.append(i)
 		self.Bind(wx.EVT_MENU, self.OnSaveProfile, i)
-		i = self.fileMenu.Append(-1, _("Load Profile from GCode..."))
-		self.normalModeOnlyItems.append(i)
-		self.Bind(wx.EVT_MENU, self.OnLoadProfileFromGcode, i)
+		# i = self.fileMenu.Append(-1, _("Load Profile from GCode..."))
+		# self.normalModeOnlyItems.append(i)
+		# self.Bind(wx.EVT_MENU, self.OnLoadProfileFromGcode, i)
 		self.fileMenu.AppendSeparator()
 		i = self.fileMenu.Append(-1, _("Reset Profile to default"))
 		self.normalModeOnlyItems.append(i)
@@ -180,18 +180,19 @@ class mainWindow(wx.Frame):
 		expertMenu.AppendSeparator()
 		i = expertMenu.Append(-1, _("Run first run wizard..."))
 		self.Bind(wx.EVT_MENU, self.OnFirstRunWizard, i)
-		self.bedLevelWizardMenuItem = expertMenu.Append(-1, _("Run bed leveling wizard..."))
-		self.Bind(wx.EVT_MENU, self.OnBedLevelWizard, self.bedLevelWizardMenuItem)
-		self.headOffsetWizardMenuItem = expertMenu.Append(-1, _("Run head offset wizard..."))
-		self.Bind(wx.EVT_MENU, self.OnHeadOffsetWizard, self.headOffsetWizardMenuItem)
+		# self.bedLevelWizardMenuItem = expertMenu.Append(-1, _("Run bed leveling wizard..."))
+		# self.Bind(wx.EVT_MENU, self.OnBedLevelWizard, self.bedLevelWizardMenuItem)
+		# self.headOffsetWizardMenuItem = expertMenu.Append(-1, _("Run head offset wizard..."))
+		# self.Bind(wx.EVT_MENU, self.OnHeadOffsetWizard, self.headOffsetWizardMenuItem)
+
 		self.menubar.Append(expertMenu, _("Expert"))
 		helpMenu = wx.Menu()
 		i = helpMenu.Append(-1, _("Online documentation..."))
 		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('http://daid.github.com/Cura'), i)
 		i = helpMenu.Append(-1, _("Report a problem..."))
 		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('https://github.com/daid/Cura/issues'), i)
-		i = helpMenu.Append(-1, _("Check for update..."))
-		self.Bind(wx.EVT_MENU, self.OnCheckForUpdate, i)
+		# i = helpMenu.Append(-1, _("Check for update..."))
+		# self.Bind(wx.EVT_MENU, self.OnCheckForUpdate, i)
 		i = helpMenu.Append(-1, _("Open YouMagine website..."))
 		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('https://www.youmagine.com/'), i)
 		i = helpMenu.Append(-1, _("About Cura..."))
@@ -338,10 +339,12 @@ class mainWindow(wx.Frame):
 			self.splitter.SetSashSize(4)
 		self.defaultFirmwareInstallMenuItem.Enable(firmwareInstall.getDefaultFirmware() is not None)
 		if profile.getMachineSetting('machine_type') == 'ultimaker2':
-			self.bedLevelWizardMenuItem.Enable(False)
-			self.headOffsetWizardMenuItem.Enable(False)
+			pass
+			# self.bedLevelWizardMenuItem.Enable(False)
+			# self.headOffsetWizardMenuItem.Enable(False)
 		if int(profile.getMachineSetting('extruder_amount')) < 2:
-			self.headOffsetWizardMenuItem.Enable(False)
+			pass
+			# self.headOffsetWizardMenuItem.Enable(False)
 		self.scene.updateProfileToControls()
 		self.scene._scene.pushFree()
 
@@ -636,10 +639,10 @@ class normalSettingsPanel(configBase.configPanelBase):
 		self.SizeLabelWidths(left, right)
 
 		#Plugin page
-		self.pluginPanel = pluginPanel.pluginPanel(self.nb, callback)
-		self.nb.AddPage(self.pluginPanel, _("Plugins"))
+		# self.pluginPanel = pluginPanel.pluginPanel(self.nb, callback)
+		# self.nb.AddPage(self.pluginPanel, _("Plugins"))
 
-		#Alteration page
+		# Alteration page
 		if profile.getMachineSetting('gcode_flavor') == 'UltiGCode':
 			self.alterationPanel = None
 		else:
@@ -731,4 +734,4 @@ class normalSettingsPanel(configBase.configPanelBase):
 		super(normalSettingsPanel, self).updateProfileToControls()
 		if self.alterationPanel is not None:
 			self.alterationPanel.updateProfileToControls()
-		self.pluginPanel.updateProfileToControls()
+		# self.pluginPanel.updateProfileToControls()
