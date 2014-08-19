@@ -16,12 +16,13 @@ import makerbot_driver
 #ugly hack:处理中文路径
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
-def Convert_Gcode_to_x3g(dest,gcode_path,machine=profile.getMachineSetting('machine_type').encode('utf-8')):
+def Convert_Gcode_to_x3g(dest,gcode_path):
 	filename = os.path.basename(gcode_path)
 	filename = os.path.splitext(filename)[0]
 	condition = threading.Condition()
 	parser = makerbot_driver.Gcode.GcodeParser()
 	parser.state = makerbot_driver.Gcode.GcodeStates()
+	machine=profile.getMachineSetting('machine_type').encode('utf-8')
 	parser.state.profile = makerbot_driver.Profile(machine)
 	parser.state.values['build_name'] = unicode(filename).encode("utf-8")
 	#INFO :必须使用Unicode.encode("utf-8")否则会出错
