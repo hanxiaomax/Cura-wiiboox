@@ -57,6 +57,7 @@ def Convert_Gcode_to_x3g(dest,gcode_path,machine=profile.getMachineSetting('mach
 		                               wx.OK|wx.ICON_INFORMATION)
 		message_dlg.ShowModal()
 		message_dlg.Destroy()
+		destfile.close()
 	else:
 		destfile.close()# 首先关闭文件然后才能remove
 		os.remove(unicode(dest).encode('GBK'))

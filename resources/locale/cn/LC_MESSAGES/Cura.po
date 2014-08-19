@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-18 17:00+0800\n"
-"PO-Revision-Date: 2014-08-18 17:00+0800\n"
+"PO-Revision-Date: 2014-08-19 10:58+0800\n"
 "Last-Translator: Lingfeng Ai <hanxiaomax@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
@@ -1183,7 +1183,7 @@ msgstr "错误记录"
 #: D:\localgit\Cura\util/profile.py:207 D:\localgit\Cura\util/profile.py:209
 #: D:\localgit\Cura\util/profile.py:211
 msgid "Quality"
-msgstr "质量"
+msgstr "打印质量"
 
 #: D:\localgit\Cura\gui/profile.py:168 D:\localgit\Cura\util/profile.py:175
 msgid "Layer height (mm)"
@@ -1211,7 +1211,7 @@ msgid ""
 "of perimeter lines and the thickness of those perimeter lines."
 msgstr ""
 "水平方向最外层表面的厚度。\n"
-"需要同喷头尺寸一起使用，来确定外轮廓线的数量和宽度。"
+"请使用0.4的倍数"
 
 #: D:\localgit\Cura\gui/profile.py:170 D:\localgit\Cura\util/profile.py:177
 msgid "Enable retraction"
@@ -1570,7 +1570,7 @@ msgstr "距离（毫米）"
 msgid ""
 "Amount of retraction, set at 0 for no retraction at all. A value of 4.5mm "
 "seems to generate good results."
-msgstr "料丝回抽量。设置为0则不进行回吸。设置为4.5mm会有比较好的效果"
+msgstr "料丝回抽量。设置为0则不进行回吸。设置为1mm会有比较好的效果"
 
 #: D:\localgit\Cura\gui/profile.py:193 D:\localgit\Cura\util/profile.py:200
 msgid "Dual extrusion switch amount (mm)"
@@ -1710,8 +1710,8 @@ msgid ""
 "used for the infill. Printing the infill faster can greatly reduce printing "
 "time, but this can negatively affect print quality."
 msgstr ""
-"需要填充部件的填充速度。如果设置为0则会使用打印速度。填充速度加快，可以极大的"
-"缩短打印时间，但是也会影响打印质量"
+"需要填充部件的填充速度填充速度加快，可以极大的缩短打印时间，但是也会影响打印"
+"质量"
 
 #: D:\localgit\Cura\gui/profile.py:205 D:\localgit\Cura\util/profile.py:215
 msgid "Outer shell speed (mm/s)"
@@ -1724,8 +1724,8 @@ msgid ""
 "quality. However, having a large difference between the inner shell speed "
 "and the outer shell speed will effect quality in a negative way."
 msgstr ""
-"模型最外层表面打印速度。如果设置为0，则会使用打印速度。打印最外层时使用较低速"
-"率可以改善表面质量。然而如果外层速率和内层速率差别很大，也会影响打印质量"
+"模型最外层表面打印速度。打印最外层时使用较低速率可以改善表面质量。然而如果外"
+"层速率和内层速率差别很大，也会影响打印质量"
 
 #: D:\localgit\Cura\gui/profile.py:206 D:\localgit\Cura\util/profile.py:216
 msgid "Inner shell speed (mm/s)"
@@ -2456,12 +2456,12 @@ msgid ""
 msgstr ""
 
 #: D:\localgit\Cura\gui/profile.py:406 D:\localgit\Cura\util/profile.py:549
-#, fuzzy, python-format
+#, python-format
 msgid "More flow than 150%% is rare and usually not recommended."
 msgstr "流动率超过百分之150是罕见的，不推荐这样设置。"
 
 #: D:\localgit\Cura\gui/profile.py:407 D:\localgit\Cura\util/profile.py:550
-#, fuzzy, python-format
+#, python-format
 msgid "Less flow than 50%% is rare and usually not recommended."
 msgstr "流动率低于50是罕见的，不推荐这样设置。"
 
