@@ -25,9 +25,10 @@ class simpleModePanel(wx.Panel):
 
 
 		printMaterialPanel = wx.Panel(self)
-		self.printMaterialPLA = wx.RadioButton(printMaterialPanel, -1, 'PLA', style=wx.RB_GROUP)
+		self.printMaterialPLA_Pro = wx.RadioButton(printMaterialPanel, -1, 'PLA Pro', style=wx.RB_GROUP)
+		self.printMaterialPLA = wx.RadioButton(printMaterialPanel, -1, 'PLA')
 		self.printMaterialABS = wx.RadioButton(printMaterialPanel, -1, 'ABS')
-		self.printMaterialDiameter = wx.TextCtrl(printMaterialPanel, -1, profile.getProfileSetting('filament_diameter'))
+		# self.printMaterialDiameter = wx.TextCtrl(printMaterialPanel, -1, profile.getProfileSetting('filament_diameter'))
 		if profile.getMachineSetting('gcode_flavor') == 'UltiGCode':
 			printMaterialPanel.Show(False)
 		
@@ -48,10 +49,11 @@ class simpleModePanel(wx.Panel):
 
 		sb = wx.StaticBox(printMaterialPanel, label=_("Material:"))
 		boxsizer = wx.StaticBoxSizer(sb, wx.VERTICAL)
+		boxsizer.Add(self.printMaterialPLA_Pro)
 		boxsizer.Add(self.printMaterialPLA)
 		boxsizer.Add(self.printMaterialABS)
-		boxsizer.Add(wx.StaticText(printMaterialPanel, -1, _("Diameter:")))
-		boxsizer.Add(self.printMaterialDiameter)
+		#boxsizer.Add(wx.StaticText(printMaterialPanel, -1, _("Diameter:")))
+		# boxsizer.Add(self.printMaterialDiameter)
 		printMaterialPanel.SetSizer(wx.BoxSizer(wx.VERTICAL))
 		printMaterialPanel.GetSizer().Add(boxsizer, flag=wx.EXPAND)
 		sizer.Add(printMaterialPanel, (1,0), flag=wx.EXPAND)
@@ -62,7 +64,7 @@ class simpleModePanel(wx.Panel):
 		sizer.Add(boxsizer, (2,0), flag=wx.EXPAND)
 
 		self.printTypeNormal.SetValue(True)
-		self.printMaterialPLA.SetValue(True)
+		self.printMaterialPLA_Pro.SetValue(True)
 
 		self.printTypeHigh.Bind(wx.EVT_RADIOBUTTON, lambda e: self._callback())
 		self.printTypeNormal.Bind(wx.EVT_RADIOBUTTON, lambda e: self._callback())
@@ -71,7 +73,8 @@ class simpleModePanel(wx.Panel):
 
 		self.printMaterialPLA.Bind(wx.EVT_RADIOBUTTON, lambda e: self._callback())
 		self.printMaterialABS.Bind(wx.EVT_RADIOBUTTON, lambda e: self._callback())
-		self.printMaterialDiameter.Bind(wx.EVT_TEXT, lambda e: self._callback())
+		self.printMaterialPLA_Pro.Bind(wx.EVT_RADIOBUTTON, lambda e: self._callback())
+		# self.printMaterialDiameter.Bind(wx.EVT_TEXT, lambda e: self._callback())
 
 		self.printSupport.Bind(wx.EVT_CHECKBOX, lambda e: self._callback())
 
@@ -88,28 +91,34 @@ class simpleModePanel(wx.Panel):
 
 		nozzle_size = float(get('nozzle_size'))
 		if self.printTypeNormal.GetValue():
-			put('layer_height', '0.2')
-			put('wall_thickness', nozzle_size * 2.0)
-			put('layer_height', '0.10')
+			put('layer_height', '0.15')
+			put('layer_height', '0.15')
 			put('fill_density', '20')
 		elif self.printTypeLow.GetValue():
-			put('wall_thickness', nozzle_size * 2.5)
+			put('wall_thickness',"0.4")
 			put('layer_height', '0.20')
-			put('fill_density', '10')
+			put('fill_density', '15')
 			put('print_speed', '60')
+			put('inset0_speed','30')
+			put('insetx_speed','35')
 			put('cool_min_layer_time', '3')
 			put('bottom_layer_speed', '30')
 		elif self.printTypeHigh.GetValue():
-			put('wall_thickness', nozzle_size * 2.0)
-			put('layer_height', '0.06')
+			put('layer_height', '0.1')
 			put('fill_density', '20')
 			put('bottom_layer_speed', '15')
+			put('inset0_speed','15')
+			put('insetx_speed','25')
+
 		elif self.printTypeJoris.GetValue():
 			put('wall_thickness', nozzle_size * 1.5)
 
-		put('filament_diameter', self.printMaterialDiameter.GetValue())
+		put('filament_diameter', "1.75")
 		if self.printMaterialPLA.GetValue():
 			pass
+		if self.printMaterialPLA_Pro.GetValue():
+			put('bottom_layer_speed','8')
+			put('support_angle', "60")
 		if self.printMaterialABS.GetValue():
 			put('print_bed_temperature', '100')
 			put('platform_adhesion', 'Brim')

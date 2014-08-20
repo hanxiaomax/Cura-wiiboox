@@ -661,12 +661,16 @@ class normalSettingsPanel(configBase.configPanelBase):
 		p = left
 		n = 0
 		for title in profile.getSubCategoriesFor(category):
-			n += 1 + len(profile.getSettingsForCategory(category, title))
-			if n > count / 2:
-				p = right
-			configBase.TitleRow(p, _(title))
-			for s in profile.getSettingsForCategory(category, title):
-				configBase.SettingRow(p, s.getName())
+			
+			if title not in  ['Filament','Machine','Retraction']:
+				n += 1 + len(profile.getSettingsForCategory(category, title))
+				if n > count / 2:
+					p = right
+				configBase.TitleRow(p, _(title))
+				for s in profile.getSettingsForCategory(category, title):
+					print s._name
+					if s._name not in  ['retraction_enable','cool_min_layer_time','layer0_width_factor','overlap_dual']:
+						configBase.SettingRow(p, s.getName())
 
 	def SizeLabelWidths(self, left, right):
 		leftWidth = self.getLabelColumnWidth(left)
