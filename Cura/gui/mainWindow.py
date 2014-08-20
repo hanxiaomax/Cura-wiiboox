@@ -668,7 +668,6 @@ class normalSettingsPanel(configBase.configPanelBase):
 					p = right
 				configBase.TitleRow(p, _(title))
 				for s in profile.getSettingsForCategory(category, title):
-					print s._name
 					if s._name not in  ['retraction_enable','cool_min_layer_time','layer0_width_factor','overlap_dual']:
 						configBase.SettingRow(p, s.getName())
 

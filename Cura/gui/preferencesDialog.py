@@ -25,10 +25,10 @@ class preferencesDialog(wx.Dialog):
 		left, right, main = self.panel.CreateConfigPanel(self)
 
 		printWindowTypes = ['Basic']
-		for p in pluginInfo.getPluginList('printwindow'):
-			printWindowTypes.append(p.getName())
-		configBase.TitleRow(left, _("Print window"))
-		configBase.SettingRow(left, 'printing_window', printWindowTypes)
+		# for p in pluginInfo.getPluginList('printwindow'):
+		# 	printWindowTypes.append(p.getName())
+		# configBase.TitleRow(left, _("Print window"))
+		# configBase.SettingRow(left, 'printing_window', printWindowTypes)
 
 		configBase.TitleRow(left, _("Colours"))
 		configBase.SettingRow(left, 'model_colour', wx.Colour)
@@ -90,7 +90,7 @@ class machineSettingsDialog(wx.Dialog):
 			configBase.SettingRow(left, 'machine_depth', index=idx)
 			configBase.SettingRow(left, 'machine_height', index=idx)
 			configBase.SettingRow(left, 'extruder_amount', index=idx)
-			configBase.SettingRow(left, 'has_heated_bed', index=idx)
+			# configBase.SettingRow(left, 'has_heated_bed', index=idx)
 			#configBase.SettingRow(left, 'machine_center_is_zero', index=idx)
 			#configBase.SettingRow(left, 'machine_shape', index=idx)
 			#configBase.SettingRow(left, 'gcode_flavor', index=idx)
@@ -107,9 +107,9 @@ class machineSettingsDialog(wx.Dialog):
 			# 	configBase.SettingRow(left, 'extruder_offset_x%d' % (i), index=idx)
 			# 	configBase.SettingRow(left, 'extruder_offset_y%d' % (i), index=idx)
 
-			configBase.TitleRow(right, _("Communication settings"))
-			configBase.SettingRow(right, 'serial_port', ['AUTO'] + machineCom.serialList(), index=idx)
-			configBase.SettingRow(right, 'serial_baud', ['AUTO'] + map(str, machineCom.baudrateList()), index=idx)
+			# configBase.TitleRow(right, _("Communication settings"))
+			# configBase.SettingRow(right, 'serial_port', ['AUTO'] + machineCom.serialList(), index=idx)
+			# configBase.SettingRow(right, 'serial_baud', ['AUTO'] + map(str, machineCom.baudrateList()), index=idx)
 
 			self.nb.AddPage(main, profile.getMachineSetting('machine_name', idx).title())
 
