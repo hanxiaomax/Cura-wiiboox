@@ -7,7 +7,6 @@ import sys
 import os
 import threading
 import wx
-import resources
 from Cura.util import profile
 #ugly hack:add makerbot_driver to sys.path to import
 driver_path=os.path.dirname(__file__)
