@@ -343,6 +343,11 @@ if [ $BUILD_TARGET = "win32" ]; then
 	#mv ffmpeg-20120927-git-13f0cd6-win32-static/licenses ${TARGET_DIR}/Cura/ffmpeg-licenses/
 	mv Win32/EjectMedia.exe ${TARGET_DIR}/Cura/
 	
+	#添加缺少的dll文件
+	cp libgcc_s_dw2-1.dll ${TARGET_DIR}/
+	cp libstdc++-6.dll ${TARGET_DIR}/
+
+
 	rm -rf Power/
 	rm -rf \$_OUTDIR
 	rm -rf PURELIB

@@ -10,7 +10,7 @@ Name "Cura ${VERSION}"
 OutFile "Cura_${VERSION}.exe"
 
 ; The default installation directory
-InstallDir $PROGRAMFILES\Cura_${VERSION}
+InstallDir C:\\Cura_${VERSION}
 
 ; Registry key to check for directory (so if you install again, it will 
 ; overwrite the old one automatically)
@@ -105,7 +105,7 @@ FunctionEnd
 
 ; Pages
 ;!insertmacro MUI_PAGE_WELCOME
-!insertmacro MUI_PAGE_DIRECTORY
+;!insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_INSTFILES
 !insertmacro MUI_PAGE_FINISH
@@ -114,7 +114,7 @@ FunctionEnd
 !insertmacro MUI_UNPAGE_FINISH
 
 ; Languages
-!insertmacro MUI_LANGUAGE "English"
+!insertmacro MUI_LANGUAGE "SimpChinese"
 
 ; Reserve Files
 !insertmacro MUI_RESERVEFILE_LANGDLL
@@ -162,17 +162,16 @@ Function LaunchLink
   ExecShell "" "$SMPROGRAMS\Cura ${VERSION}\Cura ${VERSION}.lnk"
 FunctionEnd
 
-Section "Install Arduino Drivers"
-  ; Set output path to the driver directory.
-  SetOutPath "$INSTDIR\drivers\"
-  File /r "drivers\"
-  
-  ${If} ${RunningX64}
-    ExecWait '"$INSTDIR\drivers\dpinst64.exe" /lm'
-  ${Else}
-    ExecWait '"$INSTDIR\drivers\dpinst32.exe" /lm'
-  ${EndIf}
-SectionEnd
+;Section "Install Arduino Drivers"
+;  ; Set output path to the driver directory.
+;  SetOutPath "$INSTDIR\drivers\"
+;  File /r "drivers\"  
+;  ${If} ${RunningX64}
+;    ExecWait '"$INSTDIR\drivers\dpinst64.exe" /lm'
+;  ${Else}
+;    ExecWait '"$INSTDIR\drivers\dpinst32.exe" /lm'
+;  ${EndIf}
+;SectionEnd
 
 Section "Open STL files with Cura"
 	WriteRegStr HKCR .stl "" "Cura STL model file"
@@ -182,7 +181,7 @@ Section "Open STL files with Cura"
 	WriteRegStr HKCR "Cura STL model file\shell\open\command" "" '"$INSTDIR\python\pythonw.exe" -c "import os; os.chdir(\"$INSTDIR\"); import Cura.cura; Cura.cura.main()" "%1"'
 SectionEnd
 
-Section /o "Open OBJ files with Cura"
+Section  "Open OBJ files with Cura"
 	WriteRegStr HKCR .obj "" "Cura OBJ model file"
 	DeleteRegValue HKCR .obj "Content Type"
 	WriteRegStr HKCR "Cura OBJ model file\DefaultIcon" "" "$INSTDIR\resources\stl.ico,0"
@@ -190,7 +189,7 @@ Section /o "Open OBJ files with Cura"
 	WriteRegStr HKCR "Cura OBJ model file\shell\open\command" "" '"$INSTDIR\python\pythonw.exe" -c "import os; os.chdir(\"$INSTDIR\"); import Cura.cura; Cura.cura.main()" "%1"'
 SectionEnd
 
-Section /o "Open AMF files with Cura"
+Section  "Open AMF files with Cura"
 	WriteRegStr HKCR .amf "" "Cura AMF model file"
 	DeleteRegValue HKCR .amf "Content Type"
 	WriteRegStr HKCR "Cura AMF model file\DefaultIcon" "" "$INSTDIR\resources\stl.ico,0"
@@ -199,7 +198,7 @@ Section /o "Open AMF files with Cura"
 SectionEnd
 
 
-Section /o "Uninstall other Cura versions"
+Section  "Uninstall other Cura versions"
 	StrCpy $0 0
 	loop:
 		EnumRegKey $1 HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall" $0
