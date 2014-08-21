@@ -147,7 +147,8 @@ class SceneView(openglGui.glGuiPanel):
 		self._engineResultView.setResult(self._engine._result)
 		self.printButton.setBottomText('')
 		self.viewSelection.setValue(4)
-		self.printButton.setDisabled(False)
+		self.printButton.setDisabled(True) #如果打开的是gcode，说明有保存过的gcode，关闭保存按钮
+
 		# self.youMagineButton.setDisabled(True)
 		self.OnViewChange()
 
@@ -374,6 +375,7 @@ class SceneView(openglGui.glGuiPanel):
 			return
 		dest = dlg.GetPath()
 		dlg.Destroy()
+		# self.tox3gButton.setDisabled(not self.isSaved())
 		# threading.Thread(target=Gcode_to_x3g.Convert_Gcode_to_x3g, args=(dest, gcode_path,)).start()
 		# INFO :Ulgy hack for wx.ProgressDialog
 		Gcode_to_x3g.Convert_Gcode_to_x3g(dest,gcode_path)
