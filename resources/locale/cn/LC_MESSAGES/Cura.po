@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-18 17:00+0800\n"
-"PO-Revision-Date: 2014-08-19 10:58+0800\n"
+"POT-Creation-Date: 2014-08-25 16:06+0800\n"
+"PO-Revision-Date: 2014-08-25 16:32+0800\n"
 "Last-Translator: Lingfeng Ai <hanxiaomax@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
@@ -737,7 +737,7 @@ msgstr "重新加载打印平台"
 msgid "Clear platform"
 msgstr "清空打印平台"
 
-#: D:\localgit\Cura\gui/mainWindow.py:84 D:\localgit\Cura\gui/sceneView.py:312
+#: D:\localgit\Cura\gui/mainWindow.py:84 D:\localgit\Cura\gui/sceneView.py:313
 msgid "Save GCode..."
 msgstr "保存GCode..."
 
@@ -1078,10 +1078,6 @@ msgstr "错误：没有选择插件"
 msgid "Preferences"
 msgstr "首选项"
 
-#: D:\localgit\Cura\gui/preferencesDialog.py:30
-msgid "Print window"
-msgstr "打印窗口"
-
 #: D:\localgit\Cura\gui/preferencesDialog.py:33
 msgid "Colours"
 msgstr "颜色"
@@ -1099,10 +1095,6 @@ msgstr "料丝设置"
 #: D:\localgit\Cura\gui/preferencesDialog.py:87
 msgid "Machine settings"
 msgstr "机器设置"
-
-#: D:\localgit\Cura\gui/preferencesDialog.py:110
-msgid "Communication settings"
-msgstr "通信设置"
 
 #: D:\localgit\Cura\gui/preferencesDialog.py:126
 msgid "Add new machine"
@@ -1963,6 +1955,8 @@ msgid ""
 "Amount of infill structure in the support material, less material gives "
 "weaker support which is easier to remove. 15% seems to be a good average."
 msgstr ""
+"支撑结构的填充率，较低的填充率会生成较脆弱的支撑结构，会比较容易去除。15%效果"
+"比较好。"
 
 #: D:\localgit\Cura\gui/profile.py:224 D:\localgit\Cura\util/profile.py:234
 msgid "Distance X/Y (mm)"
@@ -2530,59 +2524,59 @@ msgstr ""
 
 #: D:\localgit\Cura\gui/sceneView.py:85 D:\localgit\Cura\gui/sceneView.py:88
 msgid "Reset"
-msgstr "重置"
+msgstr ""
 
 #: D:\localgit\Cura\gui/sceneView.py:86
 msgid "Lay flat"
-msgstr "平躺"
+msgstr ""
 
 #: D:\localgit\Cura\gui/sceneView.py:89
 msgid "To max"
-msgstr "至最大值"
+msgstr ""
 
 #: D:\localgit\Cura\gui/sceneView.py:91
 msgid "Mirror X"
-msgstr "X 镜像"
+msgstr ""
 
 #: D:\localgit\Cura\gui/sceneView.py:92
 msgid "Mirror Y"
-msgstr "Y 镜像"
+msgstr ""
 
 #: D:\localgit\Cura\gui/sceneView.py:93
 msgid "Mirror Z"
-msgstr "Z 镜像"
+msgstr ""
 
 #: D:\localgit\Cura\gui/sceneView.py:101
 msgid "Scale X"
-msgstr "X 缩放"
+msgstr ""
 
 #: D:\localgit\Cura\gui/sceneView.py:104
 msgid "Scale Y"
-msgstr "Y 缩放"
+msgstr ""
 
 #: D:\localgit\Cura\gui/sceneView.py:107
 msgid "Scale Z"
-msgstr "Z 缩放"
+msgstr ""
 
 #: D:\localgit\Cura\gui/sceneView.py:110
 msgid "Size X (mm)"
-msgstr "x方向尺寸（毫米）"
+msgstr ""
 
 #: D:\localgit\Cura\gui/sceneView.py:113
 msgid "Size Y (mm)"
-msgstr "Y方向尺寸（毫米）"
+msgstr ""
 
 #: D:\localgit\Cura\gui/sceneView.py:116
 msgid "Size Z (mm)"
-msgstr "Z方向尺寸（毫米）"
+msgstr ""
 
 #: D:\localgit\Cura\gui/sceneView.py:119
 msgid "Uniform scale"
-msgstr "等比例缩放"
+msgstr ""
 
 #: D:\localgit\Cura\gui/sceneView.py:122
 msgid "View mode"
-msgstr "观察模式"
+msgstr ""
 
 #: D:\localgit\Cura\gui/sceneView.py:123
 msgid "Normal"
@@ -2604,95 +2598,95 @@ msgstr ""
 msgid "Layers"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:226
+#: D:\localgit\Cura\gui/sceneView.py:227
 msgid "Open 3D model"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:254
+#: D:\localgit\Cura\gui/sceneView.py:255
 msgid "Save 3D model"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:308
-#: D:\localgit\Cura\gui/sceneView.py:1025
+#: D:\localgit\Cura\gui/sceneView.py:309
+#: D:\localgit\Cura\gui/sceneView.py:1027
 #, python-format
 msgid "Print with %s"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:313
+#: D:\localgit\Cura\gui/sceneView.py:314
 msgid "Slice engine log..."
 msgstr "切片引擎记录"
 
-#: D:\localgit\Cura\gui/sceneView.py:342
-#: D:\localgit\Cura\gui/sceneView.py:1028
+#: D:\localgit\Cura\gui/sceneView.py:343
+#: D:\localgit\Cura\gui/sceneView.py:1030
 msgid "Save toolpath"
 msgstr "保存Gcode文件"
 
-#: D:\localgit\Cura\gui/sceneView.py:365
+#: D:\localgit\Cura\gui/sceneView.py:366
 msgid "save x3g file"
 msgstr "保存x3g格式文件"
 
-#: D:\localgit\Cura\gui/sceneView.py:413
+#: D:\localgit\Cura\gui/sceneView.py:415
 msgid "Failed to save"
 msgstr "保存失败"
 
-#: D:\localgit\Cura\gui/sceneView.py:434
+#: D:\localgit\Cura\gui/sceneView.py:436
 msgid "The slicing engine reported the following"
 msgstr "切片引擎报告"
 
-#: D:\localgit\Cura\gui/sceneView.py:434
+#: D:\localgit\Cura\gui/sceneView.py:436
 msgid "Engine log..."
 msgstr "引擎记录"
 
-#: D:\localgit\Cura\gui/sceneView.py:580
+#: D:\localgit\Cura\gui/sceneView.py:582
 msgid "How many copies do you want?"
 msgstr "需要多少份？"
 
-#: D:\localgit\Cura\gui/sceneView.py:580
+#: D:\localgit\Cura\gui/sceneView.py:582
 msgid "Number of copies"
 msgstr "份数"
 
-#: D:\localgit\Cura\gui/sceneView.py:580
+#: D:\localgit\Cura\gui/sceneView.py:582
 msgid "Multiply"
 msgstr ""
 
-#: D:\localgit\Cura\gui/sceneView.py:598
+#: D:\localgit\Cura\gui/sceneView.py:600
 #, python-format
 msgid "Could not create more than %d items"
 msgstr "不能创建多于%d的物体"
 
-#: D:\localgit\Cura\gui/sceneView.py:885
+#: D:\localgit\Cura\gui/sceneView.py:887
 msgid "Center on platform"
 msgstr "居中"
 
-#: D:\localgit\Cura\gui/sceneView.py:887
+#: D:\localgit\Cura\gui/sceneView.py:889
 msgid "Delete object"
 msgstr "删除物体"
 
-#: D:\localgit\Cura\gui/sceneView.py:888
+#: D:\localgit\Cura\gui/sceneView.py:890
 msgid "Multiply object"
 msgstr "打印多个副本"
 
-#: D:\localgit\Cura\gui/sceneView.py:889
+#: D:\localgit\Cura\gui/sceneView.py:891
 msgid "Split object into parts"
 msgstr "把物体切分成几个部分"
 
-#: D:\localgit\Cura\gui/sceneView.py:893
+#: D:\localgit\Cura\gui/sceneView.py:895
 msgid "Dual extrusion merge"
 msgstr "！双喷头合并"
 
-#: D:\localgit\Cura\gui/sceneView.py:895
+#: D:\localgit\Cura\gui/sceneView.py:897
 msgid "Delete all objects"
 msgstr "删除全部物体"
 
-#: D:\localgit\Cura\gui/sceneView.py:896
+#: D:\localgit\Cura\gui/sceneView.py:898
 msgid "Reload all objects"
 msgstr "重新加载所有物体"
 
-#: D:\localgit\Cura\gui/sceneView.py:1022
+#: D:\localgit\Cura\gui/sceneView.py:1024
 msgid "Toolpath to SD"
 msgstr "保存喷头路径到SD卡"
 
-#: D:\localgit\Cura\gui/sceneView.py:1321
+#: D:\localgit\Cura\gui/sceneView.py:1323
 msgid "Overhang view not working due to lack of OpenGL shaders support."
 msgstr "俯瞰视角无法使用，因为确实OpenGL阴影支持。"
 
@@ -2712,27 +2706,23 @@ msgstr "高速低质量打印"
 msgid "Thin walled cup or vase"
 msgstr "薄壁杯或瓶"
 
-#: D:\localgit\Cura\gui/simpleMode.py:34
+#: D:\localgit\Cura\gui/simpleMode.py:35
 msgid "Print support structure"
 msgstr "打印支撑结构"
 
-#: D:\localgit\Cura\gui/simpleMode.py:39
+#: D:\localgit\Cura\gui/simpleMode.py:40
 msgid "Select a quickprint profile:"
 msgstr "快速打印配置："
 
-#: D:\localgit\Cura\gui/simpleMode.py:49
+#: D:\localgit\Cura\gui/simpleMode.py:50
 msgid "Material:"
 msgstr "材料："
 
-#: D:\localgit\Cura\gui/simpleMode.py:53
-msgid "Diameter:"
-msgstr "直径："
-
-#: D:\localgit\Cura\gui/simpleMode.py:59
+#: D:\localgit\Cura\gui/simpleMode.py:61
 msgid "Other:"
 msgstr "其他："
 
-#: D:\localgit\Cura\gui/simpleMode.py:87
+#: D:\localgit\Cura\gui/simpleMode.py:90
 msgid "Exterior Only"
 msgstr "仅使用外部支撑"
 
@@ -2940,7 +2930,7 @@ msgstr "保存中"
 
 #: D:\localgit\Cura\util/Gcode_to_x3g.py:49
 msgid "Please wait..."
-msgstr ""
+msgstr "请稍等..."
 
 #: D:\localgit\Cura\util/Gcode_to_x3g.py:56
 msgid "has been saved to:\n"
@@ -3021,14 +3011,21 @@ msgstr "当前选择的壁厚会产生一条线，线宽"
 msgid "mm which is not recommended with your nozzle of "
 msgstr "mm，根据您的喷头尺寸，这样做是不推荐的"
 
-#: D:\localgit\Cura\util/validators.py:173
-#, python-format
-msgid ""
-"You are trying to print more then %.1fmm^3 of filament per second. This "
-"might cause filament slipping. (You are printing at %0.1fmm^3 per second)"
-msgstr ""
-"您正在尝试每秒钟打印超过%.1f立方毫米的料丝。这样做可能会造成滑丝。（您正"
-"以%0.1f立方毫米每秒的速度打印）"
+#~ msgid ""
+#~ "You are trying to print more then %.1fmm^3 of filament per second. This "
+#~ "might cause filament slipping. (You are printing at %0.1fmm^3 per second)"
+#~ msgstr ""
+#~ "您正在尝试每秒钟打印超过%.1f立方毫米的料丝。这样做可能会造成滑丝。（您正"
+#~ "以%0.1f立方毫米每秒的速度打印）"
+
+#~ msgid "Print window"
+#~ msgstr "打印窗口"
+
+#~ msgid "Communication settings"
+#~ msgstr "通信设置"
+
+#~ msgid "Diameter:"
+#~ msgstr "直径："
 
 #~ msgid "More flow than 150% is rare and usually not recommended."
 #~ msgstr "流动率超过百分之150是罕见的，不推荐这样设置。"
