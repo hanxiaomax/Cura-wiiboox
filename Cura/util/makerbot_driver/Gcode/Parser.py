@@ -19,7 +19,11 @@ class GcodeParser(object):
         self.environment = {}  #dict
         self.line_number = 1
         self._log = logging.getLogger(self.__class__.__name__)
-
+        
+        self._log.setLevel(logging.ERROR)
+        self.ch = logging.StreamHandler()
+        self._log.addHandler(self.ch) 
+        
         # Note: The datastructure looks like this:
         # [0] : command name
         # [1] : allowed codes
@@ -118,8 +122,11 @@ class GcodeParser(object):
             gcode_error.values['Command'] = command
             gcode_error.values['Suggestion'] = 'This gcode command is not valid for makerbot_driver'
             raise gcode_error
-        except makerbot_driver.Gcode.VectorLengthZeroError:
+        except makerbot_driver.Gcode.VectorLengthZeroError as gcode_error:
             self._log.debug('{"event":vector_length_zero_error"}')
+            #gcode_error.values['Command'] = command
+            #gcode_error.values['LineNumber'] = self.line_number
+            #raise gcode_error
         except makerbot_driver.Gcode.GcodeError as gcode_error:
             self._log.error('{"event":"gcode_error"}')
             gcode_error.values['Command'] = command
@@ -199,6 +206,21 @@ class GcodeParser(object):
         """
         new_position = self.state.position.copy()
         new_position.SetPoint(codes)
+        if 'E' in codes:
+            if 'A' in codes or 'B' in codes:
+                gcode_error = makerbot_driver.Gcode.ConflictingCodesError()
+                gcode_error.values['ConflictingCodes'] = ['E', 'A', 'B']
+                raise gcode_error
+
+            #Cant interpolate E unless a tool_head is specified
+            if not 'tool_index' in self.state.values:
+                raise makerbot_driver.Gcode.NoToolIndexError
+
+            elif self.state.values['tool_index'] == 0:
+                setattr(new_position, 'A', codes['E'])
+
+            elif self.state.values['tool_index'] == 1:
+                setattr(new_position, 'B', codes['E'])
         new_position = new_position.ToList()
         stepped_position = makerbot_driver.Gcode.multiply_vector(
 #            self.state.get_position(),
@@ -309,8 +331,24 @@ class GcodeParser(object):
                 raise makerbot_driver.Gcode.NoFeedrateSpecifiedError
             if len(makerbot_driver.Gcode.parse_out_axes(codes)) > 0 or 'E' in codes:
                 current_position = self.state.get_position()
+                #self._log.debug('current_position: ' + str(current_position))
                 new_position = self.state.position.copy() 
-                new_position.SetPoint(codes)
+                new_position.SetPoint(codes) 
+                if 'E' in codes:
+                    if 'A' in codes or 'B' in codes:
+                        gcode_error = makerbot_driver.Gcode.ConflictingCodesError()
+                        gcode_error.values['ConflictingCodes'] = ['E', 'A', 'B']
+                        raise gcode_error
+
+                    #Cant interpolate E unless a tool_head is specified
+                    if not 'tool_index' in self.state.values:
+                        raise makerbot_driver.Gcode.NoToolIndexError
+
+                    elif self.state.values['tool_index'] == 0:
+                        setattr(new_position, 'A', codes['E'])
+
+                    elif self.state.values['tool_index'] == 1:
+                        setattr(new_position, 'B', codes['E'])
                 new_position = new_position.ToList()
                 dda_speed = makerbot_driver.Gcode.calculate_DDA_speed(
                     current_position,
