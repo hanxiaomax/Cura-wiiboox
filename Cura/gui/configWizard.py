@@ -297,11 +297,12 @@ class PrintrbotPage(InfoPage):
 
 class OtherMachineSelectPage(InfoPage):
 	def __init__(self, parent):
-		super(OtherMachineSelectPage, self).__init__(parent, _("Other machine information"))
+		#super(OtherMachineSelectPage, self).__init__(parent, _("Other machine information"))
+		super(OtherMachineSelectPage, self).__init__(parent, _("Machine Selection"))
 
 		#self.AddText(_("The following pre-defined machine profiles are available"))
 		#self.AddText(_("Note that these profiles are not guaranteed to give good results,\nor work at all. Extra tweaks might be required.\nIf you find issues with the predefined profiles,\nor want an extra profile.\nPlease report it at the github issue tracker."))
-		self.AddText(u"请选择您所购买的机型。\n如果您购买了多台不同型号的打印机，可以在进入软件后，从机器设置菜单中添加新的打印机。\n")
+		#self.AddText(u"请选择您所购买的机型。\n如果您购买了多台不同型号的打印机，可以在进入软件后，从机器设置菜单中添加新的打印机。\n")
 		self.AddSeperator()
 		self.options = []
 		machines = resources.getDefaultMachineProfiles()#返回一个列表，包含全部的配置文件

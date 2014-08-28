@@ -33,7 +33,7 @@ from Cura.util import meshLoader
 
 class mainWindow(wx.Frame):
 	def __init__(self):
-		super(mainWindow, self).__init__(None, title='Cura - ' + version.getVersion() +"BetaV1.0")
+		super(mainWindow, self).__init__(None, title='Cura - ' + version.getVersion() +"BetaV1.1")
 
 		wx.EVT_CLOSE(self, self.OnClose)
 

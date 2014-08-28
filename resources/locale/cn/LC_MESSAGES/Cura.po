@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-25 16:06+0800\n"
-"PO-Revision-Date: 2014-08-25 16:32+0800\n"
+"POT-Creation-Date: 2014-08-28 10:36+0800\n"
+"PO-Revision-Date: 2014-08-28 10:36+0800\n"
 "Last-Translator: Lingfeng Ai <hanxiaomax@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
@@ -64,34 +64,34 @@ msgstr "本向导将帮助您设置Cura以适配您的机器"
 msgid "Select which Printrbot machine you have:"
 msgstr "您使用的是哪款Printrbot："
 
-#: D:\localgit\Cura\gui/configWizard.py:300
-msgid "Other machine information"
-msgstr "*选择您的打印机型号*"
+#: D:\localgit\Cura\gui/configWizard.py:301
+msgid "Machine Selection"
+msgstr "选择机型"
 
-#: D:\localgit\Cura\gui/configWizard.py:337
+#: D:\localgit\Cura\gui/configWizard.py:338
 msgid "Cura Ready!"
 msgstr "Cura 准备就绪！"
 
-#: D:\localgit\Cura\gui/configWizard.py:339
+#: D:\localgit\Cura\gui/configWizard.py:340
 msgid "Cura is now ready to be used!"
 msgstr "Cura已经准备就绪"
 
-#: D:\localgit\Cura\gui/configWizard.py:344
+#: D:\localgit\Cura\gui/configWizard.py:345
 msgid "Custom RepRap information"
 msgstr "自定义RepRap信息"
 
-#: D:\localgit\Cura\gui/configWizard.py:346
+#: D:\localgit\Cura\gui/configWizard.py:347
 msgid ""
 "RepRap machines can be vastly different, so here you can set your own "
 "settings."
 msgstr "RepRap 打印机非常的不一样，因此您需要在这里设置您自己的参数"
 
-#: D:\localgit\Cura\gui/configWizard.py:347
+#: D:\localgit\Cura\gui/configWizard.py:348
 msgid ""
 "Be sure to review the default profile before running it on your machine."
 msgstr "请在运行前注意核对您的默认配置参数"
 
-#: D:\localgit\Cura\gui/configWizard.py:348
+#: D:\localgit\Cura\gui/configWizard.py:349
 msgid ""
 "If you like a default profile for your machine added,\n"
 "then make an issue on github."
@@ -99,57 +99,57 @@ msgstr ""
 "如果您想要在默认配置文件列表中添加您的机器，\n"
 "请在github联系我们"
 
-#: D:\localgit\Cura\gui/configWizard.py:350
+#: D:\localgit\Cura\gui/configWizard.py:351
 msgid "You will have to manually install Marlin or Sprinter firmware."
 msgstr "你需要手动安装Marlin或是Sprinter固件"
 
-#: D:\localgit\Cura\gui/configWizard.py:352
+#: D:\localgit\Cura\gui/configWizard.py:353
 msgid "Machine name"
 msgstr "机器名"
 
-#: D:\localgit\Cura\gui/configWizard.py:353
+#: D:\localgit\Cura\gui/configWizard.py:354
 msgid "Machine width (mm)"
 msgstr "机器宽度(毫米)"
 
-#: D:\localgit\Cura\gui/configWizard.py:354
+#: D:\localgit\Cura\gui/configWizard.py:355
 msgid "Machine depth (mm)"
 msgstr "机器深度(毫米)"
 
-#: D:\localgit\Cura\gui/configWizard.py:355
+#: D:\localgit\Cura\gui/configWizard.py:356
 msgid "Machine height (mm)"
 msgstr "机器高度(毫米)"
 
-#: D:\localgit\Cura\gui/configWizard.py:356
+#: D:\localgit\Cura\gui/configWizard.py:357
 #: D:\localgit\Cura\gui/profile.py:173 D:\localgit\Cura\util/profile.py:180
 msgid "Nozzle size (mm)"
 msgstr "喷头尺寸(毫米)"
 
-#: D:\localgit\Cura\gui/configWizard.py:357
+#: D:\localgit\Cura\gui/configWizard.py:358
 #: D:\localgit\Cura\gui/profile.py:385 D:\localgit\Cura\util/profile.py:528
 msgid "Heated bed"
 msgstr "加热板打印平台"
 
-#: D:\localgit\Cura\gui/configWizard.py:358
+#: D:\localgit\Cura\gui/configWizard.py:359
 msgid "Bed center is 0,0,0 (RoStock)"
 msgstr "平台中心是0,0,0"
 
-#: D:\localgit\Cura\gui/configWizard.py:378
+#: D:\localgit\Cura\gui/configWizard.py:379
 msgid "Select your machine"
 msgstr "选择您的机器"
 
-#: D:\localgit\Cura\gui/configWizard.py:379
+#: D:\localgit\Cura\gui/configWizard.py:380
 msgid "What kind of machine do you have:"
 msgstr "您使用的是哪款机器："
 
-#: D:\localgit\Cura\gui/configWizard.py:392
+#: D:\localgit\Cura\gui/configWizard.py:393
 msgid "Other (Ex: RepRap, MakerBot)"
 msgstr "其他（例如：RepRap,MakerBot）"
 
-#: D:\localgit\Cura\gui/configWizard.py:476
+#: D:\localgit\Cura\gui/configWizard.py:477
 msgid "Select upgraded parts you have"
 msgstr "请选择您已经升级的内容"
 
-#: D:\localgit\Cura\gui/configWizard.py:477
+#: D:\localgit\Cura\gui/configWizard.py:478
 msgid ""
 "To assist you in having better default settings for your Ultimaker\n"
 "Cura would like to know which upgrades you have in your machine."
@@ -157,23 +157,23 @@ msgstr ""
 "为了能帮助您的Ultimaker设置更好的默认参数\n"
 "Cura想知道您的机器固件进行了哪些升级"
 
-#: D:\localgit\Cura\gui/configWizard.py:479
+#: D:\localgit\Cura\gui/configWizard.py:480
 msgid "Extruder drive upgrade"
 msgstr "挤出器驱动升级"
 
-#: D:\localgit\Cura\gui/configWizard.py:480
+#: D:\localgit\Cura\gui/configWizard.py:481
 msgid "Heated printer bed (kit)"
 msgstr "带加热板打印平台（套件）"
 
-#: D:\localgit\Cura\gui/configWizard.py:481
+#: D:\localgit\Cura\gui/configWizard.py:482
 msgid "Heated printer bed (self built)"
 msgstr "带加热板打印平台（自制）"
 
-#: D:\localgit\Cura\gui/configWizard.py:482
+#: D:\localgit\Cura\gui/configWizard.py:483
 msgid "Dual extrusion (experimental)"
 msgstr "双喷头"
 
-#: D:\localgit\Cura\gui/configWizard.py:484
+#: D:\localgit\Cura\gui/configWizard.py:485
 msgid ""
 "If you have an Ultimaker bought after october 2012 you will have the\n"
 "Extruder drive upgrade. If you do not have this upgrade,\n"
@@ -183,7 +183,7 @@ msgstr ""
 "您会有挤出器驱动更新。如果您没有进行此项更新。\n"
 "我们非常推荐您进行升级以提高稳定性。"
 
-#: D:\localgit\Cura\gui/configWizard.py:485
+#: D:\localgit\Cura\gui/configWizard.py:486
 msgid ""
 "This upgrade can be bought from the Ultimaker webshop\n"
 "or found on thingiverse as thing:26094"
@@ -191,11 +191,11 @@ msgstr ""
 "该项升级可以在Ultimaker线上商店获得\n"
 "或者在thingiverse找26094号物品"
 
-#: D:\localgit\Cura\gui/configWizard.py:507
+#: D:\localgit\Cura\gui/configWizard.py:508
 msgid "Upgrade Ultimaker Firmware"
 msgstr "升级固件"
 
-#: D:\localgit\Cura\gui/configWizard.py:508
+#: D:\localgit\Cura\gui/configWizard.py:509
 msgid ""
 "Firmware is the piece of software running directly on your 3D printer.\n"
 "This firmware controls the step motors, regulates the temperature\n"
@@ -204,13 +204,13 @@ msgstr ""
 "固件是直接在您的3D打印机中运行的软件。\n"
 "本固件控制步进电机，控制温度，并最终使您的打印机能够工作。"
 
-#: D:\localgit\Cura\gui/configWizard.py:510
+#: D:\localgit\Cura\gui/configWizard.py:511
 msgid ""
 "The firmware shipping with new Ultimakers works, but upgrades\n"
 "have been made to make better prints, and make calibration easier."
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:512
+#: D:\localgit\Cura\gui/configWizard.py:513
 msgid ""
 "Cura requires these new features and thus\n"
 "your firmware will most likely need to be upgraded.\n"
@@ -219,31 +219,31 @@ msgstr ""
 "Cura需要这些新特性，因此您的固件很可能需要升级。\n"
 "您现在就可以升级。"
 
-#: D:\localgit\Cura\gui/configWizard.py:513
+#: D:\localgit\Cura\gui/configWizard.py:514
 msgid "Upgrade to Marlin firmware"
 msgstr "升级固件"
 
-#: D:\localgit\Cura\gui/configWizard.py:513
+#: D:\localgit\Cura\gui/configWizard.py:514
 msgid "Skip upgrade"
 msgstr "跳过升级"
 
-#: D:\localgit\Cura\gui/configWizard.py:517
+#: D:\localgit\Cura\gui/configWizard.py:518
 msgid "Do not upgrade to this firmware if:"
 msgstr "请不要升级此固件，如果："
 
-#: D:\localgit\Cura\gui/configWizard.py:518
+#: D:\localgit\Cura\gui/configWizard.py:519
 msgid "* You have an older machine based on ATMega1280 (Rev 1 machine)"
 msgstr "* 您的机器基于ATMega1280"
 
-#: D:\localgit\Cura\gui/configWizard.py:519
+#: D:\localgit\Cura\gui/configWizard.py:520
 msgid "* Have other changes in the firmware"
 msgstr "* 固件中还有其他更新项目"
 
-#: D:\localgit\Cura\gui/configWizard.py:539
+#: D:\localgit\Cura\gui/configWizard.py:540
 msgid "Ultimaker Checkup"
 msgstr "检查机器"
 
-#: D:\localgit\Cura\gui/configWizard.py:553
+#: D:\localgit\Cura\gui/configWizard.py:554
 msgid ""
 "It is a good idea to do a few sanity checks now on your Ultimaker.\n"
 "You can skip these if you know your machine is functional."
@@ -251,166 +251,166 @@ msgstr ""
 "在运行前，对您的打印机进行一些检查会比较好。\n"
 "如果您可以确保您的机器能够正常工作，您可以跳过这些检查。"
 
-#: D:\localgit\Cura\gui/configWizard.py:554
+#: D:\localgit\Cura\gui/configWizard.py:555
 msgid "Run checks"
 msgstr "进行检查"
 
-#: D:\localgit\Cura\gui/configWizard.py:554
+#: D:\localgit\Cura\gui/configWizard.py:555
 msgid "Skip checks"
 msgstr "跳过检查"
 
-#: D:\localgit\Cura\gui/configWizard.py:558
+#: D:\localgit\Cura\gui/configWizard.py:559
 msgid "Communication:"
 msgstr "通信："
 
-#: D:\localgit\Cura\gui/configWizard.py:559
+#: D:\localgit\Cura\gui/configWizard.py:560
 msgid "Temperature:"
 msgstr "温度："
 
-#: D:\localgit\Cura\gui/configWizard.py:560
+#: D:\localgit\Cura\gui/configWizard.py:561
 msgid "Endstops:"
 msgstr "限位开关"
 
-#: D:\localgit\Cura\gui/configWizard.py:565
+#: D:\localgit\Cura\gui/configWizard.py:566
 msgid "Show error log"
 msgstr "显示错误记录"
 
-#: D:\localgit\Cura\gui/configWizard.py:599
-#: D:\localgit\Cura\gui/configWizard.py:1238
+#: D:\localgit\Cura\gui/configWizard.py:600
+#: D:\localgit\Cura\gui/configWizard.py:1239
 msgid "Connecting to machine."
 msgstr "连接打印机"
 
-#: D:\localgit\Cura\gui/configWizard.py:620
+#: D:\localgit\Cura\gui/configWizard.py:621
 msgid "Cooldown before temperature check."
 msgstr "在测温前进行冷却"
 
-#: D:\localgit\Cura\gui/configWizard.py:626
-#: D:\localgit\Cura\gui/configWizard.py:633
+#: D:\localgit\Cura\gui/configWizard.py:627
+#: D:\localgit\Cura\gui/configWizard.py:634
 msgid "Checking the heater and temperature sensor."
 msgstr "检测加热器和温度传感器"
 
-#: D:\localgit\Cura\gui/configWizard.py:644
+#: D:\localgit\Cura\gui/configWizard.py:645
 msgid "Please make sure none of the endstops are pressed."
 msgstr "请确保没有限位开关被按下"
 
-#: D:\localgit\Cura\gui/configWizard.py:657
+#: D:\localgit\Cura\gui/configWizard.py:658
 msgid "Temperature measurement FAILED!"
 msgstr "测温失败！"
 
-#: D:\localgit\Cura\gui/configWizard.py:662
+#: D:\localgit\Cura\gui/configWizard.py:663
 #, python-format
 msgid "Head temperature: %d"
 msgstr "喷头温度：%d"
 
-#: D:\localgit\Cura\gui/configWizard.py:669
-#: D:\localgit\Cura\gui/configWizard.py:678
+#: D:\localgit\Cura\gui/configWizard.py:670
+#: D:\localgit\Cura\gui/configWizard.py:679
 #, python-format
 msgid "Communication State: %s"
 msgstr "通信状态：%s"
 
-#: D:\localgit\Cura\gui/configWizard.py:672
-#: D:\localgit\Cura\gui/configWizard.py:1197
-#: D:\localgit\Cura\gui/configWizard.py:1415
+#: D:\localgit\Cura\gui/configWizard.py:673
+#: D:\localgit\Cura\gui/configWizard.py:1198
+#: D:\localgit\Cura\gui/configWizard.py:1416
 msgid "Failed to establish connection with the printer."
 msgstr "与打印机建立连接失败"
 
-#: D:\localgit\Cura\gui/configWizard.py:717
+#: D:\localgit\Cura\gui/configWizard.py:718
 msgid "Please press the right X endstop."
 msgstr "请按下X轴右侧限位开关"
 
-#: D:\localgit\Cura\gui/configWizard.py:722
+#: D:\localgit\Cura\gui/configWizard.py:723
 msgid "Please press the left X endstop."
 msgstr "请按X轴左侧限位开关"
 
-#: D:\localgit\Cura\gui/configWizard.py:727
+#: D:\localgit\Cura\gui/configWizard.py:728
 msgid "Please press the front Y endstop."
 msgstr "请按下Y轴前侧限位开关"
 
-#: D:\localgit\Cura\gui/configWizard.py:732
+#: D:\localgit\Cura\gui/configWizard.py:733
 msgid "Please press the back Y endstop."
 msgstr "请按下Y轴后侧限位开关"
 
-#: D:\localgit\Cura\gui/configWizard.py:737
+#: D:\localgit\Cura\gui/configWizard.py:738
 msgid "Please press the top Z endstop."
 msgstr "请按下Z轴上方限位开关"
 
-#: D:\localgit\Cura\gui/configWizard.py:742
+#: D:\localgit\Cura\gui/configWizard.py:743
 msgid "Please press the bottom Z endstop."
 msgstr "请按下Z轴下方限位开关"
 
-#: D:\localgit\Cura\gui/configWizard.py:748
+#: D:\localgit\Cura\gui/configWizard.py:749
 msgid "Checkup finished"
 msgstr "检测结束"
 
-#: D:\localgit\Cura\gui/configWizard.py:763
-#: D:\localgit\Cura\gui/configWizard.py:786
+#: D:\localgit\Cura\gui/configWizard.py:764
+#: D:\localgit\Cura\gui/configWizard.py:787
 msgid "Ultimaker Calibration"
 msgstr "机器校准"
 
-#: D:\localgit\Cura\gui/configWizard.py:765
+#: D:\localgit\Cura\gui/configWizard.py:766
 msgid "Your Ultimaker requires some calibration."
 msgstr "您的打印机需要进行一些校准工作。"
 
-#: D:\localgit\Cura\gui/configWizard.py:766
+#: D:\localgit\Cura\gui/configWizard.py:767
 msgid "This calibration is needed for a proper extrusion amount."
 msgstr "该项校准用以设置合适的料丝挤出量。"
 
-#: D:\localgit\Cura\gui/configWizard.py:768
+#: D:\localgit\Cura\gui/configWizard.py:769
 msgid "The following values are needed:"
 msgstr "需要以下数值："
 
-#: D:\localgit\Cura\gui/configWizard.py:769
+#: D:\localgit\Cura\gui/configWizard.py:770
 msgid "* Diameter of filament"
 msgstr "* 料丝直径"
 
-#: D:\localgit\Cura\gui/configWizard.py:770
+#: D:\localgit\Cura\gui/configWizard.py:771
 msgid "* Number of steps per mm of filament extrusion"
 msgstr "* 挤出1mm料丝所需步进电机步数"
 
-#: D:\localgit\Cura\gui/configWizard.py:772
+#: D:\localgit\Cura\gui/configWizard.py:773
 msgid ""
 "The better you have calibrated these values, the better your prints\n"
 "will become."
 msgstr "您将这些参数调试的越好，您的机器打印质量就越好"
 
-#: D:\localgit\Cura\gui/configWizard.py:774
+#: D:\localgit\Cura\gui/configWizard.py:775
 msgid "First we need the diameter of your filament:"
 msgstr "首先，我们需要您提供料丝的直径"
 
-#: D:\localgit\Cura\gui/configWizard.py:777
+#: D:\localgit\Cura\gui/configWizard.py:778
 msgid ""
 "If you do not own digital Calipers that can measure\n"
 "at least 2 digits then use 2.89mm.\n"
 "Which is the average diameter of most filament."
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:778
+#: D:\localgit\Cura\gui/configWizard.py:779
 msgid "Note: This value can be changed later at any time."
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:791
+#: D:\localgit\Cura\gui/configWizard.py:792
 msgid "Calibrating the Steps Per E requires some manual actions."
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:792
+#: D:\localgit\Cura\gui/configWizard.py:793
 msgid "First remove any filament from your machine."
 msgstr "首先，请清除打印机中全部料丝"
 
-#: D:\localgit\Cura\gui/configWizard.py:793
+#: D:\localgit\Cura\gui/configWizard.py:794
 msgid ""
 "Next put in your filament so the tip is aligned with the\n"
 "top of the extruder drive."
 msgstr "然后，请把您的料丝的末端靠在挤出器滚轮的上端"
 
-#: D:\localgit\Cura\gui/configWizard.py:794
+#: D:\localgit\Cura\gui/configWizard.py:795
 msgid "We'll push the filament 100mm"
 msgstr "我们将要进料100mm"
 
-#: D:\localgit\Cura\gui/configWizard.py:795
+#: D:\localgit\Cura\gui/configWizard.py:796
 msgid "Extrude 100mm filament"
 msgstr "挤出100mm料丝"
 
-#: D:\localgit\Cura\gui/configWizard.py:796
+#: D:\localgit\Cura\gui/configWizard.py:797
 msgid ""
 "Now measure the amount of extruded filament:\n"
 "(this can be more or less then 100mm)"
@@ -418,19 +418,19 @@ msgstr ""
 "现在，请测量挤出料丝的长度：\n"
 "（可能会比100mm长些或短些）"
 
-#: D:\localgit\Cura\gui/configWizard.py:797
+#: D:\localgit\Cura\gui/configWizard.py:798
 msgid "Save"
 msgstr "保存"
 
-#: D:\localgit\Cura\gui/configWizard.py:798
+#: D:\localgit\Cura\gui/configWizard.py:799
 msgid "This results in the following steps per E:"
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:800
+#: D:\localgit\Cura\gui/configWizard.py:801
 msgid "You can repeat these steps to get better calibration."
 msgstr "您可以重复上述步骤来更好的校准机器。"
 
-#: D:\localgit\Cura\gui/configWizard.py:803
+#: D:\localgit\Cura\gui/configWizard.py:804
 msgid ""
 "If you still have filament in your printer which needs\n"
 "heat to remove, press the heat up button below:"
@@ -438,12 +438,12 @@ msgstr ""
 "如果您的机器中仍有料丝，需要加热才能取出。\n"
 "请点击下方加热按钮："
 
-#: D:\localgit\Cura\gui/configWizard.py:804
+#: D:\localgit\Cura\gui/configWizard.py:805
 msgid "Heatup for filament removal"
 msgstr "进行加热以取出料丝"
 
-#: D:\localgit\Cura\gui/configWizard.py:829
-#: D:\localgit\Cura\gui/configWizard.py:863
+#: D:\localgit\Cura\gui/configWizard.py:830
+#: D:\localgit\Cura\gui/configWizard.py:864
 msgid ""
 "Error: Failed to open serial port to machine\n"
 "If this keeps happening, try disconnecting and reconnecting the USB cable"
@@ -451,7 +451,7 @@ msgstr ""
 "错误：无法打开串口\n"
 "如果持续出现此问题，请断开并重新链接USB线缆"
 
-#: D:\localgit\Cura\gui/configWizard.py:881
+#: D:\localgit\Cura\gui/configWizard.py:882
 msgid ""
 "Wait till you can remove the filament from the machine, and press OK.\n"
 "(Temperature is set to 200C)"
@@ -459,191 +459,191 @@ msgstr ""
 "请等待，直到您可以取出机器中的料丝，请点击OK键。\n"
 "（温度设置为200摄氏度）"
 
-#: D:\localgit\Cura\gui/configWizard.py:904
+#: D:\localgit\Cura\gui/configWizard.py:905
 msgid "Congratulations on your the purchase of your brand new Ultimaker2."
 msgstr "恭喜您购买了全新的Wiiboox One打印机。"
 
-#: D:\localgit\Cura\gui/configWizard.py:905
+#: D:\localgit\Cura\gui/configWizard.py:906
 msgid "Cura is now ready to be used with your Ultimaker2."
 msgstr "Cura已经准备就绪"
 
-#: D:\localgit\Cura\gui/configWizard.py:910
+#: D:\localgit\Cura\gui/configWizard.py:911
 msgid "Configuration Wizard"
 msgstr "设置向导"
 
-#: D:\localgit\Cura\gui/configWizard.py:971
-#: D:\localgit\Cura\gui/configWizard.py:1428
+#: D:\localgit\Cura\gui/configWizard.py:972
+#: D:\localgit\Cura\gui/configWizard.py:1429
 msgid "Bed leveling wizard"
 msgstr "平台调平向导"
 
-#: D:\localgit\Cura\gui/configWizard.py:973
+#: D:\localgit\Cura\gui/configWizard.py:974
 msgid "This wizard will help you in leveling your printer bed"
 msgstr "本向导将帮助您进行打印平台调平"
 
-#: D:\localgit\Cura\gui/configWizard.py:975
+#: D:\localgit\Cura\gui/configWizard.py:976
 msgid "It will do the following steps"
 msgstr "将会进行以下步骤："
 
-#: D:\localgit\Cura\gui/configWizard.py:976
+#: D:\localgit\Cura\gui/configWizard.py:977
 msgid "* Move the printer head to each corner"
 msgstr "*将喷头分别移动到4个角"
 
-#: D:\localgit\Cura\gui/configWizard.py:977
+#: D:\localgit\Cura\gui/configWizard.py:978
 msgid "  and let you adjust the height of the bed to the nozzle"
 msgstr "您需要在这个过程中调节平台与喷头的距离"
 
-#: D:\localgit\Cura\gui/configWizard.py:978
+#: D:\localgit\Cura\gui/configWizard.py:979
 msgid "* Print a line around the bed to check if it is level"
 msgstr "*沿平台四周打印一条线以检查是否调平"
 
-#: D:\localgit\Cura\gui/configWizard.py:981
-#: D:\localgit\Cura\gui/configWizard.py:1214
+#: D:\localgit\Cura\gui/configWizard.py:982
+#: D:\localgit\Cura\gui/configWizard.py:1215
 msgid "Connect to printer"
 msgstr "连接打印机"
 
-#: D:\localgit\Cura\gui/configWizard.py:985
-#: D:\localgit\Cura\gui/configWizard.py:1219
+#: D:\localgit\Cura\gui/configWizard.py:986
+#: D:\localgit\Cura\gui/configWizard.py:1220
 msgid "Resume"
 msgstr "继续"
 
-#: D:\localgit\Cura\gui/configWizard.py:986
+#: D:\localgit\Cura\gui/configWizard.py:987
 msgid "Up 0.2mm"
 msgstr "向上 0.2mm"
 
-#: D:\localgit\Cura\gui/configWizard.py:986
+#: D:\localgit\Cura\gui/configWizard.py:987
 msgid "Down 0.2mm"
 msgstr "向下 0.2mm"
 
-#: D:\localgit\Cura\gui/configWizard.py:987
+#: D:\localgit\Cura\gui/configWizard.py:988
 msgid "Up 10mm"
 msgstr "向上 10mm"
 
-#: D:\localgit\Cura\gui/configWizard.py:987
+#: D:\localgit\Cura\gui/configWizard.py:988
 msgid "Down 10mm"
 msgstr "向下 10mm"
 
-#: D:\localgit\Cura\gui/configWizard.py:1051
+#: D:\localgit\Cura\gui/configWizard.py:1052
 msgid "Homing printer..."
 msgstr "打印机回零..."
 
-#: D:\localgit\Cura\gui/configWizard.py:1061
+#: D:\localgit\Cura\gui/configWizard.py:1062
 msgid "Moving head to back center..."
 msgstr "将喷头移动至后部中心位置..."
 
-#: D:\localgit\Cura\gui/configWizard.py:1068
+#: D:\localgit\Cura\gui/configWizard.py:1069
 msgid "Moving head to back left corner..."
 msgstr "将喷头移动至左后角..."
 
-#: D:\localgit\Cura\gui/configWizard.py:1076
-#: D:\localgit\Cura\gui/configWizard.py:1091
+#: D:\localgit\Cura\gui/configWizard.py:1077
+#: D:\localgit\Cura\gui/configWizard.py:1092
 msgid "Moving head to front right corner..."
 msgstr "将喷头移动右前角..."
 
-#: D:\localgit\Cura\gui/configWizard.py:1083
+#: D:\localgit\Cura\gui/configWizard.py:1084
 msgid "Moving head to back right corner..."
 msgstr "将喷头移动至右后角..."
 
-#: D:\localgit\Cura\gui/configWizard.py:1098
+#: D:\localgit\Cura\gui/configWizard.py:1099
 msgid "Heating up printer..."
 msgstr "打印机加热中..."
 
-#: D:\localgit\Cura\gui/configWizard.py:1105
+#: D:\localgit\Cura\gui/configWizard.py:1106
 msgid "Printing a square on the printer bed at 0.3mm height."
 msgstr "在打印平台打印高度为0.3mm的方块。"
 
-#: D:\localgit\Cura\gui/configWizard.py:1142
+#: D:\localgit\Cura\gui/configWizard.py:1143
 msgid "Log:"
 msgstr "记录："
 
-#: D:\localgit\Cura\gui/configWizard.py:1147
+#: D:\localgit\Cura\gui/configWizard.py:1148
 msgid ""
 "Adjust the front left screw of your printer bed\n"
 "So the nozzle just hits the bed."
 msgstr "请调节打印平台左前方调平螺丝，使喷头刚好接触平台。"
 
-#: D:\localgit\Cura\gui/configWizard.py:1152
+#: D:\localgit\Cura\gui/configWizard.py:1153
 msgid ""
 "Adjust the back screw of your printer bed\n"
 "So the nozzle just hits the bed."
 msgstr "请调节打印平台后方调平螺丝，使喷头刚好接触平台。"
 
-#: D:\localgit\Cura\gui/configWizard.py:1154
+#: D:\localgit\Cura\gui/configWizard.py:1155
 msgid ""
 "Adjust the back left screw of your printer bed\n"
 "So the nozzle just hits the bed."
 msgstr "请调节打印平台左后方调平螺丝，使喷头刚好接触平台。"
 
-#: D:\localgit\Cura\gui/configWizard.py:1159
+#: D:\localgit\Cura\gui/configWizard.py:1160
 msgid ""
 "Adjust the back right screw of your printer bed\n"
 "So the nozzle just hits the bed."
 msgstr "请调节打印平台右后方调平螺丝，使喷头刚好接触平台。"
 
-#: D:\localgit\Cura\gui/configWizard.py:1163
+#: D:\localgit\Cura\gui/configWizard.py:1164
 msgid ""
 "Adjust the front right screw of your printer bed\n"
 "So the nozzle just hits the bed."
 msgstr "请调节打印平台右前方调平螺丝，使喷头刚好接触平台。"
 
-#: D:\localgit\Cura\gui/configWizard.py:1169
+#: D:\localgit\Cura\gui/configWizard.py:1170
 msgid ""
 "The printer is hot now. Please insert some PLA filament into the printer."
 msgstr "打印机加热完成。请插入PLA料丝。"
 
-#: D:\localgit\Cura\gui/configWizard.py:1178
+#: D:\localgit\Cura\gui/configWizard.py:1179
 msgid "Use the up/down buttons to move the bed and adjust your Z endstop."
 msgstr "请使用上/下按钮来移动平台，调节Z轴限位开关"
 
-#: D:\localgit\Cura\gui/configWizard.py:1191
+#: D:\localgit\Cura\gui/configWizard.py:1192
 msgid ""
 "Calibration finished.\n"
 "The squares on the bed should slightly touch each other."
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:1211
+#: D:\localgit\Cura\gui/configWizard.py:1212
 msgid "Printer head offset calibration"
 msgstr "喷头偏置校准"
 
-#: D:\localgit\Cura\gui/configWizard.py:1212
+#: D:\localgit\Cura\gui/configWizard.py:1213
 msgid ""
 "This wizard will help you in calibrating the printer head offsets of your "
 "dual extrusion machine"
 msgstr "本向导将帮助您设置双喷头打印机"
 
-#: D:\localgit\Cura\gui/configWizard.py:1244
+#: D:\localgit\Cura\gui/configWizard.py:1245
 msgid "Printing initial calibration cross"
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:1293
+#: D:\localgit\Cura\gui/configWizard.py:1294
 msgid ""
 "Please measure the distance between the horizontal lines in millimeters."
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:1303
+#: D:\localgit\Cura\gui/configWizard.py:1304
 msgid "Printing the fine calibration lines."
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:1358
+#: D:\localgit\Cura\gui/configWizard.py:1359
 msgid ""
 "Which horizontal line number lays perfect on top of each other? Front most "
 "line is zero."
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:1391
+#: D:\localgit\Cura\gui/configWizard.py:1392
 msgid "Homing printer and heating up both extruders."
 msgstr "喷头归零并且加热两个喷头。"
 
-#: D:\localgit\Cura\gui/configWizard.py:1401
+#: D:\localgit\Cura\gui/configWizard.py:1402
 msgid "Please measure the distance between the vertical lines in millimeters."
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:1408
+#: D:\localgit\Cura\gui/configWizard.py:1409
 msgid ""
 "Which vertical line number lays perfect on top of each other? Leftmost line "
 "is zero."
 msgstr ""
 
-#: D:\localgit\Cura\gui/configWizard.py:1456
+#: D:\localgit\Cura\gui/configWizard.py:1457
 msgid "Head offset wizard"
 msgstr "启动喷头偏置向导"
 
@@ -1095,6 +1095,11 @@ msgstr "料丝设置"
 #: D:\localgit\Cura\gui/preferencesDialog.py:87
 msgid "Machine settings"
 msgstr "机器设置"
+
+#: D:\localgit\Cura\gui/preferencesDialog.py:106
+#, python-format
+msgid "Extruder %d"
+msgstr "挤出器 %d"
 
 #: D:\localgit\Cura\gui/preferencesDialog.py:126
 msgid "Add new machine"
@@ -1953,10 +1958,10 @@ msgstr "填充率（%）"
 #, python-format
 msgid ""
 "Amount of infill structure in the support material, less material gives "
-"weaker support which is easier to remove. 15% seems to be a good average."
+"weaker support which is easier to remove. 15%% seems to be a good average."
 msgstr ""
-"支撑结构的填充率，较低的填充率会生成较脆弱的支撑结构，会比较容易去除。15%效果"
-"比较好。"
+"支撑结构的填充率，较低的填充率会生成较脆弱的支撑结构，会比较容易去除。15%%效"
+"果比较好。"
 
 #: D:\localgit\Cura\gui/profile.py:224 D:\localgit\Cura\util/profile.py:234
 msgid "Distance X/Y (mm)"
@@ -3011,6 +3016,9 @@ msgstr "当前选择的壁厚会产生一条线，线宽"
 msgid "mm which is not recommended with your nozzle of "
 msgstr "mm，根据您的喷头尺寸，这样做是不推荐的"
 
+#~ msgid "Other machine information"
+#~ msgstr "*选择您的打印机型号*"
+
 #~ msgid ""
 #~ "You are trying to print more then %.1fmm^3 of filament per second. This "
 #~ "might cause filament slipping. (You are printing at %0.1fmm^3 per second)"
@@ -3075,9 +3083,6 @@ msgstr "mm，根据您的喷头尺寸，这样做是不推荐的"
 
 #~ msgid "Printer head size"
 #~ msgstr "喷头尺寸"
-
-#~ msgid "Extruder %d"
-#~ msgstr "挤出器 %d"
 
 #~ msgid "Custom..."
 #~ msgstr "自定义..."
