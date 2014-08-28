@@ -114,7 +114,9 @@ FunctionEnd
 !insertmacro MUI_UNPAGE_FINISH
 
 ; Languages
-!insertmacro MUI_LANGUAGE "SimpChinese"
+; !insertmacro MUI_LANGUAGE "SimpChinese"
+!insertmacro MUI_LANGUAGE "English"
+
 
 ; Reserve Files
 !insertmacro MUI_RESERVEFILE_LANGDLL
@@ -202,20 +204,7 @@ Section  "Open AMF files with Cura"
 SectionEnd
 
 
-Section  "Uninstall other Cura versions"
-	StrCpy $0 0
-	loop:
-		EnumRegKey $1 HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall" $0
-		StrCmp $1 "" done
-		IntOp $0 $0 + 1
-		StrCmp $1 "Cura_${VERSION}" loop
-		${StrContains} $2 "Cura_" $1
-		StrCmp $2 "" loop
-		
-		ReadRegStr $3 HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\$1" "UninstallString"
-		ExecWait '"$3" /S _?=$INSTDIR'
-	done:
-SectionEnd
+
 
 ;--------------------------------
 

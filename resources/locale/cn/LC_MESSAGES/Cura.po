@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-28 10:36+0800\n"
-"PO-Revision-Date: 2014-08-28 10:36+0800\n"
+"PO-Revision-Date: 2014-08-28 14:28+0800\n"
 "Last-Translator: Lingfeng Ai <hanxiaomax@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
@@ -2677,7 +2677,7 @@ msgstr "把物体切分成几个部分"
 
 #: D:\localgit\Cura\gui/sceneView.py:895
 msgid "Dual extrusion merge"
-msgstr "！双喷头合并"
+msgstr "合并双喷头打印模型"
 
 #: D:\localgit\Cura\gui/sceneView.py:897
 msgid "Delete all objects"
