@@ -337,7 +337,7 @@ class mainWindow(wx.Frame):
 			self.splitter.SetSashPosition(self.normalSashPos, True)
 			# Enabled sash
 			self.splitter.SetSashSize(4)
-		self.defaultFirmwareInstallMenuItem.Enable(firmwareInstall.getDefaultFirmware() is not None)
+		# self.defaultFirmwareInstallMenuItem.Enable(firmwareInstall.getDefaultFirmware() is not None)
 		if profile.getMachineSetting('machine_type') == 'ultimaker2':
 			pass
 			# self.bedLevelWizardMenuItem.Enable(False)
@@ -448,11 +448,11 @@ class mainWindow(wx.Frame):
 		#Add tools for machines.
 		self.machineMenu.AppendSeparator()
 
-		self.defaultFirmwareInstallMenuItem = self.machineMenu.Append(-1, _("Install default firmware..."))
-		self.Bind(wx.EVT_MENU, self.OnDefaultMarlinFirmware, self.defaultFirmwareInstallMenuItem)
+		# self.defaultFirmwareInstallMenuItem = self.machineMenu.Append(-1, _("Install default firmware..."))
+		# self.Bind(wx.EVT_MENU, self.OnDefaultMarlinFirmware, self.defaultFirmwareInstallMenuItem)
 
-		i = self.machineMenu.Append(-1, _("Install custom firmware..."))
-		self.Bind(wx.EVT_MENU, self.OnCustomFirmware, i)
+		# i = self.machineMenu.Append(-1, _("Install custom firmware..."))
+		# self.Bind(wx.EVT_MENU, self.OnCustomFirmware, i)
 
 	def OnLoadProfile(self, e):
 		dlg=wx.FileDialog(self, _("Select profile file to load"), os.path.split(profile.getPreference('lastFile'))[0], style=wx.FD_OPEN|wx.FD_FILE_MUST_EXIST)
