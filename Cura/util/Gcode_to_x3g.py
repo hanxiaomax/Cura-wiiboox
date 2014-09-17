@@ -15,7 +15,16 @@ import makerbot_driver
 #ugly hack:处理中文路径
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
+
+def addgorgress(filename):
+	prepro = makerbot_driver.GcodeProcessors.ProgressProcessor()
+  	output = prepro.process_gcode(list(open(filename)))
+  	with open(filename, 'w') as f:
+		for o in output:
+			f.write(o)
+
 def Convert_Gcode_to_x3g(dest,gcode_path):
+	addgorgress(gcode_path)
 	filename = os.path.basename(gcode_path)
 	filename = os.path.splitext(filename)[0]
 	condition = threading.Condition()
