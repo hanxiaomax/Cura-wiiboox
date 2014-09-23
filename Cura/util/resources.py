@@ -58,7 +58,7 @@ def setupLocalization(selectedLanguage = None):
 	#Default to Chinese
 	#FIXME:can not boot with cn while using languages=['cn']
 	#FIXED:changing the secound value in setting() in porfile.py and the default value in preference.ini
-	languages = ['cn']
+	languages = ['ko']
 
 
 	if selectedLanguage is not None:
@@ -73,6 +73,7 @@ def getLanguageOptions():
 	return [
 			['cn','Chinese '],
 			['en', 'English'],
+			['ko','Korean'],
 			['de', 'Deutsch'],
 		 	['fr', 'French'],
 		 	['nl', 'Nederlands'],

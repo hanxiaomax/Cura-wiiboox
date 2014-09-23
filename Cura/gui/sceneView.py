@@ -637,7 +637,7 @@ class SceneView(openglGui.glGuiPanel):
 		self.sceneUpdated()
 
 	def sceneUpdated(self):
-		self._sceneUpdateTimer.Start(500, True)
+		self._sceneUpdateTimer.Start(2000, True)
 		self._engine.abortEngine()
 		self._scene.updateSizeOffsets()
 		self.QueueRefresh()
