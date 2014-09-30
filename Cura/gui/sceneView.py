@@ -642,6 +642,7 @@ class SceneView(openglGui.glGuiPanel):
 		self._scene.updateSizeOffsets()
 		self.QueueRefresh()
 		self.setSaveStatus(False)
+		self.tox3gButton.setDisabled(not self.isSaved())
 
 	def _onRunEngine(self, e):
 		if self._isSimpleMode:
