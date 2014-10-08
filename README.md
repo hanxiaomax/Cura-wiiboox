@@ -1,5 +1,6 @@
 ##Cura-wiiboox
 
+Cura_14.07-wiibooxBETAv1.1.2-cn post
 
 
 ###Develop Note:
@@ -10,3 +11,16 @@
 
 
 ###Change Note:
+####current version
+Cura_14.07-wiibooxBETAv1.1.3-cn：x3g按钮逻辑bug修复
+
+- Cura_14.07-wiibooxBETAv1.1.2-cn：比较稳定的中文版，x3g按钮逻辑尚未更新
+
+
+
+
+###TODO：
+
+- [ ] 向导界面引导用户选择语言
+- [ ] 个人定制simplemode
+- [ ] 合并最新版本Cura
