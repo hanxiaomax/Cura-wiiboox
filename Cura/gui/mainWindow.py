@@ -661,7 +661,7 @@ class normalSettingsPanel(configBase.configPanelBase):
 		p = left
 		n = 0
 		for title in profile.getSubCategoriesFor(category):
-			
+
 			if title not in  ['Machine','Retraction']:
 				n += 1 + len(profile.getSettingsForCategory(category, title))
 				if n > count / 2:
