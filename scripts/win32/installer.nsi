@@ -114,9 +114,8 @@ FunctionEnd
 !insertmacro MUI_UNPAGE_FINISH
 
 ; Languages
-;!insertmacro MUI_LANGUAGE "SimpChinese"
-!insertmacro MUI_LANGUAGE "English"
-;!insertmacro MUI_LANGUAGE "Korean"
+!insertmacro MUI_LANGUAGE "SimpChinese"
+;!insertmacro MUI_LANGUAGE "English"
 
 
 ; Reserve Files

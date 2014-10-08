@@ -302,7 +302,7 @@ if [ $BUILD_TARGET = "win32" ]; then
 	rm -rf Power
 	git clone https://github.com/GreatFruitOmsk/Power
 	#Ugly hack：comment out to use custom engine
-	
+
 	#rm -rf CuraEngine
 	#git clone ${CURA_ENGINE_REPO}
     #if [ $? != 0 ]; then echo "Failed to clone CuraEngine"; exit 1; fi
@@ -342,7 +342,7 @@ if [ $BUILD_TARGET = "win32" ]; then
 	#mv ffmpeg-20120927-git-13f0cd6-win32-static/bin/ffmpeg.exe ${TARGET_DIR}/Cura/
 	#mv ffmpeg-20120927-git-13f0cd6-win32-static/licenses ${TARGET_DIR}/Cura/ffmpeg-licenses/
 	mv Win32/EjectMedia.exe ${TARGET_DIR}/Cura/
-	
+
 	#添加缺少的dll文件
 	cp libgcc_s_dw2-1.dll ${TARGET_DIR}/
 	cp libstdc++-6.dll ${TARGET_DIR}/
@@ -381,6 +381,8 @@ cp -a resources/* ${TARGET_DIR}/resources
 cp -a plugins/* ${TARGET_DIR}/plugins
 #Add cura version file
 echo $BUILD_NAME > ${TARGET_DIR}/Cura/version
+
+
 
 #add script files
 if [ $BUILD_TARGET = "win32" ]; then

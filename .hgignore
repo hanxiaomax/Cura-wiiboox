@@ -1,7 +1,10 @@
+syntax: glob
+*.pyc
+*.deb
+*.bak
 *.tar.bz2
 *.tar.gz
 *.7z
-*.pyc
 *.zip
 *.exe
 *.po~
@@ -23,11 +26,15 @@ cura.bat
 object-mirror.png
 object.png
 *darwin.dmg
-scripts/darwin/dist/*
-scripts/darwin/build/*
+scripts/darwin/dist/
+scripts/darwin/build/
 scripts/darwin/Cura.dmg.sparseimage
-scripts/win32/dist/*
-scripts/linux/debian/usr/*
+scripts/win32/dist/
+scripts/linux/debian*/usr/share/cura
 log.txt
 output.txt
-*.bak
+.git
+.hgignore
+.hgsubstate
+CuraEngine/
+Power/

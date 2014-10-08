@@ -8,12 +8,10 @@ import os
 import threading
 import wx
 from Cura.util import profile
-
 #ugly hack:add makerbot_driver to sys.path to import
 driver_path=os.path.dirname(__file__)
 sys.path.append(driver_path)
 import makerbot_driver
-from makerbot_driver import GcodeProcessors
 #ugly hack:处理中文路径
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
