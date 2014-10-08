@@ -20,6 +20,6 @@ Cura_14.07-wiibooxBETAv1.1.3-cn：x3g按钮逻辑bug修复
 
 ###3.TODO：
 
-- [ ] 向导界面引导用户选择语言
-- [ ] 个人定制simplemode
-- [ ] 合并最新版本Cura
+- [x] 向导界面引导用户选择语言
+- [x] 个人定制simplemode
+- [x] 合并最新版本Cura
