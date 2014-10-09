@@ -199,6 +199,6 @@ else:
 		pass
 
 if __name__ == '__main__':
-    app=CuraApp("1.txt")
-    app.MainLoop()
+	app=CuraApp("1.txt")
+	app.MainLoop()
 
