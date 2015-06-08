@@ -639,15 +639,15 @@ class normalSettingsPanel(configBase.configPanelBase):
 		self.SizeLabelWidths(left, right)
 
 		#Plugin page
-		# self.pluginPanel = pluginPanel.pluginPanel(self.nb, callback)
-		# self.nb.AddPage(self.pluginPanel, _("Plugins"))
+		self.pluginPanel = pluginPanel.pluginPanel(self.nb, callback)
+		self.nb.AddPage(self.pluginPanel, _("Plugins"))
 
 		# Alteration page
-		# if profile.getMachineSetting('gcode_flavor') == 'UltiGCode':
-		# 	self.alterationPanel = None
-		# else:
-		# 	self.alterationPanel = alterationPanel.alterationPanel(self.nb, callback)
-		# 	self.nb.AddPage(self.alterationPanel, "Start/End-GCode")
+		if profile.getMachineSetting('gcode_flavor') == 'UltiGCode':
+			self.alterationPanel = None
+		else:
+			self.alterationPanel = alterationPanel.alterationPanel(self.nb, callback)
+			self.nb.AddPage(self.alterationPanel, "Start/End-GCode")
 
 		self.Bind(wx.EVT_SIZE, self.OnSize)
 
@@ -661,7 +661,7 @@ class normalSettingsPanel(configBase.configPanelBase):
 		p = left
 		n = 0
 		for title in profile.getSubCategoriesFor(category):
-			
+
 			if title not in  ['Machine','Retraction']:
 				n += 1 + len(profile.getSettingsForCategory(category, title))
 				if n > count / 2:

@@ -12,7 +12,7 @@ OutFile "Cura_${VERSION}.exe"
 ; The default installation directory
 InstallDir C:\\Cura_${VERSION}
 
-; Registry key to check for directory (so if you install again, it will 
+; Registry key to check for directory (so if you install again, it will
 ; overwrite the old one automatically)
 InstallDirRegKey HKLM "Software\Cura_${VERSION}" "Install_Dir"
 
@@ -30,13 +30,13 @@ SetCompressor /SOLID lzma
 ;--------------------------------
 
 ; StrContains
-; This function does a case sensitive searches for an occurrence of a substring in a string. 
-; It returns the substring if it is found. 
-; Otherwise it returns null(""). 
+; This function does a case sensitive searches for an occurrence of a substring in a string.
+; It returns the substring if it is found.
+; Otherwise it returns null("").
 ; Written by kenglish_hi
 ; Adapted from StrReplace written by dandaman32
- 
- 
+
+
 Var STR_HAYSTACK
 Var STR_NEEDLE
 Var STR_CONTAINS_VAR_1
@@ -44,7 +44,7 @@ Var STR_CONTAINS_VAR_2
 Var STR_CONTAINS_VAR_3
 Var STR_CONTAINS_VAR_4
 Var STR_RETURN_VAR
- 
+
 Function StrContains
   Exch $STR_NEEDLE
   Exch 1
@@ -66,16 +66,16 @@ Function StrContains
       Goto done
     done:
    Pop $STR_NEEDLE ;Prevent "invalid opcode" errors and keep the
-   Exch $STR_RETURN_VAR  
+   Exch $STR_RETURN_VAR
 FunctionEnd
- 
+
 !macro _StrContainsConstructor OUT NEEDLE HAYSTACK
   Push `${HAYSTACK}`
   Push `${NEEDLE}`
   Call StrContains
   Pop `${OUT}`
 !macroend
- 
+
 !define StrContains '!insertmacro "_StrContainsConstructor"'
 ;--------------------------------
 
@@ -90,7 +90,7 @@ FunctionEnd
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
 !define MUI_HEADERIMAGE_BITMAP "header.bmp"
-!define MUI_HEADERIMAGE_BITMAP_NOSTRETCH 
+!define MUI_HEADERIMAGE_BITMAP_NOSTRETCH
 ; Don't show the component description box
 !define MUI_COMPONENTSPAGE_NODESC
 
@@ -129,16 +129,16 @@ ReserveFile "header.bmp"
 Section "Cura ${VERSION}"
 
   SectionIn RO
-  
+
   ; Set output path to the installation directory.
   SetOutPath $INSTDIR
-  
+
   ; Put file there
   File /r "dist\"
-  
+
   ; Write the installation path into the registry
   WriteRegStr HKLM "SOFTWARE\Cura_${VERSION}" "Install_Dir" "$INSTDIR"
-  
+
   ; Write the uninstall keys for Windows
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Cura_${VERSION}" "DisplayName" "Cura ${VERSION}"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Cura_${VERSION}" "UninstallString" '"$INSTDIR\uninstall.exe"'
@@ -148,18 +148,18 @@ Section "Cura ${VERSION}"
 
   ; Write start menu entries for all users
   SetShellVarContext all
-  
+
 
 
   CreateDirectory "$SMPROGRAMS\Cura ${VERSION}"
   CreateShortCut "$SMPROGRAMS\Cura ${VERSION}\Uninstall Cura ${VERSION}.lnk" "$INSTDIR\uninstall.exe" "" "$INSTDIR\uninstall.exe" 0
   CreateShortCut "$SMPROGRAMS\Cura ${VERSION}\Cura ${VERSION}.lnk" "$INSTDIR\python\pythonw.exe" '-m "Cura.cura"' "$INSTDIR\resources\cura.ico" 0
-  
+
   CreateShortCut "$DESKTOP\Cura ${VERSION}.lnk" "$INSTDIR\python\pythonw.exe" '-m "Cura.cura"' "$INSTDIR\resources\cura.ico"
 
   ; Give all users write permissions in the install directory, so they can read/write profile and preferences files.
   AccessControl::GrantOnFile "$INSTDIR" "(S-1-5-32-545)" "FullAccess"
-  
+
 SectionEnd
 
 Function LaunchLink
@@ -171,7 +171,7 @@ FunctionEnd
 ;Section "Install Arduino Drivers"
 ;  ; Set output path to the driver directory.
 ;  SetOutPath "$INSTDIR\drivers\"
-;  File /r "drivers\"  
+;  File /r "drivers\"
 ;  ${If} ${RunningX64}
 ;    ExecWait '"$INSTDIR\drivers\dpinst64.exe" /lm'
 ;  ${Else}
@@ -211,7 +211,7 @@ SectionEnd
 ; Uninstaller
 
 Section "Uninstall"
-  
+
   ; Remove registry keys
   DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Cura_${VERSION}"
   DeleteRegKey HKLM "SOFTWARE\Cura_${VERSION}"
@@ -221,6 +221,6 @@ Section "Uninstall"
   ; Remove directories used
   RMDir /r "$SMPROGRAMS\Cura ${VERSION}"
   RMDir /r "$INSTDIR"
-  RMDir "$DESKTOP\Cura ${VERSION}.lnk" 
+  RMDir "$DESKTOP\Cura ${VERSION}.lnk"
 
 SectionEnd

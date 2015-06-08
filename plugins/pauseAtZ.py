@@ -3,9 +3,6 @@
 #Depend: GCode
 #Type: postprocess
 #Param: pauseLevel(float:5.0) Pause height (mm)
-#Param: parkX(float:190) Head park X (mm)
-#Param: parkY(float:190) Head park Y (mm)
-#Param: retractAmount(float:5) Retraction amount (mm)
 
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 import re
@@ -41,30 +38,13 @@ with open(filename, "w") as f:
 			newZ = getValue(line, 'Z', z)
 			x = getValue(line, 'X', x)
 			y = getValue(line, 'Y', y)
-			if newZ != z and currentSectionType != 'CUSTOM':
+			if newZ != z and currentSectionType != 'pauseAtZ':
 				z = newZ
 				if z < pauseLevel and pauseState == 0:
 					pauseState = 1
 				if z >= pauseLevel and pauseState == 1:
 					pauseState = 2
-					f.write(";TYPE:CUSTOM\n")
-					#Retract
-					f.write("M83\n")
-					f.write("G1 E-%f F6000\n" % (retractAmount))
-					#Move the head away
-					f.write("G1 X%f Y%f F9000\n" % (parkX, parkY))
-					if z < 15:
-						f.write("G1 Z15 F300\n")
-					#Wait till the user continues printing
-					f.write("M0\n")
-					#Push the filament back, and retract again, the properly primes the nozzle when changing filament.
-					f.write("G1 E%f F6000\n" % (retractAmount))
-					f.write("G1 E-%f F6000\n" % (retractAmount))
-					#Move the head back
-					if z < 15:
-						f.write("G1 Z%f F300\n" % (z+1))
-					f.write("G1 X%f Y%f F9000\n" % (x, y))
-					f.write("G1 E%f F6000\n" % (retractAmount))
-					f.write("G1 F9000\n")
-					f.write("M82\n")
+					f.write(";TYPE:pauseAtZ\n")
+					#pause at pauseLevel
+					f.write("M322 Z%f \n"% (pauseLevel))
 		f.write(line)

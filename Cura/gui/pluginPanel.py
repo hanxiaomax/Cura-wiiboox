@@ -78,7 +78,7 @@ class pluginPanel(wx.Panel):
 		pluginPanel = wx.Panel(self.pluginEnabledPanel)
 		s = wx.GridBagSizer(2, 2)
 		pluginPanel.SetSizer(s)
-		title = wx.StaticText(pluginPanel, -1, plugin.getName())
+		title = wx.StaticText(pluginPanel, -1, u(plugin.getName()))
 		title.SetFont(wx.Font(wx.SystemSettings.GetFont(wx.SYS_ANSI_VAR_FONT).GetPointSize(), wx.FONTFAMILY_DEFAULT, wx.NORMAL, wx.FONTWEIGHT_BOLD))
 		remButton = wx.Button(pluginPanel, -1, 'X', style=wx.BU_EXACTFIT)
 		helpButton = wx.Button(pluginPanel, -1, '?', style=wx.BU_EXACTFIT)

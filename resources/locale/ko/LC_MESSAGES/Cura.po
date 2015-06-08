@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: Cura Translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-17 10:38+0100\n"
-"PO-Revision-Date: 2014-10-08 15:50+0800\n"
-"Last-Translator: Jinbuhm Kim <Jinbuhm.Kim@gmail.com>\n"
+"PO-Revision-Date: 2015-01-22 20:13+0800\n"
+"Last-Translator: Lingfeng Ai <hanxiaomax@gmail.com>\n"
 "Language-Team: Korean <Jinbuhm.Kim@gmail.com>\n"
+"Language: ko_KR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.6\n"
+"X-Generator: Poedit 1.7.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Language: ko_KR\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: Cura/gui/app.py:141 Cura/gui/mainWindow.py:563
@@ -599,7 +599,7 @@ msgstr "업데이트 확인..."
 
 #: Cura/gui/mainWindow.py:188
 msgid "Open YouMagine website..."
-msgstr "Youmagine 웹사이트 열기..."
+msgstr "Yoymagine 웹사이트 열기..."
 
 #: Cura/gui/mainWindow.py:190
 msgid "About Cura..."
@@ -1646,7 +1646,7 @@ msgid ""
 "sure you do not get a lot of retractions in a small area."
 msgstr ""
 "최소 이동을 위해서는 리트렉션이 일어나지 않아야 합니다. 작은 영역에서 빈번한 "
-"리트렉션이 일어나는지 확인하십시요."
+"리트렉션이 일어나는지확인하십시오."
 
 #: Cura/util/profile.py:197
 msgid "Enable combing"
@@ -1874,7 +1874,7 @@ msgid ""
 "will add more skirt lines to reach this minimal lenght.\n"
 "Note: If the line count is set to 0 this is ignored."
 msgstr ""
-"스커드의 최소 길이, 만약 이 최소 길이에 다다르지 않으면 스커트 라인을 더 추가"
+"스커트의 최소 길이, 만약 이 최소 길이에 다다르지 않으면 스커트 라인을 더 추가"
 "합니다. \n"
 "주의: 만약 라인수가 0이면 이것은 무시됩니다."
 
@@ -1928,7 +1928,7 @@ msgid ""
 "ooze. The minimal feedrate protects against this. Even if a print gets "
 "slowed down it will never be slower than this minimal speed."
 msgstr ""
-"최소 레이어 시간은 프린트가 느려져서 필라멘드가 흘러나오게 합니다. 최소 공급"
+"최소 레이어 시간은 프린트가 느려져서 필라멘트가 흘러나오게 합니다. 최소 공급"
 "량은 이것을 막습니다. 프린트가 느려질지라도 이 최소 속도 보다는 더 느려지지 "
 "않습니다."
 
@@ -1999,9 +1999,9 @@ msgid ""
 "prints."
 msgstr ""
 "서포트 종류.\n"
-"그리드는 매우 강하고 한 조작으로 떨어지지만 때로는 너무 강합니다. \n"
-"라인은 한번에 하나씩 떨어질 수 있는 하나의 벽으로된 선입니다. 제거하지 쉽지"
-"만 덜 강하고 까다로운 프린트에는 잘 동작하지 않습니다."
+"그리드는 매우 강하고 한조각으로 떨어지지만 때로는 너무 강합니다. \n"
+"라인은 한번에 하나씩 떨어질 수 있는 하나의 벽으로된 선입니다.제거하기 쉽지만 "
+"덜 강하고 까다로운 프린트에는 잘 동작하지 않습니다."
 
 #: Cura/util/profile.py:224
 msgid "Overhang angle for support (deg)"
@@ -2024,8 +2024,9 @@ msgid ""
 "Amount of infill structure in the support material, less material gives "
 "weaker support which is easier to remove. 15% seems to be a good average."
 msgstr ""
-"서포트 재질에 채우는 양, 재료가 적으면 서포트가 약해서 제거하기 쉽습니다. 15%"
-"가 평균적으로 좋습니다."
+"지지대의 내부 채움 양을 말합니다. 너무 작은 양을 설정하면 지지대를 제거하기"
+"는 쉽지만 너무 약해져서 무너져 내릴 수 있습니다. 15%정도가 평균적으로 가장 좋"
+"습니다."
 
 #: Cura/util/profile.py:226
 msgid "Distance X/Y (mm)"
@@ -2051,7 +2052,7 @@ msgid ""
 "0.15mm gives a good seperation of the support material."
 msgstr ""
 "서포트의 위/아래로 부터 프린트까지의 거리. 여기에 작은 틈은 서포트를 제거하"
-"기 쉽게하지만 프린트의 모양이 약간 안좋게 합니다.\n"
+"기 쉽게하지만 프린트의 모양을 약간 안좋게 합니다.\n"
 "0.15mm이면 서포트 재질로 부터 쉽게 분리 할 수 있습니다."
 
 #: Cura/util/profile.py:228
@@ -2064,13 +2065,14 @@ msgid ""
 "steady Z increase over the whole print. This feature turns a solid object "
 "into a single walled print with a solid bottom."
 msgstr ""
-"나선형으로 하기는 바깥쪽 가장자리의 Z 움직임을 부드럽게 합니다. 이것은 전체 "
-"프린트물에 Z축을 천천히 증가시킵니다. 이 기능은 하나의 오브젝트를 단단한 바닥"
-"을 가지고 하나의 벽으로된 출력물으로 만듭니다."
+"나선형으로 설정하는 것은 바깥 테두리에서 Z축의 움직임을 부드럽게 합니다. 이 "
+"설정은 출력되는 물체의 모든 부분에서 Z축의 움직임을 꾸준히 증가 시킵니다. 이 "
+"기능은 속이 꽉 찬 출력물에서 바닥은 속이 꽉 차게 외곽은 하나의 벽으로된 출력"
+"물로 바꿉니다. 이 기능은 joris라고 옛날 버전에서 사용되었던 기능입니다."
 
 #: Cura/util/profile.py:230
 msgid "Brim line amount"
-msgstr "Brim line amount"
+msgstr "Brim 양의 수"
 
 #: Cura/util/profile.py:230
 msgid ""
@@ -2078,7 +2080,7 @@ msgid ""
 "sticks better, but this also makes your effective print area smaller."
 msgstr ""
 "Brim에 사용되는 라인의 수, 라인이 많이 사용되면 brim이 더 커지고 바닥에 더 "
-"잘 붙습니다. 하지만 이것은 유효 프린트 면적을 줄어들게 합니다."
+"잘 붙습니다. 하지만, 라인이 많아질수록 출력할 수 있는 공간이 줄어듭니다."
 
 #: Cura/util/profile.py:231
 msgid "Extra margin (mm)"
@@ -2091,8 +2093,8 @@ msgid ""
 "using more material and leaving less area for your print."
 msgstr ""
 "만약 raft가 활성화 되면 이것은 오브젝트 주위의 추가적인 raft 영역입니다. 이 "
-"마진을 증가시키면 더 강한 raft를 만들고 재료가 더 많이 사용이 되고 프린트를 "
-"위한 공간이 적어집니다."
+"마진을 증가시키면 더 강한 raft를 만들고 재료가 더 많이 사용이 되고 프출력할 "
+"공간이 줄어듭니다."
 
 #: Cura/util/profile.py:232
 msgid "Line spacing (mm)"
@@ -2102,7 +2104,7 @@ msgstr "라인 간격 (mm)"
 msgid ""
 "When you are using the raft this is the distance between the centerlines of "
 "the raft line."
-msgstr "Raft를 사용을 하면 이것은 중심선과 raft선 사이의 거리입니다."
+msgstr "Raft를 사용 하면 이것은 중심선과 raft선 사이의 거리입니다."
 
 #: Cura/util/profile.py:233
 msgid "Base thickness (mm)"
@@ -2388,11 +2390,11 @@ msgstr ""
 
 #: Cura/util/profile.py:385
 msgid "Extruder count"
-msgstr "익스투루더 갯수"
+msgstr "노즐 갯수"
 
 #: Cura/util/profile.py:385
 msgid "Amount of extruders in your machine."
-msgstr "기기의 익스투루더의 갯수"
+msgstr "기기의 노즐의 갯수"
 
 #: Cura/util/profile.py:386 Cura/util/profile.py:388 Cura/util/profile.py:390
 msgid "Offset X"
@@ -2558,3 +2560,31 @@ msgid ""
 msgstr ""
 "%.2fmm (3/4 노즐 사이즈)이상의 바닥 레이어는 일반적으로 좋지 않은 결과를 제공"
 "하며 사용하지 않는 것이 좋습니다."
+
+#: Cura/util/profile.py:238
+msgid "Only follow mesh surface"
+msgstr "Mesh 표면만으로 하기"
+
+#: Cura/util/profile.py:238
+msgid ""
+"Only follow the mesh surfaces of the 3D model, do not do anything else. No "
+"infill, no top/bottom, nothing."
+msgstr ""
+"3D모델을 Mesh 표면만 인식하게 합니다. 내부 채움이 없고, 윗면(top)과 아랫면"
+"(bottom)도 없습니다."
+
+#: Cura/util/profile.py:248
+msgid ""
+"Gap between the last layer of the raft and the first printing layer. A small "
+"gap of 0.2mm works wonders on PLA and makes the raft easy to remove."
+msgstr ""
+"Raft의 마지막 레이어와 출력되는 물체의 첫 레이어 사이의 거리를 설정하는 기능"
+"입니다. PLA에서 0.2mm로 설정하면 Raft가 쉽게 떨어집니다."
+
+#: Cura/util/profile.py:249
+msgid ""
+"Amount of surface layers put on top of the raft, these are fully filled "
+"layers on which the model is printed."
+msgstr ""
+"Raft의 맨 윗면의 표면 레이어 수의 양을 말합니다. 이것은 출력되는 모델을 가득 "
+"채웁니다."
